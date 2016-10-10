@@ -1,0 +1,583 @@
+\documentclass{article}
+\usepackage[top=2.5cm, bottom=2.5cm, inner=2.5cm,outer=2.5cm]{geometry}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\definecolor{WisdotaBackground}{HTML}{61595D}
+\definecolor{highlight}{HTML}{F1B72A}
+\definecolor{secondaryhighlight}{HTML}{D98E04}
+\definecolor{mistakecolor}{HTML}{8C2625}
+\definecolor{goodplaycolor}{HTML}{258C27}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{fontspec}
+\usepackage{background}
+\usepackage{blindtext}
+%\usepackage{stix}
+\usepackage{savesym}
+\usepackage{amsmath}
+\savesymbol{mathdollar}
+\usepackage{MnSymbol}
+\restoresymbol{MnS}{mathdollar}
+\usepackage{hyperref}
+\usepackage{titling}
+
+%\usepackage{fdsymbol}
+
+
+\hypersetup{
+    colorlinks = false,
+    linkbordercolor = {highlight}
+}
+
+\onehalfspacing
+%\doublespacing
+\setmainfont{Roboto-Light}
+\backgroundsetup{
+    scale=1,
+    angle=45,
+    opacity=0.1,
+    contents={\begin{tikzpicture}[remember picture,overlay]
+    \path [left color = gray, right color = black] (current page.south west) rectangle (current page.north east);   % Adjust the position of the logo.
+    \end{tikzpicture}}
+}
+
+\newcommand{\matchid}{2676766978}
+
+
+\makeatletter
+\fancypagestyle{mypagestyle}{%
+  \fancyhf{}% Clear header/footer
+  \rhead{ \textcolor{white}{Wisdota.com}}
+  \lhead{\textcolor{white}{Report for Match \matchid}}
+  \fancyfoot[C]{\textcolor{white}{\thepage}}% Page # in middle/centre of footer
+  \renewcommand{\headrulewidth}{.4pt}% .4pt header rule
+  \def\headrule{{\if@fancyplain\let\headrulewidth\plainheadrulewidth\fi
+    \color{white}\hrule\@height\headrulewidth\@width\headwidth \vskip-\headrulewidth}}
+  \renewcommand{\footrulewidth}{0pt}% No footer rule
+%  \def\footrule{{\if@fancyplain\let\footrulewidth\plainfootrulewidth\fi
+%    \vskip-\footruleskip\vskip-\footrulewidth
+%    \hrule\@width\headwidth\@height\footrulewidth\vskip\footruleskip}}
+}
+
+\title{Wisdota Report for Match \matchid \\
+Anti-Mage by iceiceiceiceiceiceiceiceice}
+\date{Played on 29/09/2016}
+\pretitle{\begin{flushleft}\LARGE\sffamily}
+\posttitle{\par\end{flushleft}}
+\preauthor{}
+\author{}
+\postauthor{} 
+\predate{\begin{flushright}\large\scshape}
+\postdate{\par\end{flushright}}
+
+\setlength{\droptitle}{0pt}
+
+\makeatother
+\pagestyle{mypagestyle}
+
+\newcommand{\gt}{\ensuremath{\;\;\color{green} \filledmedtriangleup} }
+\newcommand{\rt}{\ensuremath{\;\;\color{red} \filledmedtriangledown} }
+\newcommand{\ws}{\ensuremath{\;\;\color{white} \filledmedsquare} }
+
+\newenvironment{remarks}
+    {
+        \begin{description}
+            \setlength\itemsep{0em}
+    }
+    {
+        \end{description}
+    }
+\newcommand{\goodremark}[1]{\vbox{\item[\gt] #1}}
+\newcommand{\neutralremark}[1]{\vbox{\item[\ws] #1}}
+\newcommand{\badremark}[1]{\vbox{\item[\rt] #1}}
+
+\newenvironment{eventlog}
+    {
+        \begin{description}
+    }
+    {
+        \end{description}
+    }
+\newcommand{\logentry}[3]{\hypertarget{log:#1}{\item[\textcolor{highlight}{#1}] #2 \;#3}}
+\newcommand{\mistake}{\colorbox{mistakecolor}{Mistake!}\ }
+\newcommand{\goodplay}{\colorbox{goodplaycolor}{Good Play!}\ }
+\newcommand{\logref}[1]{\hyperlink{log:#1}{#1}}
+
+\newcommand{\minimap}[1]{\begin{center}
+                             \begin{minipage}[t]{0.3\textwidth}
+                                \includegraphics[width=\textwidth]{#1}
+                             \end{minipage}
+                         \end{center}
+}
+
+\newcommand{\twominimaps}[2]{\begin{center}
+                             \begin{minipage}[t]{0.3\textwidth}
+                                \includegraphics[width=\textwidth]{#1}
+                             \end{minipage}
+                            \begin{minipage}[t]{0.3\textwidth}
+                                \includegraphics[width=\textwidth]{#2}
+                             \end{minipage}
+                         \end{center}
+}
+
+\newcommand{\threeminimaps}[3]{\begin{center}
+                             \begin{minipage}[t]{0.3\textwidth}
+                                \includegraphics[width=\textwidth]{#1}
+                             \end{minipage}
+                            \begin{minipage}[t]{0.3\textwidth}
+                                \includegraphics[width=\textwidth]{#2}
+                             \end{minipage}
+                            \begin{minipage}[t]{0.3\textwidth}
+                                \includegraphics[width=\textwidth]{#3}
+                             \end{minipage}
+                         \end{center}
+}
+
+
+
+
+\begin{document}
+\pagecolor{WisdotaBackground}
+\color{white}
+
+\maketitle
+
+\paragraph{Match Context}
+Unranked AP as 2-Stack.
+
+Imbalanced team performance, had to make up for three weaker allies with strong play to win the game. Enemies are occupied with the rest of the team, focus is on efficient farming and pressure through split push. 
+
+\section*{Summary}
+\addcontentsline{toc}{section}{Summary}
+
+\begin{remarks}
+\goodremark{Good early itemisation, effective item progression.}
+\goodremark{Good movement, farming and splitpush.}
+\badremark{Missed early opportunities for pressure.}
+\badremark{Efficiency improvements: early lasthitting, tread switching, movement patterns.}
+\badremark{Unnecessary deaths due to wrong escape directions or staying in lost fights.}
+\end{remarks}
+
+\section{Laning}
+
+\begin{remarks}
+\badremark{ After 10 creepwaves (5:22):\\
+        22 lasthits/ 4 denies\\
+        Missed 15 lasthits, 8 denies}
+\neutralremark{ After 20 Creepwaves (10:02):\\
+        56 lasthits, 19 denies\\
+        Missed 22 lasthits, 13 denies.}
+\end{remarks}
+
+\paragraph{Frequent reasons for missing CS}
+\begin{itemize}
+\setlength\itemsep{0em}
+\item Standing too far back. (14x, e.g. \logref{1:06}, \logref{1:20}).
+\item Impatience, hit too early. (5x, e.g. \logref{3:22})
+\item Drew creeps closer by taking Aggro, but didn't move in afterwards. (2x, \logref{2:30}  \logref{3:22})
+\end{itemize}
+
+
+\section{Itemisation}
+
+\begin{remarks}
+\goodremark{Starting items:
+    Tangoes, Salve, 2 Branches to consume with Tango, Stout Shield}
+
+\goodremark{Early Poor Man's Shield, Ring of Health}
+
+\goodremark{Power Treads, Battle Fury}
+
+\goodremark{Good item progression into Vladimir's Offering, Manta Style, Abyssal Blade.}
+
+\badremark{Missed 2 opportunities to buy TP at sideshops when it was needed. (\logref{24:08}, crucial at \logref{41:10})}
+\end{remarks}
+
+\section{Mechanics}
+\begin{remarks}
+\badremark{ Toggle treads to Intelligence before using Blink (18 times, \logref{14:58} \logref{19:03} \logref{22:50}), especially early or when on low mana.}
+\neutralremark{Slow TP from base - use the regeneration buff, loses a lasthit and 5 seconds.\logref{13:36}}
+\neutralremark{Treadswitch to Strength when backing from tower. \logref{12:46}}
+\neutralremark{Don't blink out of neutral camps before killing the last one -  loses 6 seconds. \logref{18:30}}
+\neutralremark{Blink forward in the lane and move to cleave the ranged creep. \logref{22:54} \logref{22:58}}
+\neutralremark{Blink as quickly as possible when you are moving. \logref{31:25} \logref{31:50}}
+\end{remarks}
+
+\section{Information \& Assessment}
+\begin{remarks}
+\neutralremark{ Didn't check inventory of lane opponent when arriving.}
+
+\neutralremark{Didn't view the ganks of lane opponent - missing skill information.}
+
+\badremark{Didn't check inventory of enemy entering the lane - didn't realise own advantage (3x) \logref{6:01}}
+
+\badremark{Didn't notice damage output on creeps to infer skillpoint assignment and hero strength.\logref{10:40}}
+
+\neutralremark{Could watch fights of team more, to get a better understanding of each hero's power.}
+\end{remarks}
+
+
+\section{Fighting}
+\begin{remarks}
+\goodremark{ Good blinks for solo kills on Omniknight and PL (\logref{19:00}, \logref{19:42})}
+\goodremark{ Good solokill on Pudge (\logref{49:15})}
+
+\neutralremark{Dangerous aggressive movement, but goes unpunished and creates pressure. (\logref{27:20}, \logref{28:40}, \logref{30:10}, \logref{30:50}) }
+\neutralremark{Using ultimate for harassment damage without kill potential.}
+
+\badremark{Using Ultimate into Blademail(\logref{31:00}).}
+\badremark{Unnecessary deaths due to wrong escape path. Rather move towards your allies (\logref{24:50}), stay hidden in trees (\logref{37:28}) and don't corner yourself(\logref{52:50}).
+
+\threeminimaps{img/death2450.pdf}{img/death3728.pdf}{img/death5250.pdf}}
+
+\badremark{Unnecessary deaths for staying in lost fight (\logref{33:20}, \logref{47:40})}
+\end{remarks}
+
+\section{Movement}
+\begin{remarks}
+
+\neutralremark{Left fountain early, but then stayed in bad position behind tower. Rather move into jungle to have more vision. \logref{-0:35}
+\minimap{img/pregame.pdf}}
+
+\goodremark{ Switched lane in reaction to stubborn teammate. (\logref{0:50})}
+
+
+
+\badremark{Missed opportunities to push the lane and create pressure (\logref{6:18} opponent dead,\logref{ 8:40} opponent shows somewhere else)}
+
+\goodremark{ Went to fountain to heal at a good time \logref{13:05}}
+
+\badremark{ Passive movement at\logref{14:55}, farming jungle instead of available lane.
+\twominimaps{img/1455bad.pdf}{img/1455good.pdf}
+           }
+
+
+\neutralremark{ Inefficient farm movement at \logref{16:00}, missing out on 8 lane creeps.
+\twominimaps{img/1600bad.pdf}{img/1600good.pdf}
+           }
+
+\neutralremark{ Didn't react to enemy, taking suboptimal movement at \logref{19:50}. Should notice Axe/Mirana mid at 19:54, turn and kill creepwave bottom, then take rune.
+        
+\begin{center}
+    \begin{minipage}[t]{0.3\textwidth}
+    \includegraphics[width=\textwidth]{img/1950bad.pdf} 
+    \begin{itemize}
+        \item Took rune
+        \item Killed hard camp
+        \item Went back to lane (too late, missing 2 creeps)
+        \item Waited for next creepwave, delayed then pushed it.  \\ 
+             $\rightarrow$ dangerous, may as well go immediately if you want to take the risk.
+    \end{itemize}
+   
+    \end{minipage}
+\begin{minipage}[t]{0.3\textwidth}
+    \includegraphics[width=\textwidth]{img/1950good.pdf}
+    
+        \begin{itemize}
+        \item Kill creepwave
+        \item Take rune
+        \item Return to lane to push (dangerous)
+        \item Move into jungle.  \\ 
+             $\rightarrow$ Equal risk, more map pressure/tower damage bottom, faster.
+        \end{itemize}
+    \end{minipage}
+\begin{minipage}[t]{0.3\textwidth}
+    \includegraphics[width=\textwidth]{img/1950good2.pdf}
+            \begin{itemize}
+        \item Kill creepwave
+        \item Take rune
+        \item Immediately jungle  \\ 
+             $\rightarrow$ - one creepwave, + hard and medium camp near mid. Safer.
+        \end{itemize}
+    \end{minipage}
+\end{center}
+            }
+
+\neutralremark{Inefficient farming movement at  \logref{28:52}. Can stack an additional camp, wrong camp order.
+\twominimaps{img/2852bad.pdf}{img/2852good.pdf}
+       }
+
+\goodremark{ Good splitpush delaying the push.(\logref{37:10}, \logref{39:10}, \logref{44:50}, \logref{50:30})}
+
+\end{remarks}
+
+\pagebreak
+\section*{Log}
+\addcontentsline{toc}{section}{Log}
+
+
+\begin{eventlog}
+   
+    \logentry{-1:08}{\goodplay Bought quickly, moved out}{}
+    \logentry{-0:35}{Stopped moving}{ Move in to have vision of area in jungle, prevent wards}
+
+    \logentry{0:50}{\goodplay Adjust laning to accommodate Team}{TP mid.}
+    \logentry{0:50}{Didn't check items of lane opponent.}{}
+
+    \logentry{1:06}{Missed LH}{(standing too far)}
+    \logentry{1:17}{Missed LH}{(didn't prehit in tower)}
+    \logentry{1:20}{Missed LH}{(standing too far) }
+    \logentry{1:25}{Missed Denie}{(standing too far) }
+    \logentry{1:35}{Missed Denie}{(standing too far) }
+    \logentry{1:38}{Missed Denie}{(standing too far) }
+    \logentry{1:58}{Missed LH}{(waited too long)}
+    \logentry{2:10}{Missed LH}{(prehit in tower, more time by not hitting ranged creep)}
+    \logentry{2:30}{Missed LH}{(drew agro and backed - should draw Agro and go in)}
+    \logentry{3:10}{Missed Denie on Ranged Creep}{(ran too far back)}
+    \logentry{3:22}{Missed LH}{(impatient, hit too early)}
+    \logentry{3:32}{Missed LH }{(standing too far, drew agro then didn't move in)}
+    \logentry{3:47}{Missed LH on Ranged Creep }{(standing too far, moved around to drop creep agro, need to blink in)}
+    \logentry{3:48}{Missed LH }{(cancelled the attack)}
+    \logentry{3:55}{Missed LH }{(impatient, didnt wait for your creeps to hit)}
+    \logentry{4:09}{Missed LH }{(standing too far, moved out unnecessarily)}
+    \logentry{4:28}{Missed Denie }{(too defensive)}
+
+    \logentry{5:40}{Opportunity to gain information.}{Mirana ganks bottom Lane, didn't view with camera. Gives information that she put skillpoints into Arrow and not Starfall.}
+
+    \logentry{4:56}{Missed Denie}{(hit wrong creep)}
+    \logentry{4:57}{Missed Denie}{(hit wrong creep)}
+    \logentry{4:59}{Missed Denie}{(moved out too early)}
+    \logentry{5:06}{Missed LH}{(moved out too far)}
+    \logentry{5:09}{Missed LD}{(moved out unnecessarily)}
+    \logentry{5:22}{Missed LH}{(hit too early)}
+    \logentry{5:32}{Missed LH}{(moved somewhere else, hard to click as right next to tower)}
+    \logentry{5:34}{Missed LH}{(walked away)}
+
+    \logentry{6:00}{Missed Denie}{(moved instead of attacking)}
+
+    \logentry{6:01}{Mirana returns to lane, didn't check items.}{}
+
+    \logentry{6:06}{Missed Denie}{(dangerous, but can blink)}
+    \logentry{6:15}{Missed LH }{(walked too far back, can tank 2 creeps)}
+
+    \logentry{6:18}{Missed opportunity to push}{Mirana dies to mines, kept lane static. Should immediately push the lane
+    or kill rangecreep, then push with the next wave with catapult.
+    Missed lots of possible tower damage.}
+
+    \logentry{7:05}{Missed opportunity to push}{Should move in to hit ranged creep and catapult.}
+
+    \logentry{7:22}{Mirana returns to lane - Didn't check items to notice power difference.}{(you have +15dmg, +150hp)}
+
+    \logentry{7:23}{Missed Denie}{}
+    \logentry{7:29}{Missed Denie}{}
+    \logentry{7:37}{Missed Denie}{(hard to get, have to agressively go in and fight - but have advantage)}
+    \logentry{7:50}{Step into Arrow}{}
+    \logentry{7:43}{Missed LH}{(stunned by arrow)}
+    \logentry{7:47}{Missed LH}{(stunned by arrow)}
+
+    \logentry{8:40}{Missed opportunity to push.}{Mirana shows bot, did not react. Look there and start pushing mid.
+       \begin{description}
+           \item [What happened] denied the 2nd range creep, kept denying, own creeps died quickly.
+           \item[Instead] blink forward on wave at 8:50, kill ranged, keep pushing. \\ 
+             $\rightarrow$ Can hit the tower with 2 ranged and 2 melee creeps.
+       \end{description}
+           }
+
+    \logentry{8:54}{Missed LH}{(impatient, hit too early)}
+
+    \logentry{9:20}{Not pushing the lane without threat.}{Dangerous enemies (Mirana, Pudge) are visible, can kill ranged creep early and hit T1 tower with ranged and 2 melee creeps.}
+
+    \logentry{10:02}{Missed LH}{(impatient, hit too early)}
+    
+    \logentry{10:10}{Mirana returns to lane, didn't check items.}{She still has only boots, would notice the power difference.}
+  
+    \logentry{10:40}{Didn't notice power advantage to play aggressively.}{
+        Mirana hits you for no dmg, casts Starstorm with low damage. Can play very agressively and push her away from the creepwave.}
+
+    \logentry{11:40}{Mirana returns to lane - Didn't check items to notice big power difference}{(1 level, over 2k more gold in items).}
+
+    \logentry{12:38}{\goodplay Agressive blink onto Mirana to deal harassment damage.}{}
+    \logentry{12:41}{Unnecessary ultimate, no way to kill.}{Instead keep hitting.}
+
+
+    \logentry{12:46}{Toggle Power Treads to Strength against tower hits.}{}
+
+    \logentry{13:05}{Good decision to go to fountain and heal.}{ No good other options.}
+
+
+    \logentry{13:36}{Slow on the TP back to front.}{Lost 5 seconds, missed 1 LH.}
+
+    \logentry{14:20}{T1 mid dies, too late.}{For comparison, with the damage possible at 6:18, 8:40, it dies at least one creepwave earlier, letting you farm 1-2 neutral camps or take damage on T2.}
+
+
+    \logentry{14:55}{ Passive movement.}{
+           \begin{description}
+           \item [What happened] Went to farm jungle ater killing the medium camp, yields 390 gold, purchase battlefury at sideshop, have to move back through empty jungle but manage to stack.
+            \item [Instead] Blink back towards mid, kill 2 waves of creeps (no danger, as mirana is moving top, pudge is top), kill medium and large camp, send courier with battlefury, kill next wave mid.\\ 
+             $\rightarrow$ Free tower damage on T2 mid, Huskar/Juggernaut can farm jungle around bottom lane.
+             \end{description}}
+             
+
+    \logentry{14:58}{Blinked with Power Treads on Intelligence.}{7 Blinks from 14:58 - 16:00}
+
+    \logentry{16:10}{Farmed stack with Power Treads on Intelligence.}{Switching to Agility improves damage output and reduces damage taken. }
+
+    \logentry{16:00}{Inefficent farm movement pattern, missing out on 8 creeps.}{
+        \begin{description}
+       \item [What happened] stack hardcamp, farm medium camp, farm hardcamp, move to mid
+       \item [Instead] stack hardcamp, kill 2 waves mid, kill medium camp, kill stacked hardcamp
+           \end{description}
+           }
+
+    \logentry{17:00}{Blocked hardcamp, could have blinked out (prefer blinking early for efficiency anyway). }{Missed chance to have farmed these creeps at 17:40.}
+
+
+    \logentry{18:00}{Blocked ancient camp at due to indecision.}{Direct movement at 17:38 speeds up clearing the camp.}
+  
+    \logentry{18:30}{Blink out before killing last neutral}{Losing  about 6 seconds.}
+  
+    \logentry{19:00}{\goodplay Blink to kill PL.}{}
+
+    \logentry{19:03}{Blink on Agility Treads. }{Again at 19:11}
+
+    \logentry{19:20}{Inefficient hit order on neutral creep}{Can save 1 hit by cleaving the large ghost (only need 2 direct hits, can use 3rd on small one).}
+
+    \logentry{19:42}{Good blink to kill Omniknight }{Could have been a bit closer, but was good enough.}
+
+    \logentry{19:50}{Suboptimal Movement}{
+    \begin{description}
+       \item [What happened] went to rune, went back to lane (too late, missing 2 creeps), waited a creepwave, delayed then pushed it (dangerous, go immediately if you want to take the risk), went to jungle.
+       \item [Instead]
+            At 19:54 see axe/mirana mid, turn and kill creepwave bottom, then take rune
+            \begin{description}
+                \item [Option 1] return to lane, push wave(dangerous), move into jungle\\ 
+             $\rightarrow$  Equal risk, + 1 hard camp, map pressure/tower damage bottom, faster.
+                \item [Option 2] farm hardcamp, go farm jungle\\ 
+             $\rightarrow$ - one creepwave, + hard and medium camp near mid
+    safer, as creepwave bot was dangerous.
+            \end{description}
+        \end{description}
+            }
+
+
+
+    \logentry{22:50}{Blink on Agility Treads}{ 9 Blinks in 22:50-24:10 (22:50, 23:00, 23:10, 23:24, 23:31, 22:38, 22:53, 24>00, 24:10). Especially critical as on low mana. }
+   
+    \logentry{22:54}{Didn't blink forward towards creepwave.}{}
+    \logentry{22:58}{Didn't move forward to cleave range creep}{ Saves 1 or 2 hits.}
+   
+    \logentry{23:10}{Cut tree in Radiant easy camp to move towards next camp, maybe use blink earlier camp.}{}
+
+
+    \logentry{24:08}{Missed opportunity to buy TP at sideshop}{(TP bot after taking the tower is very likely)}
+
+
+    \logentry{24:50}{\mistake Blink down/towards river instead of left/toward teammate.}{
+    Dangerous territory, no vision, saw moonlight shadow on PL
+    enemies are there, leads to death.}
+
+
+    \logentry{27:20}{Risky Play}{
+    Showing bottom, very likely to die to Axe+Pudge+Mirana+Omniknight.}{
+        Initiation by Axe call and Moonlight shadow possible!}
+
+
+    \logentry{27:30}{\goodplay Continued to splitpush.}{ Fight is lost/not much to do, takes T2 bottom.}
+
+
+    \logentry{28:40}{Risky Play}{
+    Hitting T2 mid is very dangerous.}{
+        Initiation by Axe call + pudge+ omni. Next to 3 creepwaves, additional damage from counter helix might be enough for a kill.}
+
+    \logentry{28:52}{Inefficient movement:}{
+        \begin{description}
+       \item [What happened] Take top rune, hard camp, ancient camp, top lane
+       \item [Instead] Stack ancient camp, top rune, farm ancient camp, hard camp, top lane.
+       \end{description}
+       }
+       
+    \logentry{30:10}{Risky move into enemy jungle}{ All 5 missing, if they see you moving with a ward, you die.}{
+    Hight reward, as draws 3 people towards mid and away from top.}
+
+    \logentry{30:50}{Aggressive move in risky situation. }{Fighting into Axe, no vision on area where enemy team is coming from, own team is far.}
+    \logentry{31:00}{\mistake Use Ultimate into Blademail, almost die to it.}{}
+
+
+    \logentry{31:25}{Didn't blink out of fountain for 5 seconds}{Essentially one more blink.}
+    \logentry{31:50}{Didn't blink for 10 seconds.}{1 or 2 more blinks.}
+
+
+    \logentry{31:35}{Suboptimal Movement}{
+    \begin{description}
+       \item [What happened] Tried to chase Axe/Pudge, no way to reach, then farmed neutrals
+        \item [Instead] push mid instead, take T2. 
+       \item [Instead] take Roshan.
+    \end{description}
+    }
+
+    \logentry{33:14}{Walk into arrow}{
+    Endangers Rhasta, but would he would be fine if he used Hex instead of Shackles.}
+   
+    \logentry{33:20}{\mistake Indecision if the fight is good, staying too long and dying.}{
+        One Ally is dead, Mirana ultimate active and no detection available. Leads to death to whole enemy team.}
+
+
+    \logentry{37:10}{\goodplay Splitpush bottom. }{Draws enemy team back, saves T2 mid and prevents fight.}
+
+
+    \logentry{37:28}{\mistake Blinking out of trees, showing to enemies.}{Enemy team is likely still around
+        could easily blink further down through the trees
+        Results in death.}
+
+
+    \logentry{39:10}{Effective splitpush}{Draws back enemy team.}
+
+
+    \logentry{41:10}{\mistake Miss opportunity to buy TP at sideshop}{ Likely want to tp out after splitting/to start split on the other side, want to use TP later at 42:14.
+       Can only TP at 42:42, the delay lets enemies take rax uncontested at 43:40.}
+        
+     \logentry{42:42}{ Bad TP top}{
+    \begin{description}
+        \item [What happened] Moved all the way top to push.
+        \item [Option 1] TP bottom and fight (saw Pudge top, would have been a 5v3 fight wit late PL, decent chance of winning).
+        \item [Option 2] TP mid, for faster push (better than pushing top).
+    \end{description}
+    }
+    
+    \logentry{44:50}{Good splitpush}{drawing enemy team top to chase}
+
+
+    \logentry{47:30}{Solo-killed omni}{
+        \begin{description}
+        \item [What happened] Saved Manta for later, ultimate blocked by repel. Result still OK.
+        \item [Instead] pop manta after abyssal, speed up the kill.
+        \end{description}
+    }    
+
+
+
+    \logentry{47:40}{\mistake Stayed to fight PL}{Should blink out
+    Results in death, rebuy.}
+
+
+
+    \logentry{47:58}{Rebuy with no specific goal.}{Would probably have to be used later, so OK.}
+
+
+    \logentry{48:30}{Slow Mechanics. trying to drop Treads for gem and being too slow.}{
+    Would be only a slightly good trade, so OK. Could have sold Treads earlier for i.e. dust.}
+
+
+    \logentry{49:15}{\goodplay Killing pudge}{}
+
+
+    \logentry{49:40}{\goodplay Effective splitpush.}{Takes T2 mid.}
+
+
+    \logentry{50:30}{\goodplay Splitpush top}{}
+
+
+    \logentry{51:10}{\goodplay Quickly enter base for the push, forcing pudges BKB}{}
+
+
+    \logentry{52:10}{Canceled TP to split top, would have been good}{}
+
+
+    \logentry{52:40}{\goodplay Killing pudge}{}
+
+
+    \logentry{52:50}{\mistake Try to hide in trees vs PL.}{Could have blinked down over trees and kept running.  Results in death.}
+    
+    
+\end{eventlog}
+
+\end{document}

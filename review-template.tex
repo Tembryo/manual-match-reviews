@@ -1,0 +1,81 @@
+\documentclass{article}
+\usepackage[top=2.5cm, bottom=2.5cm, inner=2.5cm,outer=2.5cm]{geometry}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\definecolor{WisdotaBackground}{HTML}{61595d}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{lipsum}
+\usepackage{fontspec}
+\usepackage{background}
+\usepackage{blindtext}
+%\usepackage{stix}
+\usepackage{savesym}
+\usepackage{amsmath}
+\savesymbol{mathdollar}
+\usepackage{MnSymbol}
+\restoresymbol{MnS}{mathdollar}
+\usepackage{hyperref}
+
+%\usepackage{fdsymbol}
+
+\doublespacing
+ \setmainfont{Roboto-Light}
+ \backgroundsetup{
+scale=1,
+angle=45,
+opacity=0.1,
+contents={\begin{tikzpicture}[remember picture,overlay]
+ \path [left color = gray, right color = black] (current page.south west) rectangle (current page.north east);   % Adjust the position of the logo.
+\end{tikzpicture}}
+}
+
+ \makeatletter
+\fancypagestyle{mypagestyle}{%
+  \fancyhf{}% Clear header/footer
+  \rhead{ \textcolor{white}{Wisdota.com}}
+  \lhead{\textcolor{white}{Match Review}}
+  \fancyfoot[C]{\textcolor{white}{\thepage}}% Page # in middle/centre of footer
+  \renewcommand{\headrulewidth}{.4pt}% .4pt header rule
+  \def\headrule{{\if@fancyplain\let\headrulewidth\plainheadrulewidth\fi
+    \color{white}\hrule\@height\headrulewidth\@width\headwidth \vskip-\headrulewidth}}
+  \renewcommand{\footrulewidth}{0pt}% No footer rule
+%  \def\footrule{{\if@fancyplain\let\footrulewidth\plainfootrulewidth\fi
+%    \vskip-\footruleskip\vskip-\footrulewidth
+%    \hrule\@width\headwidth\@height\footrulewidth\vskip\footruleskip}}
+}
+\makeatother
+\pagestyle{mypagestyle}
+\begin{document}
+\pagecolor{WisdotaBackground}
+\color{white}
+\blinddocument
+
+%some alternative symbols
+%$$ \color{green} \Wedge \quad \bigtriangleup\quad  \color{red} \Vee\quad\bigtriangledown\quad \color{white} \circ\quad \bigcirc\quad $$
+
+$$\color{green} \filledmedtriangleup\quad\quad \color{red} \filledmedtriangledown \quad \quad \color{white} \filledmedsquare $$
+
+
+\section{Hello World}
+\label{sec:hello}
+
+\hyperref[sec:hello]{Click to go to hello world}
+
+\newcommand{\gt}{\ensuremath{\;\;\color{green} \filledmedtriangleup} }
+\newcommand{\rt}{\ensuremath{\;\;\color{red} \filledmedtriangledown} }
+\newcommand{\ws}{\ensuremath{\;\;\color{white} \filledmedsquare} }
+
+\begin{description}
+\item[\gt] This was a good action 
+\item[\rt] This was a bad action 
+\item[\ws] This was a neutral action
+\end{description}
+
+
+\section{Log}
+
+\newcommand{\mhl}[3]{\hyperlink{#1}{#1}\\ \hypertarget{#1}{#1\;#2 \;#3}}
+
+\mhl{1.04}{Missed Lasthit}{(had time but didn't move)}
+
+\end{document}
