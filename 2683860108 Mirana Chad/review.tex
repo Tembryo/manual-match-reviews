@@ -1,0 +1,414 @@
+\documentclass{article}
+\usepackage[top=2.5cm, bottom=2.5cm, inner=2.5cm,outer=2.5cm]{geometry}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\definecolor{WisdotaBackground}{HTML}{61595D}
+\definecolor{highlight}{HTML}{F1B72A}
+\definecolor{secondaryhighlight}{HTML}{D98E04}
+\definecolor{mistakecolor}{HTML}{8C2625}
+\definecolor{goodplaycolor}{HTML}{258C27}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{fontspec}
+\usepackage{background}
+\usepackage{blindtext}
+%\usepackage{stix}
+\usepackage{savesym}
+\usepackage{amsmath}
+\savesymbol{mathdollar}
+\usepackage{MnSymbol}
+\restoresymbol{MnS}{mathdollar}
+\usepackage{hyperref}
+\usepackage{titling}
+
+%\usepackage{fdsymbol}
+
+
+\hypersetup{
+    colorlinks = false,
+    linkbordercolor = {highlight}
+}
+
+\onehalfspacing
+%\doublespacing
+\setmainfont{Roboto-Light}
+\backgroundsetup{
+    scale=1,
+    angle=45,
+    opacity=0.1,
+    contents={\begin{tikzpicture}[remember picture,overlay]
+    \path [left color = gray, right color = black] (current page.south west) rectangle (current page.north east);   % Adjust the position of the logo.
+    \end{tikzpicture}}
+}
+
+\newcommand{\matchid}{2683860108}
+
+
+\makeatletter
+\fancypagestyle{mypagestyle}{%
+  \fancyhf{}% Clear header/footer
+  \rhead{ \textcolor{white}{Wisdota.com}}
+  \lhead{\textcolor{white}{Report for Match \matchid}}
+  \fancyfoot[C]{\textcolor{white}{\color{white}\thepage}}% Page # in middle/centre of footer
+  \renewcommand{\headrulewidth}{.4pt}% .4pt header rule
+  \def\headrule{{\if@fancyplain\let\headrulewidth\plainheadrulewidth\fi
+    \color{white}\hrule\@height\headrulewidth\@width\headwidth \vskip-\headrulewidth}}
+  \renewcommand{\footrulewidth}{0pt}% No footer rule
+%  \def\footrule{{\if@fancyplain\let\footrulewidth\plainfootrulewidth\fi
+%    \vskip-\footruleskip\vskip-\footrulewidth
+%    \hrule\@width\headwidth\@height\footrulewidth\vskip\footruleskip}}
+}
+
+\title{Wisdota Report for Match \matchid \\
+Mirana by Nobody}
+\date{Played on 02/10/2016}
+\pretitle{\begin{flushleft}\LARGE\sffamily}
+\posttitle{\par\end{flushleft}}
+\preauthor{}
+\author{}
+\postauthor{} 
+\predate{\begin{flushright}\large\scshape}
+\postdate{\par\end{flushright}}
+
+\setlength{\droptitle}{0pt}
+
+\makeatother
+\pagestyle{mypagestyle}
+
+\newcommand{\gt}{\ensuremath{\;\;\color{green} \filledmedtriangleup} }
+\newcommand{\rt}{\ensuremath{\;\;\color{red} \filledmedtriangledown} }
+\newcommand{\ws}{\ensuremath{\;\;\color{white} \filledmedsquare} }
+
+\newenvironment{remarks}
+    {
+        \begin{description}
+            \setlength\itemsep{0em}
+    }
+    {
+        \end{description}
+    }
+\newcommand{\goodremark}[1]{\vbox{\item[\gt] #1}}
+\newcommand{\neutralremark}[1]{\vbox{\item[\ws] #1}}
+\newcommand{\badremark}[1]{\vbox{\item[\rt] #1}}
+
+\newcommand{\suggestion}[1]{\\ \emph{#1}}
+
+\newcommand{\mistake}{\colorbox{mistakecolor}{Mistake!}\ }
+\newcommand{\goodplay}{\colorbox{goodplaycolor}{Good Play!}\ }
+\newcommand{\logref}[1]{\textcolor{highlight}{#1}}
+
+\newcommand{\minimap}[1]{
+    \begin{center}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#1}
+    \end{minipage}
+\end{center}
+}
+
+\newcommand{\twominimaps}[2]{
+\begin{center}
+    \begin{minipage}[t]{0.3\textwidth}
+        \begin{center}
+            \textbf{What happened}\hfill
+            
+            \includegraphics[width=\textwidth]{#1}
+            \end{center}
+    \end{minipage}
+    \begin{minipage}[t]{0.3\textwidth}
+            \begin{center}
+            \textbf{Instead}\hfill
+            
+        \includegraphics[width=\textwidth]{#2}
+                \paragraph{}\hfill
+            \end{center}
+    \end{minipage}
+\end{center}
+}
+
+\newcommand{\threeminimaps}[3]{
+\begin{center}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#1}
+    \end{minipage}
+    
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#2}
+    \end{minipage}
+    
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#3}
+    \end{minipage}
+\end{center}
+}
+
+\newcommand{\twominimapscomment}[4]{
+\begin{center}
+    \begin{minipage}[t]{0.48\textwidth}
+    \begin{center}
+        \textbf{What happened}\hfill
+        \includegraphics[width=0.7\textwidth]{#1} 
+        \begin{itemize}
+        #2
+        \end{itemize}
+    \end{center}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+        \begin{center}
+        \textbf{Instead}\hfill\\
+        \includegraphics[width=0.7\textwidth]{#3}
+        \begin{itemize}
+        #4
+        \end{itemize}
+        \end{center}
+    \end{minipage}
+    
+    \end{center}
+}
+
+
+\newcommand{\threeminimapscomment}[6]{
+\begin{center}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#1} 
+        \begin{itemize}
+            #2
+        \end{itemize}
+    \end{minipage}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#3}
+        \begin{itemize}
+        #4
+        \end{itemize}
+    \end{minipage}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#5}
+        \begin{itemize}
+            #6
+        \end{itemize}
+    \end{minipage}
+\end{center}
+}
+
+
+
+
+\begin{document}
+\pagecolor{WisdotaBackground}
+\color{white}
+
+\maketitle
+
+\paragraph{Match Context}
+Solo unranked AP.
+
+Playing snowballing mid - need to build an item advantage, use high damage output in midgame and use farming abilities to reach lategame strength. Had to make up for weaker performance by teammates to win. 
+
+\paragraph{Highlight Tip}
+Use Boots of Travel on a melee creep instead of towers or ranged creeps. This saves some time otherwise spent moving forward.
+
+\section*{Summary}
+\addcontentsline{toc}{section}{Summary}
+
+\begin{remarks}
+\goodremark{Effective Itemisation}
+\goodremark{Mostly efficient farming movement.}
+\goodremark{Mostly fast and good fight execution. Multiple correct position predictions for arrow. }
+\neutralremark{ Some mechanical inefficiencies }
+\badremark{Some suboptimal movements reducing farm. }
+\badremark{Fighting into dangerous situations multiple times, leading to expensive deaths.}
+\end{remarks}
+
+\section{Laning}
+8 damage difference, ranged vs. melee - some lasthits will be impossible.
+
+\paragraph{After 10 waves (5:05)}
+22 Lasthits /2 Denies. Missed 9 possible lasthits, 10 denies.
+
+\paragraph{Frequent reasons for missing CS}
+\begin{itemize}
+\setlength\itemsep{0em}
+    \item Hit too early (4x lasthit)
+    \item Standing too far (4x deny \logref{0:52} \logref{1:01} \logref{1:51} \logref{2:41})
+    \item Unnecessary hits on other creeps(3x deny \logref{1:24} \logref{3:02} \logref{3:16})
+\end{itemize}
+
+\paragraph{Play Alternatives}
+Separated the creepwaves by dragging a creep back at 1:44, made multiple denies unavailable. Could move forward to keep the next creepwave closer.
+
+
+\section{Itemisation}
+
+\begin{remarks}
+\goodremark{Starting items: Wind Lace is effective in lane vs melee.}
+\goodremark{First itemis: Bottle Aquila Boots}
+\goodremark{Early game: Drums, Raindrops}
+\goodremark{Core Item: Aghanims Scepter}
+\goodremark{Progression into Boots of Travel, Blink Dagger, Ghost Scepter}
+\badremark{Lotus Orb with low impact.}
+\goodremark{Luxury: Ethereal Blade, Boots of Travel 2, Refresher Orb}
+
+\neutralremark{Indecision buying Blink Dagger at sideshop, bought+sold in base.}
+\end{remarks}
+
+
+\section{Information}
+\begin{remarks}
+\goodremark{Got early ward for mid. Scouts Pudge's moves for bottom rune, might spot incoming charge.}
+\goodremark{Check items of heroes coming into your lane}
+\goodremark{Regularly check items of enemy heroes coming into vision}
+\goodremark{Usually view fights}
+\goodremark{Regularly check scoreboard}
+\goodremark{Signal enemy actions to team with pings.} 
+\goodremark{Regularly use Arrow to scout \logref{16:37} \logref{32:36} \logref{37:18} \logref{41:19}}
+\goodremark{ Use Illusion rune to scout}
+\neutralremark{ Rarely check ally's items}
+\badremark{Bad Arrow direction to scouting radiant side of rop rune before the Horn. \logref{-0:07}
+    \suggestion{Aim toward one of the highground entrances, preferably the one close to mid.}}
+\badremark{Missed checking an important Regeneration rune \logref{30:02} }
+\end{remarks}
+
+
+\section{Mechanics}
+\begin{remarks}
+\goodremark{Use Starstorm often to farm quickly.}
+\goodremark{Frequently efficient use of Leap/Blink Dagger to speed up movement.}
+
+\neutralremark{Miss a few easy lasthits while farming (11x, frequently: hit the wrong creep)}
+\neutralremark{Unnecessary hits on creeps later killed by Starfall \logref{5:07} \logref{9:46} \logref{15:30} }
+\neutralremark{Late TP from base. Could go 3 seconds earlier with Bottle+Fountain buff.  \logref{12:06} }
+
+\badremark{Repeatedly use suboptimal Boots of Travel target. (3x on tower \logref{30:42} \logref{32:07} \logref{40:15}, 2x range creep \logref{37:49} \logref{44:57})
+    \suggestion{Use a melee creep instead to save some travel time.}}
+
+\badremark{A few suboptimal uses of Aghanim's Scepter Starfall, missing some available targets due to fog. \logref{35:44} \logref{46:35}}
+\end{remarks}
+
+
+\section{Movement Decisions}
+\begin{remarks}
+\goodremark{ Ovall high efficiency in movement.}
+\goodremark{ Good gank decisions \logref{9:26} \logref{12:06} \logref{13:38} \logref{16:37} \logref{22:27} \logref{22:53} \logref{36:38} \logref{41:44}.}
+
+\neutralremark{Missing opportunities to farm camps and use up Mana before returning to fountain. \logref{14:47} \logref{23:21} \logref{30:19}}
+
+\neutralremark{ Inefficient movement while microing illusions! \logref{15:40}
+Could stack the medium camp then farm the stack immediately.
+ +1 camp, faster 
+ \twominimaps{img/1540bad.pdf}{img/1540good.pdf}}
+
+\neutralremark{Walk to base instead of taking Regen rune (didn't check). Pudge shows mid at \logref{30:10}, Timbersaw top at \logref{30:15}, so area is safe enough. }
+
+\neutralremark{Inefficent stay in lane vs opponent at \logref{36:04}.
+    \begin{description} 
+        \item [What happened:] Stay around lane with unkillable opponent. Gives information about own position. No gold gained, no pressure, no damage.
+        \item [Instead:] Farm jungle
+        \item [Or:] BoT bottom to pressure (potentially dangerous, but forces enemy reaction)
+    \end{description}
+    }
+
+\neutralremark{ Miss out on opportunities to gain farm quickly. (Bounty rune \logref{41:30}, neutral camps \logref{41:38})}
+
+\badremark{Walk in for the rune, next to pudge.\logref{2:28} Should die to Rot+rightclicks into Hook. Alive since Pudge wastes Hook.}
+
+\badremark{Attempting unlikely early gank at \logref{7:12}
+ \twominimapscomment{img/712bad.pdf}
+ {\item TP top for a gank attempt on Timbersaw \item Need to hit a decent Arrow to kill. \item Fails when showing to creeps at \logref{7:16}}
+ {img/712good.pdf}
+ {\item Walk into own jungle, farm, move out \item No risk, gold reward and off the map.}}
+
+\badremark{Running from Pudge towards mid into Spirit Breaker \logref{7:43}, instead move up to break vision. Should get charged in vision, death to Pudge+Spirit Breaker.
+ \twominimaps{img/743bad.pdf}{img/743good.pdf}}
+
+\badremark{Dive into T1 to kill Anti-Mage at \logref{8:21}, trading 3 deaths for a kill on weak Anti-Mage. Didn't realise that position inside T1 Tower is really dangerous. TPs possible, bad escape options. Committed all abilities for kill.
+\minimap{img/821.pdf}}
+
+\badremark{Suboptimal chase for kills and farming instead of pushing at \logref{17:06} 
+    Following Huskar to chase Timbersaw (impossible to kill as 2). Continue to farm jungle.
+    Delays Push into tower until Pudge respawns.}
+
+\badremark{Go into bad fight \logref{17:53}.
+    4v5, enemy has advantage, Omni Ultimate used, Damage from Call, Leap Used. Follow Huskar's jump onto Axe.  }
+
+\badremark{Risky Play at \logref{25:15}
+\twominimapscomment{img/2515bad.pdf}{\item Holding escape abilities to inviting enemy team into chase. \item Should have died (Possible Hook at \logref{25:31}, Anti-Mage and Pudge). \item Go to fountain.}{img/2515good.pdf}{
+\item Better Option: Escape immediately to farm and put lane pressure. 
+\item Blink at \logref{25:15}, farm medium camp (Starstorm combo, Arrow on big Centaur). 
+\item Move toward mid, nuke creepwave.
+\item Take bottom rune, maybe wait for Rune spawning at \logref{26:00}.
+\item Result: + 8 creeps, bounty rune.
+\item Can continue farming enemy jungle. Leaves farm top for Morphling.}
+}
+
+\badremark{Inefficient agressive movement at \logref{26:25}.
+   \threeminimapscomment{img/2625bad.pdf}{\item Directly moved mid and chased enemy.}{img/2625good.pdf}{\item Farm Hardcamp, push top. \item Use BoT to come mid after forcing TP.}{img/2625good2.pdf}{\item Farm Jungle towards mid, delay the fight a bit. \item Less impactful}}
+
+\badremark{Bad dive for kills at \logref{33:51}.
+\twominimapscomment{img/3351bad.pdf}{\item Chase behind T2. Separate from team, waste escape abilities. \item No way to solokill, leads to death.}{img/3351good.pdf}{\item Run top with team to push. \item Take T1 tower.}}
+
+
+\badremark{ Inefficient chase for Timbersaw and Anti-Mage at \logref{37:05} \logref{37:20} 
+ \threeminimapscomment{img/3705bad.pdf}{\item Use Ultimate to chase after getting 2 kills, use Blink Dagger/Leap to keep up. \item Timbersaw/ Anti-Mage are tanky and have too much escape, no way to kill.}{img/3705good.pdf}{\item Go top and push for T1 tower.}{img/3705good2.pdf}{\item BoT bottom to push, let team push top.}}
+
+
+\badremark{Keep chasing on low HP without escape, leads to death. \logref{41:59} 
+    Could run up to escape.}
+\end{remarks}
+
+\section{Fight Execution:}
+\begin{remarks}
+\goodremark{Good Arrows \logref{1:07} \logref{12:20} \logref{29:32} \logref{39:19}}
+\goodremark{Use Ultimate to initiate aggressive moves with team. \logref{16:37} \logref{21:29} \logref{24:40} \logref{29:02} \logref{39:14} \logref{46:39} }
+\goodremark{Use Ultimate to save ally. \logref{32:57}}
+\goodremark{Overall high damage output. Hitting multi-hero starstorms (\logref{9:36} \logref{21:34})}
+
+\neutralremark{ Hit wrong target with arrow at \logref{29:12}. 
+   \begin{description}
+       \item [What happens:] Hit Arrow on Spirit Breaker, continue to chase for kill, then chase Timbersaw. 
+       \item [Instead:] Angle to hit Timbersaw (narrow opportunity), ends situation quickly as 2:0 fight.
+   \end{description}
+}
+
+
+
+\badremark{Overstaying in fight and dying at \logref{6:26}
+
+   \begin{description}
+       \item [What happens:] Fight too long and trying for additional kill on Pudge. Death to Timbersaw after going in and using Arrow + Starstorm.
+       \item [Instead:] Should just run after getting the available kill, can't save and very hard kills on Pudge/Timbersaw.
+       \item [Alternative:] Can risk staying, but need to keep Mana for Leap.
+   \end{description}
+}
+
+\badremark{Guessing wrong Blink direction, missing Leap. Losing a kill on Anti-Mage. \logref{14:07}}
+
+\badremark{Bad positioing, wasting Leap, reinitiating. Leads to death \logref{17:53}.
+    Standing close to creepwave and Morphling, in range for Berserkers Call.
+    Used Leap, then ran back in to fight. }
+
+\badremark{Missed available T2 tower deny while initiating \logref{21:34}}
+
+\badremark{Suboptimal ability use leads to chase, taking a bad fight from \logref{26:44}.
+   \begin{description}
+       \item [What happens:] Missing bad arrow at \logref{26:44} (Secure hit at \logref{26:48}) and unnecessary short blink forward. Leap into enemy team for kill on Axe with no way to escape (Leap on cooldown, Blink Dagger disabled, dusted, no fast enough).
+       \item [Result:] 2v4 trade, own death.
+       \item [Good Execution:] Pickoff on Axe. Maybe able to kill Rosh.
+   \end{description}
+   }
+
+
+\badremark{Dangerous Blink forward to chase \logref{37:16}. Separate from team by blinking over river, could get killed by Timbersaw + Anti-Mage. }
+
+\badremark{Misplayed gank at \logref{41:44}.
+\begin{description}
+       \item [What happens:] Missed arrow and missing 2nd Starstorm hit at \logref{41:48}.
+       \item [Instead:] Use Leap to hit Starstorm, take quick kill and escape.
+   \end{description}
+}
+
+\badremark{Suboptimal ability usage at \logref{42:02}
+     Don't use Blink Dagger quick enough, letting it get cancelled.  Using Arrow instead of Starfall, missing kill on Spirit Breaker.}
+
+\badremark{Blinking into enemy team, leads to 2 deaths \logref{46:53} \logref{47:19}}
+\end{remarks}
+
+
+\end{document}

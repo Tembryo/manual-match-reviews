@@ -1,0 +1,194 @@
+Match context: Solo unranked AP.
+Playing snowballing mid - need to build an item advantage, use high damage output in midgame and use farming abilities to reach lategame strength. Had to make up for weaker performance by teammates to win the game.   
+
+Summary:
++ Effective Itemisation
++ Mostly efficient farming movement.
++ Mostly fast and good fight execution. Multiple correct position predictions for arrow. 
+0 Some mechanical inefficiencies 
+- Some suboptimal movements reducing farm. 
+- Fighting into dangerous situations multiple times, leading to expensive deaths.
+- Expending all
+
+Highlight tip:
+    Use a melee creep to teleport with Boots of Travel to save time spent moving forward.
+
+
+Laning:
+8 damage difference, ranged vs. melee - some lasthits will be impossible, 
+
+After 10 waves (5:05)
+22 Lasthits /2 Denys
+Missed 9 possible Lasthits, 10 denys
+
+Frequent reasons for missing CS:
+    Hit too early (4x lasthit)
+    Standing too far (4x deny 0:52 1:01 1:51 2:41)
+    Unnecessary hits on other creeps(3x deny 1:24 3:02 3:16)
+
+Different play:
+    Separated the creepwaves by dragging a creep back at 1:44, made multiple denies unavailable. Could move forward to keep them closer.
+
+Itemisation:
++ Starting items: Wind Lace is effective in lane vs melee.
++ First itemis: Bottle Aquila Boots
++ Early game: Drums, Raindrops
++ Core Item: Aghanims Scepter
++ Progression into Boots of Travel, Blink Dagger, Ghost Scepter
+- Lotus Orb with low impact, only against Spirit Breaker and Anti-Mage's Ultimate.
++ Luxury: Ethereal Blade, Boots of Travel 2, Refresher Orb
+
+0 Indecision buying Blink Dagger at sideshop, bought/sold in base.
+
+Information :
+
++ Got early ward for mid. Scouts Pudge's moves for bottom rune, might spot incoming charge.
+
++ Check items of heroes coming into your lane
+
++ Regularly check items of enemy heroes coming into vision
+
++ Usually view fights
+
++ Regularly check scoreboard
+
++ Signal enemy actions to team with pings. 
+
++ Regularly use Arrow to scout 16:37 32:36 37:18 41:19
+
++ Use Illusion rune to scout
+
+0 Rarely check ally's items
+
+- Bad Arrow direction to scouting radiant side of rop rune before the Horn. -0:07
+    Aim toward one of the highground entrances, more likely the one close to mid.
+- Missed checking an important Regeneration rune 30:02 
+
+Mechanics:
+
++ Frequently efficient use of Leap/Blink Dagger to speed up movement.
++ Use Starstorm foten to farm quickly
+
+0 Miss a few easy lasthits while farming (11x, frequently: hit the wrong creep)
+0 Unnecessary hits on creeps later killed by Starfall 5:07 9:46 15:30 
+0 Late TP from base. Could go 3 seconds earlier with Bottle+Fountain buff.  12:06 
+
+- Repeatedly suboptimal Boots of Travel target. (3x on tower 30:42 32:07  40:15, 2x range creep 37:49 44:57)
+    Use a melee creep instead to save some travel time.
+
+- A few suboptimal uses of Aghanim's Scepter Starfall, missing some available targets due to fog. 35:44 46:35
+
+Movement decisions:
+
++ Ovall high efficiency in movement.
++ Good gank decisions 9:26 12:06 13:38 16:37 22:27 22:53 36:38 41:44.
+
+0 Missing opportunities to farm camps and use up Mana before returning to fountain. 14:47 23:21 30:19
+
+0 Inefficient movement while microing! 15:40
+Could stack the medium camp then farm the stack immediately.
+ +1 camp, faster 
+ [minimap]
+
+0 Walk to base instead of taking Regen rune (didn't check). Pudge shows mid at 30:10, Timbersaw top at 30:15, so area is safe enough. 
+
+0 Inefficent stay in lane vs opponent at 36:04.
+    What happened: Stay around lane with unkillable opponent. Gives information about own position. No gold gained, no pressure, no damage.
+    Instead: Farm jungle
+    Or: BoT bottom to pressure (potentially dangerous, but forces enemy reaction)
+
+0 Miss out on opportunities to gain farm quickly. (Bounty rune 41:30, neutral camps 41:38)
+
+- Walk in for the rune, next to pudge. Should die to Rot+rightclicks into Hook. Alive since Pudge wastes Hook.
+
+- Attempting unlikely early gank at 7:12
+        Unlikely, but at least high reward - need to hit a decent Arrow to kill. Fails when showing to creeps at 7:16 
+        Other options: 
+        Bad: TP mid to farm (low reward, dangerous, no vision and could be alone vs. Spirit Breaker/ Pudge).
+        Good: Walk into own jungle, farm, move out (No risk, gold reward and off the map).
+    [minimap]
+
+- Running from Pudge towards mid into Spirit Breaker 7:43, instead move up to break vision. Should get charged in vision, death to Pudge+Spirit Breaker.
+    [Minimap2]
+
+- Dive into T1 to kill Anti-Mage at 8:21, trading 3 deaths for a kill on weak Anti-Mage. Didn't realise that position inside T1 Tower is really dangerous. TPs possible, bad escape options. Committed all abilities for kill.
+[Minimap]
+
+- Suboptimal chase for kills and farming instead of pushing at 17:06 
+    Following Huskar to chase Timbersaw (impossible to kill as 2). Continue to farm jungle.
+    Delays Push into tower until Pudge respawns.
+
+- Go into bad fight 17:53.
+    4v5, enemy has advantage, Omni Ultimate used, Damage from Call, Leap Used. Follow Huskar's jump onto Axe.  
+
+- Risky Play at 25:15
+    What happened: Holding escape abilities to inviting enemy team into chase. Should have died (Possible Hook at 25:31, Anti-Mage and Pudge). Finally go to fountain.
+    Better Option: Escape immediately to farm and put lane pressure. 
+    Blink at 25:15, farm medium camp (Starstorm combo, Arrow on big Centaur). Move toward mid, nuke creepwave, take bottom rune, (maybe wait for Rune spawning at 26:00)
+    Result: + 8 creeps, bounty rune, can continue farming enemy jungle. Leaves farm top for Morphling.
+[Minimap2]
+
+- Inefficient agressive movement at 26:25.
+    What happened: Directly moved mid and chased enemy.
+    Options: Farm Jungle towards mid, delay the fight a bit. (slightly better)
+    Farm Hardcamp, push top, use BoT to come mid after forcing TP.
+    [Minimap3]
+
+- Bad dive for kills at 33:51.
+What happened: Chase behind T2. Separate from team, waste escape abilities. No way to solokill, leads to death.
+Instead: Run top with team to kill T1 tower.
+[Minimap]
+
+
+-  Inefficent chase for Timbersaw and Anti-Mage at 37:05 37:20 
+    What Happened: Use Ultimate to chase after getting 2 kills, use Blink Dagger/Leap to keep up. Timbersaw/ Anti-Mage are tanky and have too much escape, no way to kill.
+    Better: Go top and push for T1 tower.
+    Or: BoT bottom to push, let team push top.
+
+    Minimap3
+
+
+- Keep chasing on low HP without escape, leads to death. 41:59 
+    Could run up to escape.
+
+Fight Execution:
+
++ Good Arrows 1:07 12:20 29:32 39:19
++ Use Ultimate to initiate aggressive moves with team. 16:37 21:29 24:40 29:02 39:14 46:39 
++ Use Ultimate to save ally. 32:57
++ Overall high damage output. Hitting multi-hero starstorms (9:36 21:34)
+
+0 Hit wrong target with arrow at 29:12. 
+    What happens: Hit Arrow on Spirit Breaker, continue to chase for kill, then chase Timbersaw. 
+    Better option: angle to hit Timbersaw (narrow opportunity), ends situation quickly as 2:0 fight.
+
+
+
+- Overstaying in fight and dying at 6:26
+What happened: Fight too long and trying for additional kill on Pudge. Death to Timbersaw after going in and using Arrow + Starstorm.
+Better: Should just run after getting the available kill, can't save and very hard kills on Pudge/Timbersaw.
+Option: Can risk staying, but need to keep Mana for Leap.
+
+- Guessing wrong Blink direction, missing Leap. Losing a kill on Anti-Mage. 14:07
+
+- Bad positioing, wasting Leap, reinitiating. Leads to death 17:53.
+    Standing close to creepwave and Morphling, in range for Berserkers Call.
+    Used Leap, then ran back in to fight. 
+
+- Missed available T2 tower deny while initiating (21:34)
+
+- Suboptimal ability use leads to chase, taking a bad fight from 26:44.
+    What happened: Missing bad arrow at 26:44 (Secure hit at 26:48) and unnecessary short blink forward. Leap into enemy team for kill on Axe with no way to escape (Leap on cooldown, Blink Dagger disabled, dusted, no fast enough).
+    Result: 2v4 trade, own death.
+    Good execution: Pickoff on Axe. Maybe able to kill Rosh.
+
+
+- Dangerous Blink forward to chase 37:16. Separate from team by blinking over river, could get killed by Timbersaw + Anti-Mage. 
+
+- Misplayed gank at 41:44. Missed arrow and missing 2nd Starstorm hit at 41:48.
+    Instead: Use Leap to hit Starstorm, taking quick kill. 
+
+- Suboptimal ability usage at 42:02
+     Don't use Blink Dagger quick enough, letting it get cancelled.  Using Arrow instead of Starfall, missing kill on Spirit Breaker.
+
+- Blinking into enemy team, leads to 2 deaths 46:53 47:19
