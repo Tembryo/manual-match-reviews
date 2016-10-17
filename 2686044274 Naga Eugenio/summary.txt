@@ -1,0 +1,122 @@
+Match context: Solo ranked AP.
+Playing utility support - focus is on enabling the teams cores. Reached a strong individual position by contributing to fights without dying, setting up good fights with Song of the Siren. 
+
+
+Summary:
+= Good Itemisation. Aghanims Scepter with low impact, consider switching itembuild depending on enemy team.
++ Good awareness, viewing action and checking hero itemisation
++ Very impactful usage of Song of the Siren
+= Efficiency improvements though stacking and TPs to fountain. 
+- Frequent suboptimal use of Ensnare
+- Missed out on opportunitites for deep wards, placing less effective ones 
+- Expending all
+
+Highlight tip:
+.
+
+
+Itemisation:
++ Good starting items, keeping gold for earlier Boots.
++ Rushed Arcane Boots
++ Progression into Mekansm
+- Early Aghanims Scepter 
+    No good usage of the additional healing effect. Good effectivity is unlikely: moderate AoE damage (Mirana Starstorm, OD ult is ususally killing), single target cores (OD/Drow).
+    Ultimate used as initiation, consider buying Blink Dagger/Force Staff
+    Considser Drums of Endurance
++ Luxuries: Glimmer Cape, Guardian Greaves
+
+- Miss out on buying wards for first night (buy/send at 4:00)
+- Missed buying relevant TP scrolls at 25:50 (at sideshop), 27:15 (get 2nd TP in base)
+
+Early game:
+
++ Effective initial laning to zone and kill offlaner Axe
++ Good movement mid to help Juggernaut against Mirana/OD
++ Regularly secure runes
+- Missed stack of hardcamp at 1:00
+    -> Draw the creeps to the left, or eat a different tree and draw them  up.   
+- No wards for mid, lots of fighting
+- Missed multiple stacks when moving around
+    -> stack the medium camp above top rune at 2:00, 4:00, 8:00 before going for the rune.
+    -> stack dire ancient camp at 9:00 when walking around bottom rune
+
+Information:
+
++ Good camera control, saw most action on the map.
++ Active checking of heroes to track itemisation.
+
+= Could use scoreboard more, to keep a better overview.
+= Prioritised checking allies items over enemies, other way around is preferable.
+= Could check even more inventories when looking at action. 1:28 3:07 3:13 6:37 8:38 11:17 11:19 11:23 18:30
+= Sometimes bad camera position to view action 3:24 11:21 18:30
+
+- No warding for mid during the first night (opportunity to place at 4:20)
+- Unnecessary showing in top lane at 3:32, rather stay out of vision.
+- Missed opportunity to place deep wards 10:40
+[Minimap]
+- Walking for unclear goal, should immediately go for wards 34:04
+- Too defensive ward at 20:22
+[minimap]
+- Too defensive wards at 34:25
+[Minimap]
+
+
+Mechanics:
+
++ Active control of Illusions
+    -> Consider spreading them out in the later parts of the game. E.g. farm smallcamp with 2 at 21:14, spread to give m
+    -> Keep the main hero moving while microing. Lost movement time at 17:46 21:30
+
+= Walked close to trees, hit by arrow at 5:30
+= Opportunity for better walking path at
+        ok: walk through river to be fast
+        better: walk up enemy side to catch od
+[minimap]
+
+= Missed opportunity for a good Ensnare and walked back instead 522, delaying initiation. 
+
+- Missed a few lasthits due to standing too far back  6:47 19:36 18:47 19:35 
+
+- Position unnecessarily far back, during laning 5:11 6:40 (misses lasthit) 9:30 (misses exp).
+
+
+Movement decisions:
+
++ Active movement around the map 
+
+- Use TP scroll to return to base quickly 26:05, 31:05
+
+- Inefficient movement from 20:15. Can farm radiant jungle or dire secret shop camp, instead of walking through jungle.
+[minimap]
+
+Fight Execution:
+
++ Presence in many fights, gaining assist Gold.
++ Close survival in multiple fights.
++ Good offensive use of Song of the Siren for initiation at 10:10 14:15 3023
++ Good use of Song of the Siren to save allies at 22:05 37:55
+
+= Late TP out during Song when escaping from fight at 33:35 
+
+
+- Frequent unnecessary use of Ensnare - wasting mana and putting it on cooldown:
+
+    - 1:55 on Mirana, could maybe use it to prevent her from contesting the rune later.
+    = 2:21 on Silencer, as he dies to towerhit (very close). Would get another kill later.
+    - 3:30  on Axe, bad initiation as there is no way to kill him.
+    - 12:50 on OD, too early for initiation. 
+    - 23:22 on Axe, he is initiating and does not want to move. Missing mana for Rip Tide afterwards.
+    - 25:55 on Axe, he is waiting for Euls to finish  and does not want to move.
+    - 29:20 on Roshan.
+    - 37:05 on Axe, he is farming a creepwave and does not want to move.
+    - 38:31 on Drow, she will die to Omnislash. 
+
+- Missed crucial Rip Tide at 10:17 casting too early before song ends. Loses a kill on Silencer.
+
+- Too defensive positioning in fight at 19:05. Missed Rip Tide by standing too far 19:08. Could possibly get additional kill on Mirana by being closer and using Ensnare on Mirana instead of OD.
+
+- Too defensive positioning in fight at 22:05. Instead move forward with Song and look for opportunities, as Axe is sure to die. 
+
+- Missed Rip Tide at 25:57 after Illusions die too fast.
+
+- Suboptimal Illusion usage at 30:23. Sent them to hit Axe, could instead send them forward to give more vision against Mirana's Ultimate as they carry gem. 

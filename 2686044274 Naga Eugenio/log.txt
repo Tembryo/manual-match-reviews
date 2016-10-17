@@ -1,0 +1,652 @@
++tp to front, ward
+
+hide
+    -0.36 check axe
+
+-0.27 fight axe
+
+staying top on the side
+
+040 fight to force out axe, harass damage
+    + clean execution, minimal move out at start 
+    go in 
+    cast net
+    rightclicks
+
+1.00 try stack
+    - failed/blocked by pugna 
+    rather pull to left to make the stack
+
+1:10 fight initiate on axe, kill
+    + clean execution
+    + cast net at max range
+    -slight move out near the end
+
+126 try a pull
+    !missed pull
+        pugna trys impossible sidepull, should eat tree and pull up  
+
+    128 check mid
+        Check juggernauts items
+        !could check OD
+    129 Check mid
+        see arrow, mirana on Dire jungle entrance 
+
+130 walk to challenge Mirana
+    - could stack medium camp and then walk to rune
+
+2.00 fight for top rune
+    - unnecessary net, wasting mana (could use to prevent from coming to rune)
+    - could get more hits on mirana (damage advantage in trade)
+    +got bounty rune
+
+    + 209 dodge likely arrow 
+
+    212 view fight mid
+2:15 go back mid to help juggernaut
+
+225 fight 
+    = unnecessary net on silencer, wasting mana 
+        +very close
+        +dead to towerhit that is shot after cast by ~8hp
+        +net would have secured kill
+        -net would secure another kill on OD/mirana
+    + chase in
+    + hits on mirana
+
+230 back off
+
+238 walk top
+    243 use clarity
+
+246 turn back mid
+    247 check mid
+    250 watch mid
+    - bad pathing
+        ok: walk through river to be fast
+        better: walk up enemy side to catch od
+
+300 get 172 assist gold 
+
++301 upgrade courier
++302 walk top
+    305 check mid
+    307 check top
+        - could check axe items
+    313 check bottom
+        + check SKs items
+        - could check silencer+drow
+    320 check bottom
+        + check silencer
+    324 view top 
+        - bad placement
+    327 view top 
+
+- 332 walk into top lane
+    show position
+    unnecessary net on Axe
+
+335 walk top to sideshop
+    +buy boots
+    
+346 move towards toprune/mid 
+    346 check mid
+    - could stack hard camp (OD doesnt move early)
+
++400 secure top rune
+    + 403 check juggernaut for bottle
+    405 take top rune as OD is coming
+
+!should buy ward for mid!
+
+406 stay top rune
+    -indecisive movement
+    406 move top
+    409 back to top rune
+    415 check top
+
+417 move mid
+    + protection against mirana (top is pushed, cant farm jungle)
++426 Deward in mid
+    +sees obs+sent
+    -could have been prevented by OD
+stay mid
+
+440 laning stay mid with jugg vs 
+    taking exp
+    - 443 prepare to cast net
+    - walk in? take hit from OD (should take more)
+    - stay in lane, sit back, take exp#
+    +456 cast net on OD
+        kill the sentry
+    504 walk toward jungle
+    + turn back, 509 draw creeps from tower
+    - walked unnecessarily far back
+
+520 fight mid
+    - 522 missed net opportunity for pressure/harass
+        cancel with walk back
+    - 523 cast net on OD
+    + back as silencer shows
+    = 530 hit by arrow 
+        -walked next to treeline
+        good aim, hard to dodge
+
+538 stay to heal with healing ward
+    - could watch action pugna vs silencer 
+        then could move in for net on silencer
+    + 548 move forward
+    + 550 move over highground into fight 
+
+556 contest OD for top rune, 
+    fight top rune area
+    -559 could hit OD
+    +keep mana for net
+    +keep net until OD wants to run
+    = don't get the haste rune
+    + 601 cast net on OD
+
+    -606 small move out
+    +607  move onto mirana, protect pugna
+    chase mirana
+    + 611 back from silencer+mirana
+
+go back
+    622 prepare items 
+go to secret shop
+    + 630 buy arcanes
+
+go mid, lane
+    +632 check sandking
+    633 use arcane boots
+    637 check top
+        check slark
+        -could check axe
+
+    - 640 move forward 
+        ! dont know whats happening
+            move after checking
+    641 check mid
+        - dont check OD
+        move back
+    647 miss lasthit (stood too far back)
+    
+649 fight 
+    - too early, not enough damage with only naga+sk
+        need to make sure jugg tps after initiate 
+    - likely that more enemies around 
+        no vision
+        bot is not under pressure
+        could be top, but unlikely for mirana
+    649 attempt net on OD
+        -get imprisoned
+    652 miss ranged lasthit (imprisoned)
+    +655 cast net on OD 
+    +    move in
+    +657 cast rip tide
+    - 702 run up into river
+        - far from team
+        - no vision uphill
+    +704 walk back in
+        705 net 
+    708 stand on net range
+        - walk up for delay on the net, close to tower
+    709 net on drow
+        - should be stunned by sandking
+        - could kill OD with net
+    +in range for assist gold
+
++722 stay in mid
+    728 heal up with ward
+    730 arcanes
+    take exp
+
+738 walk towards jungle
+744 walk towards top rune
+    - could stack medium camp
+    747 buy ward
+800 secure top rune
+    801 check juggernaut
+    leave rune 
+    stay around
+
+walk around
+    805 walk into jungle
+    811 check juggernaut/mid
+    812 check top allies
+    813 check top enemy
+        -  move command top, cancel quickly
+    move toward mid
+    819 check bottom
+    820 check silencer
+
+!buy second ward
+! use courier to bring ward 
+support mid
+    use arcanes
+
+move around
+    move toward mid
+    826 check bottom
+        - move commands bottom
+    828 check mid
+        - cam a bit off
+    move into jungle bottom
+    838 check action top
+        - could check mirana
+    spotted by silencer
+     -stay beside lane bottom
+        no good gank possible with only sk
+        was seen
+        -can stack ancients
+    walk back out
+    850 check top
+    851 walk toward mid
+    900 check mid
+913 lane mid
+    916 miss lasthit (bad prehit)
+    918 miss lasthit (too early)
+
+    staying far back from OD
+        -still in vision
+    930 miss exp for denie
+    stay behind jugg mid
+        -show
+        +take exp
+
+- 1000 walk for top run
+    too late, taken by OD
+    1002 check bottom
++1003 tp bot for return kills
+    fight
+    + 1010 good song to initiate
+    + 1011 walk close to drow
+    + walk behind drow
+    --miss rip tide (too early)
+        - delays kill on drow,
+        -- misses kill on silencer
+    +1027 hit net on drow, kill
+
+1036 walk into jungle on the side
+    + got all exp
+    - could stay on lane and hit catapult
+    - missing some hits on tower
+    1041 check mid
+    1047 check top
+
+!!opportunity to place deep wards
+
+1050 push T1 bot
+    +hit tower
+    +use illusions to hit
+
+1116 walk towards mid
+    1117 check action mid
+        - could check silencer/OD
+    1119 check action in dire jungle
+        - could check mirana 
+    1121 check mid
+        - bad camera position
+    1122 check top
+        check axe
+    1123 check dire jungle
+        -could check mirana
+
+1125 walk back bottom
+    1126 check bottom
+    walk to the right
+    1136 check bottom
+    1137 use illusions, send them bottom
+
+1138 walk mid
+    1141 control illusions
+    -1158 show mid
+
+1200 walk bot rune
+    1212 take bottom rune
+        send illusions bottom
+
+
+walk mid
+    buy items
+-1227 walk top rune
+    1230 check top
+    1232 micro illusions    
+    
+    +necessary to get initiation on OD
+        - missing 4 creeps exp mid
+
+1239 walk back mid
+    +hide outside vision
+    could position more forward in the lane
+    fight
+    -initiate: cast net on OD
+        -too early
+    walk back in, baiting OD
+    1302 cast rip tide
+
+1305 stay mid
+    1312 check bottom
+
+1318 move bottom 
+    1319 check top
+        check axe
+    1324 check bottom
+        - dont check silencer
+    1326 check top
+
+    1332 cast illusions
+        send illusions bottom
+
+
+move into radiant jungle
+push bot with ilusions
+
+1358 check action at top rune
+
+1400 TP mid to join team
+    fight top rune
+    walk into fight
+    cast net on silencer
+    +cast song to delay
+    cast net on OD
+    walk back from call
+    walk in to chase
+    -back out a bit (hit by drow)
+    cast rip tide on drow
+        -could hit axe as well
+    - use net on drow 
+        unnecessary
+    follow axe
+
+1454 back, return to fountain
+    1508 check top run
+        check silencer
+    1520 check mid
+        check mirana
+    1536 check mid
+
+15:40 walk to mid
+    1542 check scoreboard
+    1546 check top
+    1554 check mirana
+    
+1619 farm wave
+    +use rip tide
+    1626 missed lasthit (cancelled attack)
+
+1630 back off from lane
+    1631 missed lasthit (walked away)
+
+    1636 cast illusions
+        send radiant jungle medium camp
+    1640 check mid
+    1642 walk top 
+    1643 check top
+
+1655 fight to kill axe
+    +move close to axe
+    cast rip tide 
+    +cast net
+    hits
+
+1705 move top
+    1711 check OD
+
+1723 push top wave
+    - miss lasthit (let one creep pass by)
+    + cast rip tide
+    cast illusions 
+
+    1746 micro illusions to push
+        +use rip tide for illusions
+        - didnt move hero before
+
+1747 walk mid
+    +1749 micro illusions to hit tower top
+    1753 check bottom
+        - didnt check drow
+    1754 check top
+
+1809 move towards bottom
+    1815 check action bot jungle
+    check slark
+    check drow
+    +1823 exp for kill on drow
+
+    1830 check mid
+        -bad camera placement
+        -could check mirana
+    cast illusions
+    illusions to mid
+
+
+1840 push on T2 tower
+    + good position, 3 heroes visible far away, have 3 
+    rip tide on creepwave
+    micro illusions
+    - run too far back, away from creepwave
+    miss lasthit (standing too far back) 
+    miss lasthit (standing too far back)
+    1848 - stand far back
+        (exposing pugna)
+        -bad hiding position (all entrances visible to radiant, rather walk up/back out of vision)
+        - too far for net on mirana
+    1854 micro illusions mid
+        cast rip tide
+
+1850 fight
+    run out 
+        - a bit too far
+    back in for sk initiation
+    net on OD
+    - 1908 miss rip tide
+
+    - 1910 back out to jungle
+        - unnecessary, 2 dead, axe visible somewhere else. just push
+
+1919 push and take t2
+    + kill T2
+
+stay bottom
+    1930 illusions to farm
+    missed lasthit (used rip tide too early/too far)
+
+1938 move to medium camp near mid
+    - instead move to medium camp center jungle
+    1951 cast rip tide for illusions 
+
+!1946 missing opprtunity to ward/deward radiant uber ward
+
+2000 check rune 
+    2009 ward
+    2014 cast illusions
+    send illusions to push bottom
+        -could use two illusion to farm easy camp
+
+    2015 check mid
+    2019 check bottom
+
+- 2022 walk forward mid
+    -- should instead farm radiant jungle, using up mana -  dire side is occupied by team, 
+
+    2023 check mid
+2026 stay mid
+    2030 check bottom
+    2033 walk back a bit
+    2035 check bottom
+    2037 micro illusions bottom
+- 2038 walk into dire jungle
+    - rather walk to dire secret shop and farm hardcamp, jungle is farmed by team
+    2039 micro illusions
+
+2051 walk to fountain
+
+2114 tp mid
+2119 cast illusions
+walk into dire jungle
+    send illusions to push mid
+    - not moving while microing illusions
+2155 move top
+
+2205 fight top vs axe initiation
+    +good song
+    !- staying back, should move forward with song
+    - could get earlier net on silencer
+    continue to silencer
+
+
+push top for T2
+
+push for T3
+    -catch arrow
+    -should keep illusions (at least one) to tank tower
+
+send illusions to scout
+
+2305 push rax
+
+back off
+
+continue push
+
+2320 fight move in
+    +good mek
+    - unnecessary net (axe doesnt need to move there)
+    - need mana to use rip tide 
+
+2328 move out 
+farm hardcamp
+    -micro illusions, switch aggro to keep all alive
+tp base
+
+2430 move mid
+illusions to push
+    -missing exp, show and take the creepwave
+    2448 miss lasthit catapult
+
+!rosh opportunity
+
+move bottom
+move into radiant jungle
+    =2456 try to check silencer
+    2519 micro illusions
+        +rip tide for lasthit
+2520 TP top
+    + good song attempt to catch OD
+    = could try to cancel song when OD blinks out
+try to initiate fight
+back off
+    - no way to check trees for OD. 
+    - too late
+2545 fight
+    + good mek
+    -2555 unnecessary net on axe
+    - miss rip tide (illusions died)
+    + hit second rip tide on mirana
+
+!opportunity to buy tp
+    -> tp fountain
+
+move for top rune
+move to mid
+- send illusions to push top
+    send mid instead, rax pushed top + creepwave in mid
+!tp to base
+
+move to base
+
+!drop scepter+arcanes to heal
+!buy second TP
+
+2720 TP mid
+send illusions to push
+walk into radiant jungle to team
+
+walk to radiant ancients
+    +dewards obs+sentry
+    2835 lasthit bottom
+
+backup a push on  mid T2
+push bot with illusions
+push mid with illusions
+
+2920 go for rosh
+    - unnecessary net
+    - late rip tide
+    - should hit immediately
+
+push bottom
+push mid with illusions
+
+3023 fight bot rax
+    + good song to initiate
+    + good net on axe
+    - used illusions to hit axe
+         rather move them in/spread out to give true sight vs mirana ult
+
+3103 stay alive, run back to bottom rune
+!tp base instead
+
+illusions to push bot
+farm hardcamp
+
+send illusions to push radiant jungle
+3215 run base
+
+!TP forward to T1 bot
+
+3300 run to secret shot
+
+run to team in mid
+3302 micro illusions
+push bot with illusions
+
+3336 fight around radiant ancients
+    + use greaves, glimmer, tp to escape
+    - tp too late, should use within song
+
+3346 TP base
+
+3405 run down mid
+3404 illusions to push mid
+    - farm hardcamp on the way with the illusion rip tide
+run for bottom rune
+
+!! walking around with 4 wards, first priority should be to place wards
+run into radiant jungle
+!opportunity to place radiant jungle uber ward
+run mid
+
+3528 back and group in mid
+
+run to top rune
+
+run mid
+
+3615 run radiant ancients, ward
+! too passive wards
+    
+
+
+
+
+push mid with illusiosn
+ward around mid 
+
+ 3705 net axe
+3715 push mid with illusions
+
+3748 push top
+
+3750 fight 
+    -run out too far at start
+    + good song
+        saves pugna, heals him up
+        initiates on silencer+mirana
+    - should rip tide immediately after song ends, before net
+    - run out a bit far
+    - net on Drow who is already dead
+
+
+3920 kill T4/throne

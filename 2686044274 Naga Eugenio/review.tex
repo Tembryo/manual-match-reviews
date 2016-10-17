@@ -1,0 +1,365 @@
+\documentclass{article}
+\usepackage[top=2.5cm, bottom=2.5cm, inner=2.5cm,outer=2.5cm]{geometry}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\definecolor{WisdotaBackground}{HTML}{61595D}
+\definecolor{highlight}{HTML}{F1B72A}
+\definecolor{secondaryhighlight}{HTML}{D98E04}
+\definecolor{mistakecolor}{HTML}{8C2625}
+\definecolor{goodplaycolor}{HTML}{258C27}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{fontspec}
+\usepackage{background}
+\usepackage{blindtext}
+%\usepackage{stix}
+\usepackage{savesym}
+\usepackage{amsmath}
+\savesymbol{mathdollar}
+\usepackage{MnSymbol}
+\restoresymbol{MnS}{mathdollar}
+\usepackage{hyperref}
+\usepackage{titling}
+\usepackage{enumitem}
+%\usepackage{fdsymbol}
+
+
+\hypersetup{
+    colorlinks = false,
+    linkbordercolor = {highlight}
+}
+
+\onehalfspacing
+%\doublespacing
+\setmainfont{Roboto-Light}
+\backgroundsetup{
+    scale=1,
+    angle=45,
+    opacity=0.1,
+    contents={\begin{tikzpicture}[remember picture,overlay]
+    \path [left color = gray, right color = black] (current page.south west) rectangle (current page.north east);   % Adjust the position of the logo.
+    \end{tikzpicture}}
+}
+
+\newcommand{\matchid}{2686044274}
+
+
+\makeatletter
+\fancypagestyle{reportpage}{%
+  \fancyhf{}% Clear header/footer
+  \rhead{ \textcolor{white}{Wisdota.com}}
+  \lhead{\textcolor{white}{Report for Match \matchid}}
+  \fancyfoot[C]{\textcolor{white}{\color{white}\thepage}}% Page # in middle/centre of footer
+  \renewcommand{\headrulewidth}{.4pt}% .4pt header rule
+  \def\headrule{{\if@fancyplain\let\headrulewidth\plainheadrulewidth\fi
+    \color{white}\hrule\@height\headrulewidth\@width\headwidth \vskip-\headrulewidth}}
+  \renewcommand{\footrulewidth}{0pt}% No footer rule
+%  \def\footrule{{\if@fancyplain\let\footrulewidth\plainfootrulewidth\fi
+%    \vskip-\footruleskip\vskip-\footrulewidth
+%    \hrule\@width\headwidth\@height\footrulewidth\vskip\footruleskip}}
+}
+\fancypagestyle{first-page}{%
+  \fancyhf{}% Clear header/footer
+  \rhead{}
+  \lhead{}
+  \fancyfoot[C]{\textcolor{white}{\color{white}\thepage}}% Page # in middle/centre of footer
+  \renewcommand{\headrulewidth}{0}% .4pt header rule
+  \def\headrule{}
+  \renewcommand{\footrulewidth}{0pt}% No footer rule
+%  \def\footrule{{\if@fancyplain\let\footrulewidth\plainfootrulewidth\fi
+%    \vskip-\footruleskip\vskip-\footrulewidth
+%    \hrule\@width\headwidth\@height\footrulewidth\vskip\footruleskip}}
+}
+
+\setlist[itemize]{leftmargin=0pt,labelindent=1em}
+
+\title{Wisdota Report for Match \matchid \\
+Naga Siren by Perpetuus}
+\date{Played on 03/10/2016}
+\pretitle{\begin{flushleft}\LARGE\sffamily}
+\posttitle{\par\end{flushleft}}
+\preauthor{}
+\author{}
+\postauthor{} 
+\predate{\begin{flushright}\large\scshape}
+\postdate{\par\end{flushright}}
+
+\setlength{\droptitle}{0pt}
+
+\makeatother
+\pagestyle{reportpage}
+
+\newcommand{\gt}{\ensuremath{\;\;\color{green} \filledmedtriangleup} }
+\newcommand{\rt}{\ensuremath{\;\;\color{red} \filledmedtriangledown} }
+\newcommand{\ws}{\ensuremath{\;\;\color{white} \filledmedsquare} }
+
+\newenvironment{remarks}
+    {
+        \begin{description}
+            \setlength\itemsep{0em}
+    }
+    {
+        \end{description}
+    }
+\newcommand{\goodremark}[1]{\vbox{\item[\gt] #1}}
+\newcommand{\neutralremark}[1]{\vbox{\item[\ws] #1}}
+\newcommand{\badremark}[1]{\vbox{\item[\rt] #1}}
+
+\newcommand{\suggestion}[1]{\\ \emph{#1}}
+
+\newcommand{\important}{\colorbox{highlight}{Important!}\ }
+
+\newcommand{\mistake}{\colorbox{mistakecolor}{Mistake!}\ }
+\newcommand{\goodplay}{\colorbox{goodplaycolor}{Good Play!}\ }
+\newcommand{\logref}[1]{\textcolor{highlight}{#1}}
+
+\newcommand{\minimap}[1]{
+    \begin{center}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#1}
+    \end{minipage}
+\end{center}
+}
+
+\newcommand{\twominimaps}[2]{
+\begin{center}
+    \begin{minipage}[t]{0.3\textwidth}
+        \begin{center}
+            \textbf{What happened}\hfill
+            
+            \includegraphics[width=\textwidth]{#1}
+            \end{center}
+    \end{minipage}
+    \begin{minipage}[t]{0.3\textwidth}
+            \begin{center}
+            \textbf{Instead}\hfill
+            
+        \includegraphics[width=\textwidth]{#2}
+                \paragraph{}\hfill
+            \end{center}
+    \end{minipage}
+\end{center}
+}
+
+\newcommand{\threeminimaps}[3]{
+\begin{center}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#1}
+    \end{minipage}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#2}
+    \end{minipage}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#3}
+    \end{minipage}
+\end{center}
+}
+
+\newcommand{\twominimapscomment}[4]{
+\begin{center}
+    \begin{minipage}[t]{0.48\textwidth}
+    \begin{center}
+        \textbf{What happened}\hfill
+        \includegraphics[width=0.7\textwidth]{#1} 
+        \begin{itemize}
+        #2
+        \end{itemize}
+    \end{center}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+        \begin{center}
+        \textbf{Instead}\hfill\\
+        \includegraphics[width=0.7\textwidth]{#3}
+        \begin{itemize}
+        #4
+        \end{itemize}
+        \end{center}
+    \end{minipage}
+    
+    \end{center}
+}
+
+
+\newcommand{\threeminimapscomment}[6]{
+\begin{center}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#1} 
+        \begin{itemize}
+            #2
+        \end{itemize}
+    \end{minipage}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#3}
+        \begin{itemize}
+        #4
+        \end{itemize}
+    \end{minipage}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#5}
+        \begin{itemize}
+            #6
+        \end{itemize}
+    \end{minipage}
+\end{center}
+}
+
+
+
+
+\begin{document}
+\pagecolor{WisdotaBackground}
+\color{white}
+
+\maketitle
+\thispagestyle{first-page}
+
+\paragraph{Match Context}
+Solo ranked AP. Playing utility support - focus is on enabling the teams cores. Reached a strong individual position by contributing to fights without dying and setting up good fights with Song of the Siren. 
+
+\paragraph{Highlight Tip}
+Use Ensnare deliberately to prevent enemies from moving, don't use it on heroes that are sure to die or want to stay in place anyway. Save the mana and wait for a better opportunity.
+
+\section*{Summary}
+\addcontentsline{toc}{section}{Summary}
+
+\begin{remarks}
+\goodremark{Good awareness, viewing action and checking hero itemisation}
+\goodremark{Impactful usage of Song of the Siren}
+\neutralremark{Good Itemisation. Aghanims Scepter without impact, consider buying other luxury items.}
+\neutralremark{Efficiency improvements though stacking and TPs to fountain. }
+\badremark{Frequent suboptimal use of Ensnare on targets either sure to die or not intending to run.}
+\badremark{Missed out on opportunitites for deep wards, placing less effective ones. }
+\end{remarks}
+
+\section{Itemisation}
+
+\begin{remarks}
+\goodremark{Good starting items, keeping gold for earlier Boots}
+\goodremark{Rushed Arcane Boots}
+\goodremark{Progression into Mekansm}
+\badremark{Early Aghanims Scepter 
+    \begin{itemize}
+        \item No good usage of the additional healing effect. Unlikely to get a good situation: moderate AoE damage (Mirana Starstorm, OD ult is ususally killing), single target cores (OD/Drow).
+        \item  Ultimate used as initiation, consider buying Blink Dagger/Force Staff, consider Drums of Endurance to replace the stats.
+    \end{itemize}
+    }
+\goodremark{Luxuries: Glimmer Cape, Guardian Greaves}
+
+\badremark{Miss out on buying wards for first night (buy/send at \logref{4:00})}
+\badremark{Unused ward in stash from \logref{8:10} until \logref{15:20}}
+\badremark{Missed buying relevant TP scrolls at \logref{25:50} (at sideshop), \logref{27:15} (get 2nd TP in base)}
+\end{remarks}
+
+\section{Early game}
+\begin{remarks}
+\goodremark{Effective initial laning to zone and kill offlaner Axe}
+\goodremark{Good movement mid to help Juggernaut against Mirana/OD}
+\goodremark{Regularly secure runes}
+\badremark{Missed stack of hardcamp at \logref{1:00}
+    \suggestion{Draw the creeps to the left, or eat a different tree and draw them  up.}}
+\badremark{No wards for mid, lots of fighting. Opportunity to place around \logref{4:10}}
+\badremark{\important Missed multiple stacks when moving around
+    \begin{itemize}
+    \item stack the medium camp above top rune at \logref{2:00}, \logref{4:00}, \logref{8:00} before going for the rune.
+    \item stack dire ancient camp at \logref{9:00} when leaving the radiant jungle.
+    \end{itemize}}
+\end{remarks}
+
+\section{Information}
+\begin{remarks}
+\goodremark{Good camera control, saw most action on the map.}
+\goodremark{Active checking of heroes to track itemisation.}
+
+\neutralremark{Could use scoreboard more, to keep a better overview.}
+\neutralremark{Prioritised checking allies items over enemies, other way around is preferable.}
+\neutralremark{Could check even more inventories when looking at action. \logref{1:28} \logref{3:07} \logref{3:13} \logref{6:37} \logref{8:38} \logref{11:17} \logref{11:19} \logref{11:23} \logref{18:30}}
+\neutralremark{Sometimes bad camera position to view action \logref{3:24} \logref{11:21} \logref{18:30}}
+
+\badremark{\important No warding for mid during the first night (opportunity to place at \logref{4:20})}
+\badremark{Unnecessary showing in top lane at \logref{3:32}, rather stay out of vision.}
+\badremark{\important Missed opportunity to go place a deep ward at \logref{10:40}
+\minimap{img/1040ward.pdf}}
+
+\badremark{Too defensive ward at \logref{20:22}
+\threeminimaps{img/wardbad.pdf}{img/wardgood.pdf}{img/wardgood2.pdf}}
+
+\badremark{Too defensive wards at \logref{36:23}
+\twominimaps{img/wards34bad.pdf}{img/wards34good.pdf}}
+\end{remarks}
+
+\pagebreak
+
+\section{Mechanics}
+\begin{remarks}
+\goodremark{Active control of Illusions
+    \begin{itemize}
+        \item Consider spreading illusions in the later parts of the game. \\Farm smallcamp with 2 illusions at \logref{21:14}
+        \item Keep the main hero moving while microing. Lost movement time at \logref{17:46} \logref{21:30}
+    \end{itemize}
+    }
+
+\neutralremark{Walked close to trees, hit by arrow at \logref{5:30}}
+
+\badremark{Missed a few lasthits due to standing too far back  \logref{6:47} \logref{19:36} \logref{18:47} \logref{19:35} }
+
+\badremark{Position unnecessarily far back during laning \logref{5:11} \logref{6:40} (misses lasthit) \logref{9:30} (misses exp).}
+
+\end{remarks}
+
+
+\section{Movement Decisions}
+\begin{remarks}
+\goodremark{Active movement around the map }
+\goodremark{Early rotations to help mid}
+
+\badremark{Inefficient movement from \logref{20:10}. Can farm radiant jungle or dire secret shop camp, instead of a long walk to base.
+\threeminimaps{img/2010bad.pdf}{img/2010good.pdf}{img/2010good2.pdf}}
+
+\badremark{\important Use TP scroll to return to base quickly \logref{26:05}, \logref{31:05}. 
+\suggestion{This lets you move out together with the respawning teammates, speeding up the next larger movement.}}
+
+
+\badremark{Walking for unclear goal, should immediately go for wards \logref{34:04}}
+
+\end{remarks}
+
+\pagebreak
+
+\section{Fight Execution}
+\begin{remarks}
+\goodremark{Presence in many fights, gaining assist Gold.}
+\goodremark{Close survival in multiple fights.}
+\goodremark{Good offensive use of Song of the Siren for initiation at \logref{10:10} \logref{14:15} \logref{30:23}}
+\goodremark{Good use of Song of the Siren to save allies at \logref{22:05} \logref{37:55}}
+
+\neutralremark{Late TP out during Song when escaping from fight at \logref{33:35} }
+
+
+\badremark{\important Frequent suboptimal use of Ensnare - wasting mana and putting it on cooldown:
+\begin{description}\setlength\itemindent{1em}
+    \badremark{\logref{1:55} on Mirana, could maybe use it to prevent her from contesting the rune later.}
+    \neutralremark{\logref{2:21} on Silencer, as he dies to towerhit (very close). Would get another kill later.}
+    \badremark{ \logref{3:30}  on Axe, bad initiation as there is no way to kill him.}
+    \badremark{ \logref{12:50} on OD, too early for initiation.}
+    \badremark{ \logref{23:22} on Axe, he is initiating and does not want to move. Missing mana for Rip Tide afterwards.}
+    \badremark{ \logref{25:55} on Axe, he is waiting for Euls to finish  and does not want to move.}
+    \badremark{ \logref{29:20} on Roshan.}
+    \badremark{ \logref{37:05} on Axe, he is farming a creepwave and does not want to move.}
+    \badremark{ \logref{38:31} on Drow, she will die to Omnislash.}
+\end{description}
+
+}
+
+\badremark{\important Missed crucial Rip Tide at \logref{10:17} casting too early before song ends. Loses a kill on Silencer.}
+
+\badremark{Too defensive positioning in fight at \logref{19:05}. Missed Rip Tide by standing too far \logref{19:08}. Could possibly get additional kill on Mirana by being closer and using Ensnare on Mirana instead of OD.}
+
+\badremark{Too defensive positioning in fight at \logref{22:05}. Instead move forward with Song and look for opportunities, as Axe is sure to die. }
+
+\badremark{Missed Rip Tide at \logref{25:57} after Illusions die too fast.}
+
+\badremark{Suboptimal Illusion usage at \logref{30:23}. Sent them to hit Axe, could instead send them forward to give more vision against Mirana's Ultimate as they carry gem. }
+
+\end{remarks}
+
+
+\end{document}

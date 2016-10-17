@@ -1,4 +1,5 @@
 #!/bin/bash
+mkdir -p img
 for file in svg/*.svg
     do
         filename=$(basename $file)
