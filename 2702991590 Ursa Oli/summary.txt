@@ -1,0 +1,217 @@
+Match context: Party ranked AP.
+Playing snowballing carry with good hero matchups - focus is on reaching core items quickly, to then put pressure and secure a strong advantage through kills. Reached a strong individual position by contributing to fights without dying, setting up good fights with Song of the Siren. 
+
+Highlight tip:
+
+Summary:
+= Good itembuild, important early BKB. Should finish Vladimir's Offering after buying Blink Dagger. 
+= Efficiency improvements through better movement routes and using Blink Dagger to move faster. 
+- Early ganking delayed item progression.
+- Missed out on opportunitites for deep wards, placing less effective ones 
+- Expending all
+
+
+Itemisation:
+
++ Lots of regen to lane against Tidehunter
++ Early Phase Boots
+- Finished Vladimir's Offering:
+    suggestion: Speed up the Blink Dagger by only buying Ring of Basilius and Mask of Death. 
++ Blink Dagger
++ BKB
++ Basher into Abyssal Blade
+
+
+Early game:
+
+After 10 Creepwaves (5:23): 21 lasthits, 5 denies
+            Missed 17 lasthits, 5 denies
+
+Frequent reasons for mising CS: 
+    stood too far away 136 144 333 357
+    Didnt prehit in tower 304 312 314 318 
+    cancelled the attack 100 505
+    hit too early 112 442
+
++ Clean kill on Tidehunter at 048
+
+= Missed opportunities to pull lane back against Tidehunter 
+    154 standing in lane  - could have blocked creeps a bit
+    219 could start denying creep, instead pushed
+    631 should not tank creepwave
+
+= Missed opportunities to push empty lane 
+    759 should kill ranged creep quickly/nuke wave with Earthshock
+    939 should kill ranged creep quickly
+    958 denied own creep, losing own ranged creep
+
+- Missed a solokill on Tidehunter at 413
+    Redirect tower aggro to creeps at 413
+    Had a big creepwave and boots advantage
+
+- Unnecessary death to a gank by Axe 638
+    Didn't use tangoes to stay full health, opoportunities to use at 505 526 623
+    Could escape the gank by escaping into the river instead of back up the lane.
+    [minimap]
+
+
+
+Information:
+
+= Checked enemy inventories a few times
+= Watched some distant action
+
+- Missed enemies walking into own lane at 1007 1020
+    - didn't check Axe to see Blink Dagger 1007
+    - didn't check Necrophos to see Dagon 1020
+
+- Missed checking enemy Earthshaker before initiating a gank 1817
+    - would have seen his Blink Dagger
+
+- Overall need more active camera to make good decisions
+
+Mechanics:
+
++ Regular use of spells to farm
+
+= Hits on low HP creeps, instead of evening out the HP to kill the group with Earthshock 1302 1539 1557 
+
+= Suboptimal use of Earthshock:
+    Didn't hit all creeps in neutral camp at 1539 3032
+    missed enemy in fight at 2905 4252
+    Didn't use it to farm at 3255
+
+= Suboptimal movement:
+    ran away from creeps 1539 1943
+    indecision, waiting before farming 2044 2706
+    left creepcamp without farming 2100
+
+- Precast Overpower before walkink into fights 1357 3843 3903 4234 4644
+
+- \important Use Blink Dagger to speed up movement. Unused at 2024 2040 2310 2322 2651 2731 3046 3235 3726
+[x minimap for move 2010-2040]
+
+
+Movement:
+
+1508 inefficient movement towards bottom
+    - hardcamp at secret shop is farmed by team, have to change route
+    - want to play top anyway, as need 900 gold to blink
+
+3726 farm medium camp on the way out, use blink
+    (optional: farm hardcamp before, risky)
+
+3805 bad pathing
+    blink up over cliff into easy camp
+    dont move into lane with sf, rather go for hardcamp, move further up into lane
+    [x minimap]
+
+Fight Execution:
+
+- 1128 missed opportunity to live by casting Enrage 
+    tide running in, saw Necrophos earlier
+
+1359 fight - gank on Necrophos 
+    - bad initiation route: instead wrap around from the side
+        [minimap]
+        scout the area, (in this case, will find earthshaker)
+        better angle: force necrophos to move away from the tower
+    - could get out at 14:10. Not worth dying for a kill on earthshaker
+
+1826 could blink on earthshaker - better than running at him, also earlier initiation 
+
+2106 gank on silencer
+    - 2116 saw necrophos on the minimap nearby, didn't notice
+    - should walk through the side, blink from the trees
+
+3315  !going back in, while SF is running
+    bad target selection: 
+        Tide used ravage, not strong
+         deep in the fight, behind earthshaker - later blocked by fissure
+        rather focus earthshaker (important kill, as low cooldowns)
+    could use BKB to try and escape
+    save unrelieable gold and buy basher
+
+3840 fight
+    - 3843 should precast overpower before running back in, save 4.5 sec cooldown
+        3852 could back a little earlier, when SF's last attack is out
+        3903 should recast overpower when stack runs out
+
+3938 fight
+    - have short window to cast Enrage, should be spamming it after initiation
+    - see enemies on minimap before initiation
+        - should be watching the minimap 
+        - could have the camera on centaur who is scouting
+
+4508 fight
+    !! should use BKB and go in
+    ! oracle ultimate up, want to go lifesteal
+    ! want to dodge follow up spells
+    ! team went in, should follow
+
+4914 fight
+    4933 bad target selection!
+        go for tide/axe instead
+        !wanto to get away from fountain/T4, rebuys
+        ! towards T3s to push
+        !blink over fissure is bad
+
+Strategic Decisions:
+
++ Farm safelane against Tide
+
+- Stopped laning for ganks too early. Actively went for fights before buying Blink Dagger.
+    1343 TP bottom
+    !! bad idea - 600 gold to blink
+    ! own jungle is secured by wards, play top 
+    1359 fight - gank on necrophos 
+
+    1606 TP bottom 
+    - bad tp
+    - too far to contribute to fight
+    - dont want to walk into a dangerous fight without blink dagger
+    - move top instead and push - splitting up enemies
+
+- Did not go for early opportunities to take Roshan 
+    1343 TP bottom to fight
+    1749 TP top to fight
+    2106 Go for gank on silencer
+    2226 TP mid to fight
+
+- Fighting into risky situations
+    1359 gank on necrophos: No vision at all, enemies all missing 
+    1749 fight into Necrophos/Earthshaker: Centaur just died, 2 worst enemies up there (earthshaker stuns, necrophos most farmed enemy) 
+    2106 gank on silencer: no vision, Necrophos/Earthshaker missing for long time
+    2226 conter-initiate in mid: no vision, all missing
+
+- Taking bad fights: 
+    2354 smokegank: 
+        no vision, bad position
+        only smoked with Ursa and Sand King.
+        Uncover Earthshaker and Tidehunter, hard kills.
+        highly likely for more behind
+
+- Unnecessary return to fountain:
+    1707 instead heal up with tangoes and lifesteal
+        in this situation: eat tangoes, buy blink at sideshop, farm hardcamp, go for in this situation
+    2314 heal up with lifesteal while farming jungle
+    2638 supports with arcane boots (SK nearby)
+        no need to immediately fill up, not looking to force a fight as weak and enemies are grouped.
+
+Missed splitpush opportunities
+    2010 - camps on the way are farmed, dont want to walk that much
+        Instead:
+        - move to lanecreeps from harcamp, farm next wave as well
+        - creates push top, can then TP bot - Rosh!
+            [x minimap]
+
+    3046 no way to fight with 2 dead, way behind.
+        [minimaps]
+
+Missed opportunities for tower damage:
+    3527 can walk up to T3 mid and hit
+            - 3 dead, lots of damage with ursa+sf
+        force glyph, or maybe take tower
+        possibly even initiate
+
+

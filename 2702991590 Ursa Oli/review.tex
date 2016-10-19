@@ -1,0 +1,465 @@
+\documentclass{article}
+\usepackage[top=2.5cm, bottom=2.5cm, inner=2.5cm,outer=2.5cm]{geometry}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\definecolor{WisdotaBackground}{HTML}{61595D}
+\definecolor{highlight}{HTML}{F1B72A}
+\definecolor{secondaryhighlight}{HTML}{D98E04}
+\definecolor{mistakecolor}{HTML}{8C2625}
+\definecolor{goodplaycolor}{HTML}{258C27}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{fontspec}
+\usepackage{background}
+\usepackage{blindtext}
+%\usepackage{stix}
+\usepackage{savesym}
+\usepackage{amsmath}
+\savesymbol{mathdollar}
+\usepackage{MnSymbol}
+\restoresymbol{MnS}{mathdollar}
+\usepackage{hyperref}
+\usepackage{titling}
+\usepackage{enumitem}
+%\usepackage{fdsymbol}
+
+
+\hypersetup{
+    colorlinks = false,
+    linkbordercolor = {highlight}
+}
+
+\onehalfspacing
+%\doublespacing
+\setmainfont{Roboto-Light}
+\backgroundsetup{
+    scale=1,
+    angle=45,
+    opacity=0.1,
+    contents={\begin{tikzpicture}[remember picture,overlay]
+    \path [left color = gray, right color = black] (current page.south west) rectangle (current page.north east);   % Adjust the position of the logo.
+    \end{tikzpicture}}
+}
+
+\newcommand{\matchid}{2702991590}
+
+
+\makeatletter
+\fancypagestyle{reportpage}{%
+  \fancyhf{}% Clear header/footer
+  \rhead{ \textcolor{white}{Wisdota.com}}
+  \lhead{\textcolor{white}{Report for Match \matchid}}
+  \fancyfoot[C]{\textcolor{white}{\color{white}\thepage}}% Page # in middle/centre of footer
+  \renewcommand{\headrulewidth}{.4pt}% .4pt header rule
+  \def\headrule{{\if@fancyplain\let\headrulewidth\plainheadrulewidth\fi
+    \color{white}\hrule\@height\headrulewidth\@width\headwidth \vskip-\headrulewidth}}
+  \renewcommand{\footrulewidth}{0pt}% No footer rule
+%  \def\footrule{{\if@fancyplain\let\footrulewidth\plainfootrulewidth\fi
+%    \vskip-\footruleskip\vskip-\footrulewidth
+%    \hrule\@width\headwidth\@height\footrulewidth\vskip\footruleskip}}
+}
+\fancypagestyle{first-page}{%
+  \fancyhf{}% Clear header/footer
+  \rhead{}
+  \lhead{}
+  \fancyfoot[C]{\textcolor{white}{\color{white}\thepage}}% Page # in middle/centre of footer
+  \renewcommand{\headrulewidth}{0}% .4pt header rule
+  \def\headrule{}
+  \renewcommand{\footrulewidth}{0pt}% No footer rule
+%  \def\footrule{{\if@fancyplain\let\footrulewidth\plainfootrulewidth\fi
+%    \vskip-\footruleskip\vskip-\footrulewidth
+%    \hrule\@width\headwidth\@height\footrulewidth\vskip\footruleskip}}
+}
+
+\setlist[itemize]{leftmargin=0pt,labelindent=1em}
+
+\title{Wisdota Report for Match \matchid \\
+Ursa by Oli the Optimist}
+\date{Played on 11/10/2016}
+\pretitle{\begin{flushleft}\LARGE\sffamily}
+\posttitle{\par\end{flushleft}}
+\preauthor{}
+\author{}
+\postauthor{} 
+\predate{\begin{flushright}\large\scshape}
+\postdate{\par\end{flushright}}
+
+\setlength{\droptitle}{0pt}
+
+\makeatother
+\pagestyle{reportpage}
+
+\newcommand{\gt}{\ensuremath{\;\;\color{green} \filledmedtriangleup} }
+\newcommand{\rt}{\ensuremath{\;\;\color{red} \filledmedtriangledown} }
+\newcommand{\ws}{\ensuremath{\;\;\color{white} \filledmedsquare} }
+
+\newenvironment{remarks}
+    {
+        \begin{description}
+            \setlength\itemsep{0em}
+    }
+    {
+        \end{description}
+    }
+\newcommand{\goodremark}[1]{\item[\gt] #1}
+\newcommand{\neutralremark}[1]{\item[\ws] #1}
+\newcommand{\badremark}[1]{\item[\rt] #1}
+\newcommand{\logremark}[2]{\item[\textnormal{\logref{#1}}] #2}
+
+\newcommand{\suggestion}[1]{\\ \emph{#1}}
+
+\newcommand{\important}{\colorbox{highlight}{Important!}\ }
+
+\newcommand{\mistake}{\colorbox{mistakecolor}{Mistake!}\ }
+\newcommand{\goodplay}{\colorbox{goodplaycolor}{Good Play!}\ }
+\newcommand{\logref}[1]{\textcolor{highlight}{#1}}
+
+\newcommand{\minimap}[1]{
+    \begin{center}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#1}
+    \end{minipage}
+\end{center}
+}
+
+\newcommand{\twominimaps}[2]{
+\begin{center}
+    \begin{minipage}[t]{0.3\textwidth}
+        \begin{center}
+            \textbf{What happened}\hfill
+            \includegraphics[width=\textwidth]{#1}
+            \end{center}
+    \end{minipage}
+    \begin{minipage}[t]{0.3\textwidth}
+            \begin{center}
+            \textbf{Instead}\hfill
+        \includegraphics[width=\textwidth]{#2}
+                \paragraph{}\hfill
+            \end{center}
+    \end{minipage}
+\end{center}
+}
+
+\newcommand{\threeminimaps}[3]{
+\begin{center}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#1}
+    \end{minipage}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#2}
+    \end{minipage}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#3}
+    \end{minipage}
+\end{center}
+}
+
+\newcommand{\twominimapscomment}[4]{
+\begin{center}
+    \begin{minipage}[t]{0.42\textwidth}
+    \begin{center}
+        \textbf{What happened}\hfill
+        \includegraphics[width=0.7\textwidth]{#1} 
+        \begin{itemize}
+        #2
+        \end{itemize}
+    \end{center}
+    \end{minipage}
+    \begin{minipage}[t]{0.42\textwidth}
+        \begin{center}
+        \textbf{Instead}\hfill\\
+        \includegraphics[width=0.7\textwidth]{#3}
+        \begin{itemize}
+        #4
+        \end{itemize}
+        \end{center}
+    \end{minipage} 
+    \end{center}
+}
+
+
+\newcommand{\threeminimapscomment}[6]{
+\begin{center}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#1} 
+        \begin{itemize}
+            #2
+        \end{itemize}
+    \end{minipage}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#3}
+        \begin{itemize}
+        #4
+        \end{itemize}
+    \end{minipage}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#5}
+        \begin{itemize}
+            #6
+        \end{itemize}
+    \end{minipage}
+\end{center}
+}
+
+
+
+
+\begin{document}
+\pagecolor{WisdotaBackground}
+\color{white}
+
+\maketitle
+\thispagestyle{first-page}
+
+\paragraph{Match Context}
+Party ranked AP. Playing snowballing carry with good hero matchups - focus is on reaching core items quickly, then put pressure and secure a strong advantage through kills. Got counterinitated in multiple dangerous initiations, having to play from behind most game.
+
+\paragraph{Highlight Tip}
+Make sure to finish Blink Dagger before joining fights - don't actively rotate with TPs for uncertain ganks, rather stay in safe areas.
+
+\section*{Summary}
+\addcontentsline{toc}{section}{Summary}
+
+\begin{remarks}
+\goodremark{Solid itembuild, important early BKB. Should buy Blink Dagger before finishing Vladimir's Offering. }
+\neutralremark{Efficiency improvements through better movement routes and using Blink Dagger to move faster. }
+\badremark{Early ganking delayed item progression.}
+\badremark{Took multiple dangerous fights and got countered.}
+\end{remarks}
+
+\section{Tips}
+
+\begin{itemize}
+    \item Pre-hit creeps under the tower when you have under 70 damage.
+    \item Keep a close eye on the minimap to see enemies entering your lane.
+    \item As Ursa prioritise taking an early Roshan over fighting.
+    \item Use Blink Dagger as often as possible to speed up movement.
+    \item Reconsider ganks when lots of enemies are missing and you have little vision.
+\end{itemize}
+
+
+\pagebreak
+
+\section{Itemisation}
+
+\begin{remarks}
+\goodremark{Lots of regen to lane against Tidehunter}
+\goodremark{ Early Phase Boots}
+\badremark{Finished Vladimir's Offering:
+    \suggestion{Speed up the Blink Dagger by only buying Ring of Basilius and Mask of Death.} }
+\goodremark{Blink Dagger}
+\goodremark{Early Black King Bar}
+\goodremark{Basher into Abyssal Blade}
+\end{remarks}
+
+
+\section{Early game}
+
+\paragraph{After 10 Creepwaves (5:23)}
+21 lasthits, 5 denies. Missed 17 lasthits, 5 denies
+
+\paragraph{Frequent reasons for mising CS}
+\begin{itemize}
+    \item Stood too far away \logref{1:36} \logref{1:44} \logref{3:33} \logref{3:57}
+    \item Didn't prehit in tower \logref{3:04} \logref{3:12} \logref{3:14} \logref{3:18}
+    \item Cancelled the attack \logref{1:00} \logref{5:05}
+    \item Hit too early \logref{1:12} \logref{4:42}
+\end{itemize}
+
+
+
+
+    
+\begin{remarks}
+\goodremark{Clean kill on Tidehunter at \logref{0:48}}
+
+\neutralremark{Missed opportunities to pull lane back against Tidehunter 
+\begin{remarks}
+    \logremark{1:54}{standing in lane  - could have blocked creeps a bit}
+    \logremark{2:19}{could start denying creep, instead pushed}
+    \logremark{6:31}{should not tank creepwave}
+    \end{remarks} }
+
+\neutralremark{Missed opportunities to push empty lane 
+\begin{remarks}
+    \logremark{7:59}{ should kill ranged creep quickly/nuke wave with Earthshock}
+    \logremark{9:39}{ should kill ranged creep quickly}
+    \logremark{9:58}{ denied own creep, losing own ranged creep}
+      \end{remarks} }
+
+\badremark{Missed a solokill on Tidehunter at \logref{4:13}
+\begin{itemize}
+    \item Redirect tower aggro to creeps at \logref{4:13}
+    \item Had a big creepwave and boots advantage
+\end{itemize}
+}
+
+
+\badremark{Unnecessary death to a gank by Axe \logref{6:38}
+\begin{itemize}
+    \item Didn't use tangoes to stay full health, opoportunities to use at \logref{5:05} \logref{5:26} \logref{6:23}
+    \item Could escape the gank by escaping into the river instead of back up the lane.
+\end{itemize}
+\minimap{img/638.pdf}
+    }
+\end{remarks}
+
+\section{Information}
+\begin{remarks}
+\goodremark{Checked enemy inventories a few times}
+\goodremark{Watched some distant action}
+
+\badremark{Missed enemies walking into own lane at \logref{10:07} \logref{10:20}
+\begin{remarks}
+    \badremark{Didn't check Axe to see Blink Dagger \logref{10:07}}
+    \badremark{Didn't check Necrophos to see Dagon \logref{10:20}}
+\end{remarks}}
+
+\badremark{Missed checking enemy Earthshaker before initiating a gank \logref{18:17}, would have seen his Blink Dagger}
+
+\badremark{Overall need more active camera to make good decisions}
+\end{remarks}
+
+\pagebreak
+
+\section{Mechanics}
+\begin{remarks}
+\goodremark{Regularly use of spells to farm}
+\neutralremark{Hits on low HP creeps, instead of evening out the HP to kill the group with Earthshock \logref{13:02} \logref{15:39} \logref{15:57} }
+\neutralremark{Suboptimal use of Earthshock
+\begin{itemize}
+    \item Didn't hit all creeps in neutral camp at \logref{15:39} \logref{30:32}
+    \item Missed enemy in fight at \logref{29:05} \logref{42:52}
+    \item Didn't use it to farm at \logref{32:55}
+\end{itemize}
+}
+\neutralremark{Suboptimal movement:
+\begin{itemize}
+    \item Ran away from creeps \logref{15:39} \logref{19:43}
+    \item Indecision, waiting before farming \logref{20:44} \logref{27:06}
+    \item Left creepcamp without farming \logref{21:00}
+\end{itemize}
+}
+\badremark{ Precast Overpower before walking into fights \logref{13:57} \logref{38:43} \logref{39:03} \logref{42:34} \logref{46:44} }
+\badremark{ \important Use Blink Dagger to speed up movement. Unused at \logref{20:24} \logref{20:40} \logref{23:10} \logref{23:22} \logref{26:51} \logref{27:31} \logref{30:46} \logref{32:35} \logref{37:26}
+\minimap{img/2010blinks.pdf}
+}
+\end{remarks}
+
+\pagebreak
+\section{Movement}
+\begin{remarks}
+\logremark{15:08}{Inefficient movement towards bottom
+\begin{itemize}
+    \item hardcamp at secret shop is farmed by team, have to change route
+    \item want to play top anyway, as need 900 gold to blink
+\end{itemize}
+    }
+
+\logremark{37:26}{Farm medium camp on the way out, use blink (optional: farm hardcamp before, risky) }
+
+\logremark{38:05}{
+\twominimapscomment{img/3805bad.pdf}{\item suboptimal pathing \item sharing farm with SF}
+{img/3805good.pdf}{\item blink up over cliff into easy camp \item farm hardcamp instead of lane}}
+\end{remarks}
+
+\pagebreak
+
+\section{Fight Execution}
+\begin{remarks}
+\logremark{11:28}{Missed opportunity to live by casting Enrage - Saw Tidehunter and Necrophos moving in.}
+
+\logremark{13:59}{Bad initiation route ganking Necrophos. Instead wrap around from the side
+\twominimapscomment{img/1359bad.pdf}{\item Wide distance to close from the front \item His escape path lead towards tower.}{img/1359good.pdf}{\item Scouts the area, will find Earthshaker.\item Force necrophos to move away from the tower.}}
+
+\logremark{14:10}{ Commit to lost fight instead of escaping. Not worth dying for a kill on earthshaker}
+
+\logremark{18:26}{Blink on Earthshaker - better than running at him, earlier initiation.}
+
+\logremark{21:16}{Didn't react to Necrophos showing on the minimap. Also should approach from the side instead of along the lange.}
+
+\logremark{33:15}{ Going back into fight when SF is running. Bad target selection on Tidehunter: 
+\begin{itemize}
+    \item Tide used Ravage, not strong
+    \item Deep in the fight, behind Earthshaker - later blocked by Fissure
+    \item Rather focus Earthshaker (important kill, as low cooldowns)
+\end{itemize}}
+
+
+
+\logremark{39:38}{Unnecessary death
+\begin{itemize}
+\item Short window to cast Enrage, should be spamming it after initiation.
+\item Enemies visible before initiation - minimap, could have the camera on Centaur who is scouting.
+\end{itemize}
+        }
+
+\logremark{45:08}{\important Should use BKB and go in
+\begin{itemize}
+\item Affected by Oracle ultimate, want to heal with lifesteal
+\item Want to use BKB to dodge follow up spells
+\item Team went in, should follow
+    \end{itemize}}
+
+\logremark{49:33}{Bad target selection, go for Tidehunter or Axe instead.
+\begin{itemize}
+\item Want to get away from fountain/T4, rebuys
+\item Want to move towards T3s to push
+\item Blink over fissure is bad
+\end{itemize}
+            }
+\end{remarks}
+
+
+\section{Strategic Decisions}
+\begin{remarks}
+\goodremark{Farm safelane against Tide}
+
+\neutralremark{Missed splitpush opportunities
+\begin{remarks}
+\logremark{16:06}{Bad TP to bottom. Fight is very far, rather try and drag enemies away by pressuring top.}
+\logremark{20:10}{ Inefficient movement towards bottom.
+\twominimapscomment{img/2010bad.pdf}{\item Camps on the way are farmed \item Long distance to walk}{img/2010good.pdf}{\item More gold from lanecreeps \item creates pressure top \item Efficient TP to bottom}
+}
+\logremark{30:46}{ Returned early to impossible fight
+\twominimaps{img/3046bad.pdf}{img/3046good.pdf} }
+\end{remarks}
+}
+
+\neutralremark{Missed opportunity for tower damage at \logref{35:27} as 3 enemies are dead. Lots of damage with Ursa and SF, can force glyph.}
+
+\neutralremark{ Unnecessary return to fountain:
+\begin{remarks}
+\logremark{17:07}{Instead heal up with Tangoes and lifesteal. In this situation: eat Tangoes, buy Blink at sideshop, farm hardcamp, go for Rosh.}
+\logremark{23:14}{Heal up with lifesteal while farming jungle}
+\logremark{26:38}{Supports with Arcane boots (SK nearby), no need to immediately fill up as team is too weak to push.}
+\end{remarks}
+}
+
+\badremark{  Stopped laning for ganks too early. Actively went for fights before buying Blink Dagger.
+\begin{remarks}
+\logremark{13:43}{600 gold to blink, own jungle is secured by wards so should stay top.}
+\logremark{13:59}{Gank on Necrophos without vision}
+\logremark{16:06}{Fight is very far away, have to walk in without blink dagger.}
+   \end{remarks}
+}
+\badremark{\important Did not go for early opportunities to take Roshan, instead went for risky plays.
+\begin{remarks}
+\logremark{13:43}{TP bottom to fight}
+\logremark{17:49}{TP top to fight}
+\logremark{21:06}{Go for gank on silencer}
+\logremark{22:26}{TP mid to fight}
+    \end{remarks}
+}
+\badremark{ Fighting into risky situations
+\begin{remarks}
+\logremark{13:59}{gank on necrophos: No vision at all, enemies all missing }
+\logremark{17:49}{fight into Necrophos/Earthshaker: Centaur just died, 2 worst enemies up there (earthshaker stuns, necrophos most farmed enemy) }
+\logremark{21:06}{gank on silencer: no vision, Necrophos/Earthshaker missing for long time}
+\logremark{22:26}{counter-initiate in mid: no vision, all missing}
+        \end{remarks}
+}
+\badremark{  Took bad fight at \logref{23:54}: Smokegank with 2, no vision. Hard kills on Earthshaker and Tidehunter, highly likely that more enemies are behind. }
+
+\end{remarks}
+
+\end{document}

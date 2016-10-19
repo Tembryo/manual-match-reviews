@@ -108,6 +108,21 @@
          d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
          transform="matrix(-0.3,0,0,-0.3,0.69,0)" />
     </marker>
+    <marker
+       inkscape:stockid="Arrow2Send"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow2Send-3"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4936-6"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(-0.3,0,0,-0.3,0.69,0)" />
+    </marker>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -116,9 +131,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.52578125"
-     inkscape:cx="82.212246"
-     inkscape:cy="407.51919"
+     inkscape:zoom="0.74356697"
+     inkscape:cx="162.3115"
+     inkscape:cy="384.51884"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -168,8 +183,8 @@
     <circle
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:10.87829304;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path4213-3-5"
-       cx="249.00758"
-       cy="1232.8678"
+       cx="232.86916"
+       cy="1236.9023"
        r="24.560854" />
     <path
        style="fill:#a00000;fill-opacity:1;stroke:#000000;stroke-width:10.87829304;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"

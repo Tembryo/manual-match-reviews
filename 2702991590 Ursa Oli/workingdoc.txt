@@ -1,0 +1,322 @@
+Ranked AP, Party
+
+1 Pos farmer, decent matchups: Should outscale, similar teamfight strength. 
+
+STarting items: lots of regen, decent vs Tide
+
+Consider staying in side jungle to protect from wards, if support places no laneward
+
+Could start creepblock earlier, just ran in front for 5seconds from 019
+
+
+033 - 048 fight
+    clean kill on tidehunter
+
+
+100 missed lasthit (cancelled attack)
+106 missed lasthit (blocked by tide - can't click the creep)
+can start denying ranged creep, missed 2 hits
+112 missed lasthit (too early)
+
+can denie one melee creep
+
+129 missed lasthit (denied, no chance, prehit to get fury swipe stacks or use Overpower)
+136 missed lasthit (denied, walked too far back)
+144 missed lasthit (stood too far, late because big creepwave kills too fast)
+
+154 standing in lane  - could have blocked creeps a bit
+
+buy boots
+216 good harass
+
+219 could start denying creep, instead pushed
+226 missed deny
+
+233 checked tidehunter
+
+239 missed deny
+
+255 missed lasthit (too late, need to use overpower/earthshock)
+304 missed lasthit (didnt prehit/ waited to use overpower charge. right before killed a different creep with 2 hits!)
+312 missed lasthit (didnt prehit)
+314 missed lasthit (didnt prehit)
+318 missed lasthit (didnt prehit)
+333 missed lasthit (stood too far)
+341 missed lasthit (too laste)
+could kill ranged creep to increase push
+357 missed lasthit (stood too far)
+
+400 check scoreboard
+
+410 missed lasthit (used earth shock too late)
+
+413 !! missed solokill on Tidehunter
+    - give off Tower aggro at 413
+    - keep chasing as have boots
+    - kill in  3 hits, have big creepwave
+    slight danger of earthshaker porting in, but should be OK 
+
+442 missed lasthit (too early, 1 hp!)
+454 missed deny (too late)
+    go to shop
+        501 missed deny (backed off to go to shop)
+        should have lost another lasthit, if tide denies
+
+505 missed opportunity to eat tango
+
+505 missed lasthit (canceled attack)
+521 missed deny (too early)
+
+526 missed opportunity to eat 2nd tango
+
+602 missed deny (went to shop)
+
+610-618 fight
+    solokill on tidehunter
+
+623 missed opportunity to eat tango
+
+631 should not tank creepwave
+    - tide respawns quickly, rather pull the lane back
+
+638 fight ganked by axe
+    !! - could run to the right to escape
+
+Tabbed out during death - check what is going on in the other lanes
+
+741 missed lasthit (too late - or could have used spell)
+747 bad camera placement - keep it more forward
+758 missed lasthit (hit other creep/moved away)
+!missed opportunity to push - should kill ranged creep quickly/nuke wave with Earthshock
+808 missed lasthit (too late)
+
+should be eating tangoes
+939 missed opportunity to push - should kill ranged creep quickly
+
+958 no need to denie creep, rather keep it and push (loses ranged creep)
+1007 didnt check tide+axe  walking into lane
+    - didnt see axe blink dagger
+1018 missed opportunity to check tide
+1020 didnt check necrophos walking into lane
+    - didnt see dagon on necrophos
+fight 1125 - 
+    - missed opportunity to escape by casting Enrage at 1128
+        tide running in, saw Necrophos earlier
+
+1230 checked hardcamp - saw tide farming
+
+fight 1240- gank on tide
+    -clicked too much, clicked oracle - walking away and missing an attack
+
+13:00 missed lasthit (too early)
+
+1302 2 unnecessary attacks on creep (dont attack the first one, creeps will hit it)
+1311 missed lasthit (busy with last creep)
+
+1340 check bottom
+1343 TP bottom
+    !! bad idea - 600 gold to blink
+    ! own jungle is secured by wards, play top 
+1348 didnt check axe 
+
+1359 fight - gank on necrophos 
+    !! bad initiation route, bad position 
+    can easily wrap around from the side
+    also secures the area, as scouts out the jungle (in this case, will find earthshaker)
+    - could get out at 14:10. Not worth dying for a kill on earthshaker
+
+1508 inefficient movement
+    - hardcamp at secret shop is farmed by team, have to change rout
+    - want to play top anyway, as need 900 gold to blink
+
+1539 inefficient farming
+    -missed earthshock, only hitting 1 of 3 creeps
+    - unnecessary running back from camp, enough regen with VLadimirs
+    - bad attack order, kill big wolf first 
+    - inefficient earth shock, hit 3 targets with better attack order
+
+1557 unnecessary hit on melee creep (focused by ranged creep)
+    unnecessary hit on ranged creep (dies to earthshock)
+
+1606 TP bottom 
+    - bad tp
+    - too far to contribute to fight
+    - dont want to walk into a dangerous fight without blink dagger
+    - move top instead and push - splitting up enemies
+
+1707 Inefficient movement:
+    walk back to base
+
+    instead: eat tangoes, buy blink at sideshop, farm hardcamp, go for rosh!
+
+1749 TP top to T2
+    ! bad idea, centaur just died
+    2 worst enemies up there -  earthshaker stuns, necrophos strong 
+    could go rosh!
+
+1817 didnt check earthshaker
+    - would have seen his blink dagger
+
+1826 could blink on earthshaker - better than running at him, also earlier initiation 
+
+1943 inefficient farming
+    - running away from creeps 
+
+2010 inefficient movement
+    - move to lanecreeps from harcamp, farm next wave as well
+    - creates push top, can then TP bot - Rosh!
+        [minimap]
+
+    - camps on the way are farmed, dont want to walk that much
+
+    use blink dagger to move! missed 2 blinks , =over medium camp trees =into ancients
+        []
+    2044 indecision, go for ancient camp straight away
+
+2100
+    inefficient, kill ancient camp before moving on
+
+2106 go for gank on silencer
+    ! bad idea, no vision
+    2116 saw necrophos on the minimap nearby, didn't notice
+    should walk through the side 
+    fight
+
+2226 TP mid
+    - should be bottom T2 for rosh
+    - no wards in mid, not too keen to take a fight
+
+    fight
+
+2258 inefficient movement
+    go back to base
+    - instead: farm kill hardcamp, maybe kill ancients, regen with lifesteal!
+
+2310 use blink dagger to move faster
+    especially out of fountain
+
+2326 checked ppl moving, checked silencer, tide
+
+2322 use blink to move
+
+2354 fight
+    engage from smoke on earthshaker
+    !no vision at all
+    !saw 3+ heroes move bot
+    ! high likelihood that more are behind
+    ! centaur and SF are far
+    ! behind, dont want 5v5
+
+2556 took rosh!
+
+2614 missed lasthit
+
+2625 inefficient farming
+    - take the medium camp near rune instead, so allies can farm the central one
+    - move on to smallcamp/hardcamp 
+2627 inefficient movement
+    -moved to courier
+    - let it bring stuff instead
+
+2638 TP to base to regen mana
+    ! unnecessary, no need to immediately fill up
+    ! supports have arcane boots (SK nearby)
+    ! will join supports to defend 
+
+2651 use blink dagger to move out of fountain
+
+2706 inefficient movement
+    ! immediately go for hardcamp
+    !not your job as carry to be first defender
+
+2731 inefficient movement
+    blink over into ancient camp, farm it
+
+2832 missed lasthit (too late)
+
+2857 fight
+    2905 earthshock only on one target 
+
+3025 inefficient movement
+    farm mediumcamp, smallcamp, harcamp instead of running and only killing hardcamp 
+        !have ward
+
+3032 inefficient farming
+    missed earthshock, hit only 2/3 creeps in camp
+
+3046 bad movement
+    !no way to fight with 2 dead, way behind
+    what happens: move mid to defend
+    better: stay bottom to splitpush 
+        maybe fight into earthshaker 
+
+3046 inefficient movement
+    use blink dagger to move!
+
+3235 use blink dagger to move!
+3255 inefficient farming 
+    - use earthshock to farm
+
+3315    fight
+    dagger gets canceled by echo slam (end of range)
+    !going back in, while SF is running
+
+        bad target selection: 
+        Tide used ravage, not strong
+         deep in the fight, behind earthshaker - later blocked by fissure
+        rather focus earthshaker (important kill, as low cooldowns)
+    could use BKB to try and escape
+    save unrelieable gold and buy basher
+
+3527 passive play
+    can walk up to T3 mid and hit
+        - 3 dead, lots of damage with ursa+sf
+    force glyph, or maybe take tower
+    possibly even initiate
+
+3627 missed lasthit (too early)
+
+3726 inefficient movement - farm medium camp on the way out, use blink
+    (optional: farm hardcamp before, risky)
+3740 inefficient movement - use blink to move
+
+3805 inficient movement - bad pathing
+    blink up over cliff into easy camp
+    dont move into lane with sf, rather go for hardcamp, move further up into lane
+
+3840 fight
+    use aegis
+    - 3843 should precast overpower before running back in, save 4.5 sec cooldown
+        3852 could back a little earlier, when SF's last attack is out
+        3903 should recast overpower when stack runs out
+
+3938 fight
+    - have short window to cast Enrage, should be spamming it after initiation
+    - see enemies on minimap before initiation
+        - should be watching the minimap 
+        - could have the camera on centaur who is scouting
+
+4234 should recast overpower when buff runs out
+
+4236 figth
+    4252 missed earthshock
+
+4347
+    ! missed opportunity to push
+    should go for some damage on T3, 2 dead, no ravage
+
+4508 fight
+    !! should use BKB and go in
+    ! oracle ultimate up, want to go lifesteal
+    ! want to dodge follow up spells
+    ! team went in, should follow
+
+4644 precast overpower before TP into fight
+4648 unnecessary Enrage
+
+4914 fight
+    4933 bad target selection!
+        go for tide/axe instead
+        !wanto to get away from fountain/T4, rebuys
+        ! towards T3s to push
+        !blink over fissure is bad

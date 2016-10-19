@@ -486,7 +486,7 @@ stay bottom
 2119 cast illusions
 walk into dire jungle
     send illusions to push mid
-    - not moving while microing illusions
+    2130 - not moving while microing illusions
 2155 move top
 
 2205 fight top vs axe initiation

@@ -1,0 +1,29 @@
+Detail:   Granularity --->    
+|           
+v           
+        Low                             High           
+LVL 1:  context                         Highlight tip
+LVL 2:  Summary                         (Tips)
+LVL 3:  Common subj for Tips            Section Content
+LVL 4:                                  Log
+
+
+
+Areas:
+
+
+Information (What could the player entity have done <-> what could the ingame unit have done)
+
+Itemisation
+(Warding)
+
+
+Early Game
+(Midgame)
+(lategame)
+
+
+Mechanics               / Micro Execution   / Minimal changes to individual actions
+Fight Execution         / Micro Decisions   / Goal picking for individual actions
+Map Movement            / Macro Execution   / Small changes to action sequences
+Strategic Decisions     / Macro Decisions   / Goal picking for action sequences

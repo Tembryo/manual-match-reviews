@@ -26,6 +26,7 @@ Itemisation:
 + Luxuries: Glimmer Cape, Guardian Greaves
 
 - Miss out on buying wards for first night (buy/send at 4:00)
+- Unused ward in stash from 8:10 until 15:20
 - Missed buying relevant TP scrolls at 25:50 (at sideshop), 27:15 (get 2nd TP in base)
 
 Early game:
@@ -52,7 +53,7 @@ Information:
 
 - No warding for mid during the first night (opportunity to place at 4:20)
 - Unnecessary showing in top lane at 3:32, rather stay out of vision.
-- Missed opportunity to place deep wards 10:40
+- Missed opportunity to place deep ward 10:40
 [Minimap]
 - Walking for unclear goal, should immediately go for wards 34:04
 - Too defensive ward at 20:22
@@ -68,12 +69,6 @@ Mechanics:
     -> Keep the main hero moving while microing. Lost movement time at 17:46 21:30
 
 = Walked close to trees, hit by arrow at 5:30
-= Opportunity for better walking path at
-        ok: walk through river to be fast
-        better: walk up enemy side to catch od
-[minimap]
-
-= Missed opportunity for a good Ensnare and walked back instead 522, delaying initiation. 
 
 - Missed a few lasthits due to standing too far back  6:47 19:36 18:47 19:35 
 
@@ -86,7 +81,7 @@ Movement decisions:
 
 - Use TP scroll to return to base quickly 26:05, 31:05
 
-- Inefficient movement from 20:15. Can farm radiant jungle or dire secret shop camp, instead of walking through jungle.
+- Inefficient movement from 20:10. Can farm radiant jungle or dire secret shop camp, instead of walking through jungle.
 [minimap]
 
 Fight Execution:
