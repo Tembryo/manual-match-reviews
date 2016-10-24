@@ -1,0 +1,127 @@
+Match Context:
+Solo AP ranked
+Offlane, Roaming/initiator - Goal is to gain an advantage through kills and become strong enough to initiate fights with charge. 
+
+Highlight tip:
+Empowering Haste has an active part, use it to boost movespeed (and thereby damage) in fights!
+
+Summary:
++ Effective itembuild. Get Stout Shield, buy Quelling Blade at the sideshop.
++ Good laning, punishing solo Sven
++ Successful aggressive ganks.
+- Unused skills/abilities: Empowering Haste, sometimes Urn and Drums. 
+- Unnecessary deaths to overconfidence, might have been able to escape with charge.
+
+Tips:
+
+- Only hero and tower damage cancels Urn regeneration, use it to stay healthy when tanking creepwaves.
+- When you have charges available, use Urn agressively when you enter the fight.
+- Prioritise killing the ranged creep when pushing a lane.
+- When pushing lanes later in the game, make sure to lasthit the enemy creeps receiving damage from your creeps. 
+- Be patient and take safe lasthits over pushing a little bit more.
+
+
+Itemisation:
+= starting items
+    + good windlace
+    - need more regen in lane
+    - should get stout shield (melee - will take creep hits)
+    - quelling blade unnecessary, buy at sideshop if needed (1v1 against sven)
++ early urn, Power Treads
++ Echo Saber to push advantage
+= Progression Drums, Sange and Yasha: could aim for bigger items.
+
+1905 missed opportunity to buy TP
+
+
+Laning
+
+034 missed lasthit (denied, stood too far)
+057 missed lasthit (too late)
+135 missed lasthit (too late)
+308 missed lasthit (stood on wrong side of creepwave)
+310 missed lasthit (too late)
+
+153 good kill on sven!
+    creep advantage by killing range+1 melee
+    hits to harass, bashes!
+    finish off
+
+158 missed opportunity to pull lane back: 
+    only lasthit, denie own creeps
+
+
+258 missed kill on Sven: use charge early to set up arrow, don't rely on bashes
+
+320 missed opportunity to sidepull hardcamp
+
+Mechanics:
+
+- Accidentally pooled tango to Omniknight at -032
+- 537 salve cancelled by riki (just killed spectre)
+
+= inefficient farming:
+    left creep in camp 1401, slows down next ally farming the camp
+    instead: at least kill the creep, even better stack at 13:55
+
+= miscalculated cost for item: 
+    selling quelling blade to empty the slot gives enough gold to finish item.
+    no need to farm another camp.
+
+= charge out from fountain instead of walking 
+    1020 walk mid - charge either sven top or CM in mid. can probably fight mid
+
+= kill ranged creep first when pushing 1200 1729 1857 2246
+
+- Didn't use available urn charges to heal 2015, 2205 (leads to death later). Urn is not cancelled by creeps!
+
+- Missed free lasthits.
+    Frequently ignored lasthit lost to own creeps 2212 2213 2513 2536 or hit too early 1720 1737 2220 2222 2451 2453 2510
+
+Fight Execution
+
++ good charge 1120 1620
++ good delay of fight 1230
+    let enemies dive tower, then initiate
+
+= unnecessary dust in sentry 1310
+
+
+- Never used active component of Empowering Haste. Activate when entering fight, examples at 352 504 834 848 1120 1243 1452 1648 2157 2706
+
+- Missed aggressive uses of Urne:  1243 (save use of Ultimate) 1452 1459 1648 1919 2157
+
+- Didn't use Drums of Endurance 2243 (Escape), 2515 (push!) 2706(fight!)
+ 
+- unnecessary death! Didn't use available skills to escape: Drums, Empowering Haste, Urn charge to disable blink, charge away in fog 2246
+    
+
+Movement
+
++ good TP to speed up kill on Nature's Prophet 2148
+
+=  undecisive movement 554, TP top  621
+    -> rather charge top
+
+= suboptimal movement: farm hardcamp, farm medium camp, then walk to fountain
+    or: farm medium camp, then hardcamp, then go to base.
+
+- 906 bad TP top: rather TP base and charge out
+    out of mana, low HP
+    money to buy items
+    -have to walk to base afterwards
+[Minimap]
+
+
+Strategic Decisions:
+
++ Good decision to heal after early fight
+
++ Good aggressive play, pushing advantage
+
+- 936 walk into lane with low HP
+    should die to Sven here
+    no mana for charge out
+
+- Farming right outside enemy base 2050
+    Small chance to escape by charging bottom

@@ -1,14 +1,14 @@
 Match context: Party ranked AP.
-Playing snowballing carry with good hero matchups - focus is on reaching core items quickly, to then put pressure and secure a strong advantage through kills. Reached a strong individual position by contributing to fights without dying, setting up good fights with Song of the Siren. 
+Playing snowballing carry with good hero matchups - focus is on reaching core items quickly, to then put pressure and secure a strong advantage through kills. Got counterinitated in multiple dangerous initiations, having to play from behind most game.
 
 Highlight tip:
+Make sure to finish Blink Dagger before joining fights - don't actively rotate with TPs for uncertain ganks, rather stay in safe areas.
 
 Summary:
 = Good itembuild, important early BKB. Should finish Vladimir's Offering after buying Blink Dagger. 
 = Efficiency improvements through better movement routes and using Blink Dagger to move faster. 
 - Early ganking delayed item progression.
-- Missed out on opportunitites for deep wards, placing less effective ones 
-- Expending all
+- Initiation into multiple dangerous fights.
 
 
 Itemisation:
@@ -133,7 +133,6 @@ Fight Execution:
     save unrelieable gold and buy basher
 
 3840 fight
-    - 3843 should precast overpower before running back in, save 4.5 sec cooldown
         3852 could back a little earlier, when SF's last attack is out
         3903 should recast overpower when stack runs out
 

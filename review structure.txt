@@ -25,5 +25,5 @@ Early Game
 
 Mechanics               / Micro Execution   / Minimal changes to individual actions
 Fight Execution         / Micro Decisions   / Goal picking for individual actions
-Map Movement            / Macro Execution   / Small changes to action sequences
+Movement                / Macro Execution   / Small changes to action sequences, small increase
 Strategic Decisions     / Macro Decisions   / Goal picking for action sequences
