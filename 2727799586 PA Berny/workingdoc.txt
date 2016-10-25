@@ -1,0 +1,213 @@
+starting items:
+stout + blight stone
+
+    poor mans shield better
+
+
+laning:
+031 missed lasthit (too early (5hp) )
+032 missed lasthit (didnt use dagger to lasthit)
+041 missed lasthit (too early, dagger to contest vs pudge)
+
+047 good harass
+049 walking in for harass too long, missing deny
+
+051 missed lasthit (too late / walked too far away)
+
+149 missed lasthit (didnt use dagger)
+237 missed lasthit (walked back for courier)
+242 missed lasthit (too early)
+
+324 try gank with haste rune
+    = potential to kill LC
+
+436 missed lasthit (too early)
+
+good play: letting pudge hook for a go
+
+445 missed kill on pudge:
+    let him self-deny
+    instead: don't do last hit, wait for dagger to get ready
+
+454 missed lasthit (too early / could have used dagger)
+502 missed lasthit (too early)
+
+522 good gank bottom with rune
+
+544 missed lasthit (impatient)
+
+628 bad go on on sandking (use of invis rune):
+    no chance to kill (very unlikely to have no sandstorm)
+    good chance to find + kill LC
+
+
+646 missed kill on pudge:
+    let him self-deny
+    instead: don't do last hit, walk close, wait for dagger to get ready
+
+647 missed opportunity to buy TP -> sideshop, will likely move mid
+
+
+726 good go on LD
+
+814 good go on LC
+
+921 bad blink into fight
+    pudge+sk under tower, just run
+
+1014 inefficient: didnt use blinkstrike on creepwave
+
+1021 missed lasthit (impatient)
+missed lasthit (unlucky crit)
+1106 missed lasthit ()
+
+1116 good tp bottom
+    good choice chasing sk
+
+1146 missed lasthit (hit wrong creep)
+1147 missed lasthit (hit wrong creep)
+
+1153 missed opportunity to buy tp at sideshop
+
+1230 death
+    +LC blink was suprising
+    -WD didn't use heal
+
+1438 inefficient
+    didnt use spells to farm camp
+        !full mana
+        !low(er) hp
+
+1512 inefficient
+    didnt use dagger to farm camp
+        !more mana
+        !low(er) hp
+
+1556 missed lasthit (didnt watch wave for dagger)
+
+1604 death to tiny
+    - walking around with low HP
+    + new blink
+    - had to expect blink to soon come up
+    - had no vision, knew enemies were nearby
+
+!!! decision makign:
+    did even ping enemy position!
+    need to realize that initiating teamfights is impossible
+    lots of magic burst damage, all heroes squishy
+    can only fight if enemies use spells separately - super hard
+
+->
+{{
+1649 bad tp mid
+    - towards enemy team
+
+1655 walk uphill
+
+1708 death in fight
+    - too low maxhp/too much magic damage
+    - cant go into fight
+    - lucky that tiny didnt burst immediately
+
+}}
+{{ 
+   !!instead TP bottom 1649, split/move to ancient jungle
+
+}}
+
+1833 Fight in jungle
+    well executed 4:3 trade
+
+2009 bad go into tiny - should have immediately died to combo
+
+
+!!! decision makign:
+    keep fighting into sk/tiny  with reduced HP
+
+2053 go onto tiny
+    leads to death
+
+
+
+2200 good TP top
+
+!!decision making
+    walk over to mid as they fight pudge
+    should farm jungle, no need to help there
+    want to spread and maximize farm
+    dont want to show, dangerous with 3 blinks and lots of burst
+
+bad movement
+top t2-> mid t2 - mid t1 - farm mid wave  -stay and farm next wave
+instead - farm jungle
+top t2 -> medium camp -> hard camp -> medium camp rune
+
+2221 should die do sk+tiny 
+
+good decision making!!
+    find DD
+    see SK mid
+2315 take rosh 
+
+!!need to check more items, no idea how strong they are
+
+2445 inefficient movement
+    bad pathing above ancient camp to creepwave
+    misses 2 creeps
+    saw them mid, cant 
+2457 missed lasthit (hit wrong creep)
+
+2452 inefficient farming: didnt use blink strike to creepwave
+
+2502 missed lasthit (impatient, )
+
+2503 !decision making:
+    tiny sk pudge show mid
+    -> wave bottom is safe to farm
+
+2504 inefficient movment:
+    !missing information: need to view drows movement
+    walk to hardcamp
+    team is farming that
+    instead: immediately farm ancients
+        !avoids dangerous situation
+
+2744 inefficient: use blink strike to clear creepwave
+
+2746
+    !decision making
+        should farm enemy jungle toward bottom
+            enemies are respawning/ in base
+            lots of space available
+            spread out 
+{{
+    2813 missed opportunity to buy TP, usign courier
+    walk to secret shop
+    farm ancients
+    walk mid
+
+    2830 !decision making
+        should not try to fight there
+        no vision
+        nothing to gain, own lane is pushed in
+        Lina is out of mana, global silence on cooldown
+}}
+{{ 
+   !!instead farm radiant jungle toward bottom, kill one wave
+
+}}
+
+2947 missed opportunity to buy TP
+    replace Raindrops! 
+
+3004 !decision making should push out top
+
+    inefficient movement farming mid
+        allies in mid, sharing farm with drow
+        only 2 camps next to secret shop to continue
+    farm top instead 
+        big creepwave
+        should push top
+        can continue jungle
+
+3056 !decision making should push out top
