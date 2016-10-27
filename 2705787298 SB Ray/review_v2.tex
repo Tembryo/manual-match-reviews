@@ -1,0 +1,307 @@
+\documentclass{article}
+\usepackage[top=2.5cm, bottom=2.5cm, inner=2.5cm,outer=2.5cm]{geometry}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\definecolor{WisdotaBackground}{HTML}{61595D}
+\definecolor{highlight}{HTML}{F1B72A}
+\definecolor{secondaryhighlight}{HTML}{D98E04}
+\definecolor{mistakecolor}{HTML}{8C2625}
+\definecolor{goodplaycolor}{HTML}{258C27}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{fontspec}
+\usepackage{background}
+\usepackage{blindtext}
+%\usepackage{stix}
+\usepackage{savesym}
+\usepackage{amsmath}
+\savesymbol{mathdollar}
+\usepackage{MnSymbol}
+\restoresymbol{MnS}{mathdollar}
+\usepackage{hyperref}
+\usepackage{titling}
+\usepackage{enumitem}
+%\usepackage{fdsymbol}
+
+
+\hypersetup{
+    colorlinks = false,
+    linkbordercolor = {highlight}
+}
+
+\onehalfspacing
+%\doublespacing
+\setmainfont{Roboto-Light}
+\backgroundsetup{
+    scale=1,
+    angle=45,
+    opacity=0.1,
+    contents={\begin{tikzpicture}[remember picture,overlay]
+    \path [left color = gray, right color = black] (current page.south west) rectangle (current page.north east);   % Adjust the position of the logo.
+    \end{tikzpicture}}
+}
+
+\newcommand{\matchid}{2705787298}
+
+
+\makeatletter
+\fancypagestyle{reportpage}{%
+  \fancyhf{}% Clear header/footer
+  \rhead{ \textcolor{white}{Wisdota.com}}
+  \lhead{\textcolor{white}{Report for Match \matchid}}
+  \fancyfoot[C]{\textcolor{white}{\color{white}\thepage}}% Page # in middle/centre of footer
+  \renewcommand{\headrulewidth}{.4pt}% .4pt header rule
+  \def\headrule{{\if@fancyplain\let\headrulewidth\plainheadrulewidth\fi
+    \color{white}\hrule\@height\headrulewidth\@width\headwidth \vskip-\headrulewidth}}
+  \renewcommand{\footrulewidth}{0pt}% No footer rule
+%  \def\footrule{{\if@fancyplain\let\footrulewidth\plainfootrulewidth\fi
+%    \vskip-\footruleskip\vskip-\footrulewidth
+%    \hrule\@width\headwidth\@height\footrulewidth\vskip\footruleskip}}
+}
+\fancypagestyle{first-page}{%
+  \fancyhf{}% Clear header/footer
+  \rhead{}
+  \lhead{}
+  \fancyfoot[C]{\textcolor{white}{\color{white}\thepage}}% Page # in middle/centre of footer
+  \renewcommand{\headrulewidth}{0}% .4pt header rule
+  \def\headrule{}
+  \renewcommand{\footrulewidth}{0pt}% No footer rule
+%  \def\footrule{{\if@fancyplain\let\footrulewidth\plainfootrulewidth\fi
+%    \vskip-\footruleskip\vskip-\footrulewidth
+%    \hrule\@width\headwidth\@height\footrulewidth\vskip\footruleskip}}
+}
+
+\setlist[itemize]{leftmargin=0pt,labelindent=1em}
+
+\title{Wisdota Report for Match \matchid \\
+Spirit Breaker by Spdy}
+\date{Played on 11/10/2016}
+\pretitle{\begin{flushleft}\LARGE\sffamily}
+\posttitle{\par\end{flushleft}}
+\preauthor{}
+\author{}
+\postauthor{} 
+\predate{\begin{flushright}\large\scshape}
+\postdate{\par\end{flushright}}
+
+\setlength{\droptitle}{0pt}
+
+\makeatother
+\pagestyle{reportpage}
+
+\newcommand{\gt}{\ensuremath{\;\;\color{green} \filledmedtriangleup} }
+\newcommand{\rt}{\ensuremath{\;\;\color{red} \filledmedtriangledown} }
+\newcommand{\ws}{\ensuremath{\;\;\color{white} \filledmedsquare} }
+
+\newenvironment{remarks}
+    {
+        \begin{description}
+            \setlength\itemsep{0em}
+    }
+    {
+        \end{description}
+    }
+\newcommand{\goodremark}[1]{\item[\gt] #1}
+\newcommand{\neutralremark}[1]{\item[\ws] #1}
+\newcommand{\badremark}[1]{\item[\rt] #1}
+\newcommand{\logremark}[2]{\item[\textnormal{\logref{#1}}] #2}
+
+\newcommand{\suggestion}[1]{\\ \emph{#1}}
+
+\newcommand{\important}{\colorbox{highlight}{Important!}\ }
+
+\newcommand{\mistake}{\colorbox{mistakecolor}{Mistake!}\ }
+\newcommand{\goodplay}{\colorbox{goodplaycolor}{Good Play!}\ }
+\newcommand{\logref}[1]{\textcolor{highlight}{#1}}
+
+\newcommand{\nnsection}[1]
+{\section*{#1}
+\addcontentsline{toc}{section}{#1}
+}
+
+\newcommand{\bigscreenshot}[1]{
+    \begin{center}
+    \begin{minipage}[t]{0.9\textwidth}
+        \includegraphics[width=\textwidth]{#1}
+    \end{minipage}
+\end{center}
+}
+
+\newcommand{\screenshot}[1]{
+    \begin{center}
+    \begin{minipage}[t]{0.4\textwidth}
+        \includegraphics[width=\textwidth]{#1}
+    \end{minipage}
+\end{center}
+}
+
+\newcommand{\twoscreenshots}[2]{
+\begin{center}
+    \begin{minipage}[t]{0.4\textwidth}
+        \begin{center}
+            \includegraphics[width=\textwidth]{#1}
+            \end{center}
+    \end{minipage}
+    \begin{minipage}[t]{0.4\textwidth}
+            \begin{center}
+        \includegraphics[width=\textwidth]{#2}
+                \paragraph{}\hfill
+            \end{center}
+    \end{minipage}
+\end{center}
+}
+
+
+\newcommand{\minimap}[1]{
+    \begin{center}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#1}
+    \end{minipage}
+\end{center}
+}
+
+\newcommand{\twominimaps}[2]{
+\begin{center}
+    \begin{minipage}[t]{0.3\textwidth}
+        \begin{center}
+            \textbf{What happened}\hfill
+            \includegraphics[width=\textwidth]{#1}
+            \end{center}
+    \end{minipage}
+    \begin{minipage}[t]{0.3\textwidth}
+            \begin{center}
+            \textbf{Instead}\hfill
+        \includegraphics[width=\textwidth]{#2}
+                \paragraph{}\hfill
+            \end{center}
+    \end{minipage}
+\end{center}
+}
+
+\newcommand{\threeminimaps}[3]{
+\begin{center}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#1}
+    \end{minipage}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#2}
+    \end{minipage}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#3}
+    \end{minipage}
+\end{center}
+}
+
+\newcommand{\twominimapscomment}[4]{
+\begin{center}
+    \begin{minipage}[t]{0.42\textwidth}
+    \begin{center}
+        \textbf{What happened}\hfill
+        \includegraphics[width=0.7\textwidth]{#1} 
+        \begin{itemize}
+        #2
+        \end{itemize}
+    \end{center}
+    \end{minipage}
+    \begin{minipage}[t]{0.42\textwidth}
+        \begin{center}
+        \textbf{Instead}\hfill\\
+        \includegraphics[width=0.7\textwidth]{#3}
+        \begin{itemize}
+        #4
+        \end{itemize}
+        \end{center}
+    \end{minipage} 
+    \end{center}
+}
+
+
+\newcommand{\threeminimapscomment}[6]{
+\begin{center}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#1} 
+        \begin{itemize}
+            #2
+        \end{itemize}
+    \end{minipage}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#3}
+        \begin{itemize}
+        #4
+        \end{itemize}
+    \end{minipage}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#5}
+        \begin{itemize}
+            #6
+        \end{itemize}
+    \end{minipage}
+\end{center}
+}
+
+
+
+
+\begin{document}
+\pagecolor{WisdotaBackground}
+\color{white}
+
+\maketitle
+\thispagestyle{first-page}
+
+\paragraph{Match Context}
+Solo AP ranked. Spriti Breaker on offlane, roaming/initiator - Goal is to gain an advantage through kills and become strong enough to initiate fights with charge. Got an early advantage and snowballed to a win.
+
+\nnsection{Summary}
+
+\begin{remarks}
+\goodremark{Effective itembuild. Get Stout Shield, buy Quelling Blade at the sideshop.}
+\goodremark{Good laning, punishing solo Sven}
+\goodremark{Successful aggressive ganks.}
+\neutralremark{Unnecessary deaths to overconfidence, might have been able to escape with charge.}
+\badremark{Unused skills/abilities: Empowering Haste, sometimes Urn and Drums. }
+\end{remarks}
+
+\paragraph{Highlight Tip}
+Empowering Haste has an active part, use it to boost movespeed (and damage) in fights and to escape bad situations! Examples where you could have used this ability more are: \logref{3:52}, \logref{8:34}, \logref{16:48}.
+
+\paragraph{Pro Example}
+Fear video clip (20s total): \url{https://youtu.be/7-AWDOwb5Vk?t=4m21s}\\  
+Fear goes for a gank on invoker, it goes bad and he needs to escape. He uses the active Empowering Haste at \logref{4:29} to escape from Earth Spirit and is back to safety by \logref{4:39}.
+\bigscreenshot{img/Fear_Empowering_Haste.png}
+
+\paragraph{Highlight Tip}
+Think about using Charge of Darkness to escape more often.
+
+\paragraph{Pro Example}
+Fear video clip (25s total): \url{https://youtu.be/7-AWDOwb5Vk?t=12m55s}\\  
+Fear charges Death Prophet and uses active Empowering Haste to chase. He gets caught by Mirana at \logref{13:15}, and tries to escape by charging to the bottom lane but gets killed by a Sunstrike.
+\bigscreenshot{img/Fear_Charge_Escape.png}
+
+\paragraph{Tip - Laning}
+Don't walk into lane with low HP and no mana for a charge out. This nearly caused you to die to Sven at \logref{9:36}
+\twoscreenshots{img/929.jpg}{img/933.jpg}
+
+\paragraph{Tip - Abilities}
+Use Charge of Darkness earlier when ganking. For example: You missed a kill on Sven at \logref{2:58} because you held charge too long and hoped for a Bash and Mirana misses her arrow.
+\twoscreenshots{img/255.jpg}{img/257.jpg}
+
+\paragraph{Tip - Farming }
+Only hero and tower damage cancels Urn regeneration, use it to stay healthy when tanking creepwaves. E.g., \logref{20:15}, \logref{22:05}. Urn is not cancelled by creeps!
+
+\paragraph{Tip - Fighting}
+When you have charges available, use Urn aggressively when you enter the fight. E.g.,  \logref{12:43}, \logref{19:19}, \logref{21:57}.
+
+\paragraph{Tip - Farming}
+Prioritise killing the ranged creep when pushing a lane. E.g., \logref{12:00},\logref{17:29}, \logref{22:46}
+
+\paragraph{Tip - Farming}
+When farming your jungle make sure that you kill all of the creeps in a camp as otherwise this slows down next ally farming the camp. Eg., did not kill last creep in camp \logref{14:01}.
+
+\paragraph{Tip - Farming}
+Missed free lasthits. Frequent problems: Ignored lasthit lost to own creeps \logref{22:12},  \logref{25:13}, \logref{25:36}, and hit too early \logref{17:20}, \logref{22:20}, \logref{25:10}.
+
+\paragraph{Tip - Movement}
+Charge out from fountain instead of walking to save time. E.g.,  \logref{10:20} walk mid - charge either sven top or CM in mid. 
+
+
+\end{document}
