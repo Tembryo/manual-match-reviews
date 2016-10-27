@@ -1,10 +1,11 @@
 starting items:
-stout + blight stone
+stout shield, blight stone
+-057 inefficiency: bought slow, start moving now
+-030 information: stopped moving with ward in inventory
+    -> place it now, before laning
 
-    poor mans shield better
+018 information walk into lane with ward
 
-
-laning:
 031 missed lasthit (too early (5hp) )
 032 missed lasthit (didnt use dagger to lasthit)
 041 missed lasthit (too early, dagger to contest vs pudge)
@@ -57,9 +58,9 @@ good play: letting pudge hook for a go
 
 1014 inefficient: didnt use blinkstrike on creepwave
 
-1021 missed lasthit (impatient)
+1021 missed lasthit (impatient,  tried 2 hits)
 missed lasthit (unlucky crit)
-1106 missed lasthit ()
+1105 missed lasthit (impatient, tried 2 hits)
 
 1116 good tp bottom
     good choice chasing sk
@@ -91,12 +92,11 @@ missed lasthit (unlucky crit)
     - had to expect blink to soon come up
     - had no vision, knew enemies were nearby
 
-!!! decision makign:
-    did even ping enemy position!
+!!! decision making:
+    did ping enemy position!
     need to realize that initiating teamfights is impossible
     lots of magic burst damage, all heroes squishy
     can only fight if enemies use spells separately - super hard
-
 ->
 {{
 1649 bad tp mid
@@ -108,7 +108,6 @@ missed lasthit (unlucky crit)
     - too low maxhp/too much magic damage
     - cant go into fight
     - lucky that tiny didnt burst immediately
-
 }}
 {{ 
    !!instead TP bottom 1649, split/move to ancient jungle
@@ -210,4 +209,35 @@ good decision making!!
         should push top
         can continue jungle
 
-3056 !decision making should push out top
+3056 !decision making should push out bottom
+    !missing tp, could have bought at 2947
+
+3236 inefficient movement: walk mid then bot
+    bottom needs to be pushed, go there immediately
+
+3320 missed lasthit (wrong creep)
+
+3415
+    good call: take rosh
+
+4032 missed opportunity to buy TP
+
+4130 !decision making
+    enemies could push top rax, no tp!
+
+4221 decision making: 
+    fighting with only 3 for enemy base
+    no TP out
+        -> should run 
+4225 fight execution:
+    run up instead of towards team
+
+4519 !decision making:
+    killed 4, go for objectives
+
+    did: farmed ancients, moved to bottom
+
+    should: push mid
+
+    use phaseboots always!
+        1319 1945 

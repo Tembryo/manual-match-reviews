@@ -1,0 +1,576 @@
+\documentclass{article}
+\usepackage[top=2.5cm, bottom=2.5cm, inner=2.5cm,outer=2.5cm]{geometry}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\definecolor{WisdotaBackground}{HTML}{61595D}
+\definecolor{highlight}{HTML}{F1B72A}
+\definecolor{secondaryhighlight}{HTML}{D98E04}
+\definecolor{mistakecolor}{HTML}{8C2625}
+\definecolor{goodplaycolor}{HTML}{258C27}
+
+\definecolor{mechanicscolor}{HTML}{D73356}
+\definecolor{efficiencycolor}{HTML}{D68A1B}
+\definecolor{informationcolor}{HTML}{3FD258}
+\definecolor{itemisationcolor}{HTML}{D13CC1}
+\definecolor{executioncolor}{HTML}{37AFD3}
+\definecolor{decisioncolor}{HTML}{5A56DC}
+
+
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{fontspec}
+\usepackage{background}
+\usepackage{blindtext}
+%\usepackage{stix}
+\usepackage{savesym}
+\usepackage{amsmath}
+\savesymbol{mathdollar}
+\usepackage{MnSymbol}
+\restoresymbol{MnS}{mathdollar}
+\usepackage{hyperref}
+\usepackage{titling}
+\usepackage{enumitem}
+%\usepackage{fdsymbol}
+
+
+\hypersetup{
+    colorlinks = false,
+    linkbordercolor = {highlight}
+}
+
+\onehalfspacing
+%\doublespacing
+\setmainfont{Roboto-Light}
+\backgroundsetup{
+    scale=1,
+    angle=45,
+    opacity=0.1,
+    contents={\begin{tikzpicture}[remember picture,overlay]
+    \path [left color = gray, right color = black] (current page.south west) rectangle (current page.north east);   % Adjust the position of the logo.
+    \end{tikzpicture}}
+}
+
+\newcommand{\matchid}{2705787298}
+
+
+\makeatletter
+\fancypagestyle{reportpage}{%
+  \fancyhf{}% Clear header/footer
+  \rhead{ \textcolor{white}{Wisdota.com}}
+  \lhead{\textcolor{white}{Report for Match \matchid}}
+  \fancyfoot[C]{\textcolor{white}{\color{white}\thepage}}% Page # in middle/centre of footer
+  \renewcommand{\headrulewidth}{.4pt}% .4pt header rule
+  \def\headrule{{\if@fancyplain\let\headrulewidth\plainheadrulewidth\fi
+    \color{white}\hrule\@height\headrulewidth\@width\headwidth \vskip-\headrulewidth}}
+  \renewcommand{\footrulewidth}{0pt}% No footer rule
+%  \def\footrule{{\if@fancyplain\let\footrulewidth\plainfootrulewidth\fi
+%    \vskip-\footruleskip\vskip-\footrulewidth
+%    \hrule\@width\headwidth\@height\footrulewidth\vskip\footruleskip}}
+}
+\fancypagestyle{first-page}{%
+  \fancyhf{}% Clear header/footer
+  \rhead{}
+  \lhead{}
+  \fancyfoot[C]{\textcolor{white}{\color{white}\thepage}}% Page # in middle/centre of footer
+  \renewcommand{\headrulewidth}{0}% .4pt header rule
+  \def\headrule{}
+  \renewcommand{\footrulewidth}{0pt}% No footer rule
+%  \def\footrule{{\if@fancyplain\let\footrulewidth\plainfootrulewidth\fi
+%    \vskip-\footruleskip\vskip-\footrulewidth
+%    \hrule\@width\headwidth\@height\footrulewidth\vskip\footruleskip}}
+}
+
+\setlist[itemize]{leftmargin=0pt,labelindent=1em}
+
+\title{Wisdota Report for Match \matchid \\
+Spirit Breaker by Spdy}
+\date{Played on 11/10/2016}
+\pretitle{\begin{flushleft}\LARGE\sffamily}
+\posttitle{\par\end{flushleft}}
+\preauthor{}
+\author{}
+\postauthor{} 
+\predate{\begin{flushright}\large\scshape}
+\postdate{\par\end{flushright}}
+
+\setlength{\droptitle}{0pt}
+
+\makeatother
+\pagestyle{reportpage}
+
+\newcommand{\mechanics}{\ensuremath{\;\;\color{mechanicscolor} \filledmedsquare} }
+\newcommand{\efficiency}{\ensuremath{\;\;\color{efficiencycolor} \filledmedsquare} }
+\newcommand{\information}{\ensuremath{\;\;\color{informationcolor} \filledmedsquare} }
+\newcommand{\itemisation}{\ensuremath{\;\;\color{itemisationcolor} \filledmedsquare} }
+\newcommand{\execution}{\ensuremath{\;\;\color{executioncolor} \filledmedsquare} }
+\newcommand{\decision}{\ensuremath{\;\;\color{decisioncolor} \filledmedsquare} }
+
+\newcommand{\gt}{\ensuremath{\;\;\color{green} \filledmedtriangleup} }
+\newcommand{\rt}{\ensuremath{\;\;\color{red} \filledmedtriangledown} }
+\newcommand{\ws}{\ensuremath{\;\;\color{white} \filledmedsquare} }
+
+\newenvironment{remarks}
+    {
+        \begin{description}
+            \setlength\itemsep{0em}
+    }
+    {
+        \end{description}
+    }
+\newcommand{\goodremark}[1]{\item[\gt] #1}
+\newcommand{\neutralremark}[1]{\item[\ws] #1}
+\newcommand{\badremark}[1]{\item[\rt] #1}
+\newcommand{\logremark}[3]{\item[\textnormal{\logref{#1}} #2 ] #3}
+
+\newcommand{\suggestion}[1]{\\ \emph{#1}}
+
+\newcommand{\important}{\colorbox{highlight}{Important!}\ }
+
+\newcommand{\mistake}{\colorbox{mistakecolor}{Mistake!}\ }
+\newcommand{\goodplay}{\colorbox{goodplaycolor}{Good Play!}\ }
+\newcommand{\logref}[1]{\textcolor{highlight}{#1}}
+
+\newcommand{\nnsection}[1]
+{\section*{#1}
+\addcontentsline{toc}{section}{#1}
+}
+
+\newcommand{\decisionmistake}[3]{#1\\
+\vbox{
+\vspace{}
+\textbf{What happened}\\\vbox{#2}
+\textbf{Alternative}\\\vbox{#3}
+}
+}
+
+\newcommand{\decisionmistakeshort}[3]{#1\\
+\vbox{
+\textbf{Thoughts}\\\vbox{#2}
+\textbf{Alternative}\\\vbox{#3}
+}
+}
+
+
+\newcommand{\decisionmistakefull}[4]{#1\\
+\textbf{Thoughts}\\#2\\
+\textbf{What Happened}\\#3\\
+\textbf{Alternative}\\#4
+}
+
+\newcommand{\screenshot}[1]{
+    \begin{center}
+    \begin{minipage}[t]{0.4\textwidth}
+        \includegraphics[width=\textwidth]{#1}
+    \end{minipage}
+\end{center}
+}
+
+\newcommand{\twoscreenshots}[2]{
+\begin{center}
+    \begin{minipage}[t]{0.4\textwidth}
+        \begin{center}
+            \includegraphics[width=\textwidth]{#1}
+            \end{center}
+    \end{minipage}
+    \begin{minipage}[t]{0.4\textwidth}
+            \begin{center}
+        \includegraphics[width=\textwidth]{#2}
+                \paragraph{}\hfill
+            \end{center}
+    \end{minipage}
+\end{center}
+}
+
+
+\newcommand{\minimap}[1]{
+    \begin{center}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#1}
+    \end{minipage}
+\end{center}
+}
+
+\newcommand{\twominimaps}[2]{
+\begin{center}
+    \begin{minipage}[t]{0.3\textwidth}
+        \begin{center}
+            \textbf{What happened}\hfill
+            \includegraphics[width=\textwidth]{#1}
+            \end{center}
+    \end{minipage}
+    \begin{minipage}[t]{0.3\textwidth}
+            \begin{center}
+            \textbf{Instead}\hfill
+        \includegraphics[width=\textwidth]{#2}
+                \paragraph{}\hfill
+            \end{center}
+    \end{minipage}
+\end{center}
+}
+
+\newcommand{\threeminimaps}[3]{
+\begin{center}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#1}
+    \end{minipage}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#2}
+    \end{minipage}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#3}
+    \end{minipage}
+\end{center}
+}
+
+\newcommand{\twominimapscomment}[4]{
+\begin{center}
+    \begin{minipage}[t]{0.42\textwidth}
+    \begin{center}
+        \textbf{What happened}\hfill
+        \includegraphics[width=0.7\textwidth]{#1} 
+        \begin{itemize}
+        #2
+        \end{itemize}
+    \end{center}
+    \end{minipage}
+    \begin{minipage}[t]{0.42\textwidth}
+        \begin{center}
+        \textbf{Instead}\hfill\\
+        \includegraphics[width=0.7\textwidth]{#3}
+        \begin{itemize}
+        #4
+        \end{itemize}
+        \end{center}
+    \end{minipage} 
+    \end{center}
+}
+
+
+\newcommand{\threeminimapscomment}[6]{
+\begin{center}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#1} 
+        \begin{itemize}
+            #2
+        \end{itemize}
+    \end{minipage}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#3}
+        \begin{itemize}
+        #4
+        \end{itemize}
+    \end{minipage}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#5}
+        \begin{itemize}
+            #6
+        \end{itemize}
+    \end{minipage}
+\end{center}
+}
+
+
+
+
+\begin{document}
+\pagecolor{WisdotaBackground}
+\color{white}
+
+\maketitle
+\thispagestyle{first-page}
+
+\paragraph{Match Context}
+Solo AP ranked. Spriti Breaker on offlane, roaming/initiator - Goal is to gain an advantage through kills and become strong enough to initiate fights with charge. Got an early advantage and snowballed to a win.
+
+\paragraph{Highlight Tip}
+Empowering Haste has an active part, use it to boost movespeed (and damage) in fights!
+
+\nnsection{Summary}
+
+\begin{remarks}
+\goodremark{Effective itembuild. Get Stout Shield, buy Quelling Blade at the sideshop.}
+\goodremark{Good laning, punishing solo Sven}
+\goodremark{Successful aggressive ganks.}
+\neutralremark{Unnecessary deaths to overconfidence, might have been able to escape with charge.}
+\badremark{Unused skills/abilities: Empowering Haste, sometimes Urn and Drums. }
+\end{remarks}
+
+\section{Tips}
+
+\begin{itemize}
+    \item Only hero and tower damage cancels Urn regeneration, use it to stay healthy when tanking creepwaves.
+    \item When you have charges available, use Urn agressively when you enter the fight.
+    \item Prioritise killing the ranged creep when pushing a lane.
+    \item When pushing lanes later in the game, make sure to lasthit the enemy creeps dying to your creeps. 
+    \item Be patient and take safe lasthits over pushing a little bit more.
+\end{itemize}
+
+
+\pagebreak
+
+\section{Events}
+
+
+
+\begin{remarks}
+
+\logremark{-0:57}{\mechanics}{bought slow, start moving now}
+\logremark{-0:30}{\decision}{
+    \decisionmistake
+    {Did not move in to place ward.}
+    {
+        \begin{remarks}
+        \setlength\topsep{20pt}
+        \logremark{0:18}{\information}{walked into lane with ward}
+        \logremark{1:17}{\information}{placed ward while visible
+            \screenshot{img/117.jpg}
+            }
+        \end{remarks}
+    }
+    {
+        Either give the ward to a support, or place from outside vision.\\
+        \minimap{img/-030.pdf}
+    }
+}
+
+
+
+\logremark{0:31}{\mechanics}{missed lasthit (too early, 5hp)}
+\logremark{0:32}{\mechanics}{missed lasthit (didn't use dagger to lasthit)}
+\logremark{0:41}{\mechanics}{missed lasthit (too early, use dagger to contest vs pudge)}
+
+\logremark{0:49}{\mechanics}{walking in for harass too long, missing deny}
+
+\logremark{0:51}{\mechanics}{missed lasthit (too late / walked too far away)}
+
+\logremark{1:49}{\mechanics}{missed lasthit (didn't use dagger)}
+\logremark{2:37}{\mechanics}{missed lasthit (walked back for courier)}
+\logremark{2:42}{\mechanics}{missed lasthit (too early)}
+
+\logremark{3:10}{\decision}{
+    \decisionmistake
+    {Bought boots in base, unused until \logref{6:17}}
+    {
+    \begin{remarks}
+        \logremark{3:40}{\itemisation}{Didn't use courier to bring boots}
+        \logremark{5:09}{\efficiency}{Walk to sidelane without Boots.}
+    \end{remarks}
+    }
+    {Buy them at at the sideshop bottom at \logref{3:47}, can even complete Phaseboots at sideshop bottom \logref{5:50}}
+}
+
+
+\logremark{4:36}{\mechanics}{missed lasthit (too early)}
+
+\logremark{4:45}{\execution}{
+\decisionmistake
+{Missed kill on Pudge}
+{Attacked until Pudge could self-deny
+\twoscreenshots{img/445.jpg}{img/445-2.jpg}
+}
+{Keep close without hitting until Dagger is off cooldown.}
+
+}
+
+\logremark{4:54}{\mechanics}{missed lasthit (too early / could have used dagger)}
+\logremark{5:02}{\mechanics}{missed lasthit (too early)}
+
+\logremark{5:44}{\mechanics}{missed lasthit (impatient, tried 2 hits)}
+
+\logremark{6:28}{\decision}{
+    \decisionmistakeshort{Break Invisibility rune to attack Sand King}
+    {No chance to kill (very unlikely to have no sandstorm, could stun and TP.)}
+    {Good chance to find and kill Legion Commander.}
+}
+
+\logremark{6:46}{\execution}{
+\decisionmistake{Missed kill on Pudge}
+{Attacked until Pudge could self-deny
+\twoscreenshots{img/645.jpg}{img/645-2.jpg}
+}
+{Keep close without hitting until Dagger is off cooldown.}
+}
+\logremark{6:47}{\itemisation}{missed opportunity to buy TP at sideshop, will likely move mid}
+
+
+\logremark{9:21}{\decision}{bad blink into fight, death
+    pudge+sk under tower, just run}
+    
+
+\logremark{10:14}{\efficiency}{didnt use blinkstrike on creepwave}
+
+\logremark{10:21}{\mechanics}{missed lasthit (impatient, tried 2 hits)}
+\logremark{10:34}{\mechanics}{missed lasthit (unlucky crit, could use dagger quickly)}
+\logremark{11:05}{\mechanics}{missed lasthit (impatient, tried 2 hits)}
+
+\logremark{11:46}{\mechanics}{missed lasthit (hit wrong creep)}
+\logremark{11:47}{\mechanics}{missed lasthit (hit wrong creep)}
+
+\logremark{11:53}{\itemisation}{missed opportunity to buy tp at sideshop}
+
+\logremark{12:30}{\execution}{death in small fight
+    1222 move into fight with half HP
+        safe play is to stay back a bit and bottle up
+    +LC blink was suprising
+    -WD didn't use heal, could have lived}
+
+\logremark{13:19}{\itemisation}{always use phaseboots to move}
+        
+    
+\logremark{14:38}{\efficiency}{didnt use spells to farm camp
+        !full mana
+        !low(er) hp}
+
+\logremark{15:12}{\efficiency}{inefficient
+    didnt use dagger to farm camp
+        !more mana
+        !low(er) hp}
+
+\logremark{15:56}{\mechanics}{missed lasthit (didnt watch wave for dagger)}
+
+\logremark{16:04}{\itemisation}{death to tiny
+    - walking around with low HP
+    + new blink
+    - had to expect blink to soon come up
+    - had no vision, knew enemies were nearby}
+
+\logremark{}{\itemisation}{!!! decision making:
+    did ping enemy position!
+    need to realize that initiating teamfights is impossible
+    lots of magic burst damage, all heroes squishy
+    can only fight if enemies use spells separately - super hard
+->
+..
+1649 bad tp mid
+    - towards enemy team
+
+1655 walk uphill
+
+1708 death in fight
+    - too low maxhp/too much magic damage
+    - cant go into fight
+    - lucky that tiny didnt burst immediately
+
+ ..
+   !!instead TP bottom 1649, split/move to ancient jungle
+..
+}
+
+\logremark{19:45}{\efficiency}{use phaseboots to move}
+          
+    
+   
+\logremark{20:09}{\decision}{decision bad go into tiny - should have immediately died to combo}
+
+
+\logremark{}{\itemisation}{!!! decision makign:
+    keep fighting into sk/tiny  with reduced HP}
+
+\logremark{20:53}{\itemisation}{go onto tiny
+    leads to death}
+
+\logremark{}{\decision}{!!decision making
+    walk over to mid as they fight pudge
+    should farm jungle, no need to help there
+    want to spread and maximize farm
+    dont want to show, dangerous with 3 blinks and lots of burst
+
+bad movement
+top t2-> mid t2 - mid t1 - farm mid wave  -stay and farm next wave
+instead - farm jungle
+top t2 -> medium camp -> hard camp -> medium camp rune}
+
+\logremark{22:21}{\decision}{show on the lane - should die do sk+tiny }
+
+\logremark{24:45}{\itemisation}{inefficient movement
+    bad pathing above ancient camp to creepwave
+    misses 2 creeps
+    saw them mid, cant }
+
+\logremark{24:57}{\mechanics}{missed lasthit (hit wrong creep)}
+
+\logremark{24:52}{\efficiency}{Didn't use blink strike to creepwave}
+
+\logremark{25:02}{\mechanics}{missed lasthit (impatient, tried to get two hits.)}
+
+\logremark{25:03}{\decision}{!decision making:
+    tiny sk pudge show mid
+    -> wave bottom is safe to farm}
+
+\logremark{25:04}{\efficiency}{
+    !missing information: need to view drows movement
+    walk to hardcamp
+    team is farming that
+    instead: immediately farm ancients
+        !avoids dangerous situation
+}
+\logremark{27:44}{\efficiency}{use blink strike to clear creepwave}
+
+\logremark{27:46}{\decision}{
+    !decision making
+        should farm enemy jungle toward bottom
+            enemies are respawning/ in base
+            lots of space available
+            spread out 
+..
+    2813 missed opportunity to buy TP, usign courier
+    walk to secret shop
+    farm ancients
+    walk mid
+
+    2830 !decision making
+        should not try to fight there
+        no vision
+        nothing to gain, own lane is pushed in
+        Lina is out of mana, global silence on cooldown
+..
+..
+   !!instead farm radiant jungle toward bottom, kill one wave
+
+..
+}
+
+\logremark{29:47}{\itemisation}{missed opportunity to buy TP
+    replace Raindrops! }
+
+\logremark{30:04}{\itemisation}{!decision making should push out top
+
+    inefficient movement farming mid
+        allies in mid, sharing farm with drow
+        only 2 camps next to secret shop to continue
+    farm top instead 
+        big creepwave
+        should push top
+        can continue jungle}
+
+\logremark{30:56}{\itemisation}{!decision making should push out bottom
+    !missing tp, could have bought at 2947}
+
+\logremark{32:36}{\efficiency}{inefficient movement: walk mid then bot
+    bottom needs to be pushed, go there immediately}
+
+\logremark{33:20}{\mechanics}{missed lasthit (wrong creep)}
+
+\logremark{40:32}{\itemisation}{missed opportunity to buy TP}
+
+\logremark{41:30 }{\decision}{enemies could push top rax, no tp!}
+
+\logremark{42:21}{\decision}{
+    fighting with only 3 for enemy base
+    no TP out
+        -> should run }
+\logremark{42:25}{\execution}{fight execution:
+    run up instead of towards team}
+
+\logremark{45:19}{\decision}{
+    killed 4, go for objectives
+
+    did: farmed ancients, moved to bottom
+
+    should: push mid
+
+}
+
+\end{remarks}
+\end{document}
+
+
