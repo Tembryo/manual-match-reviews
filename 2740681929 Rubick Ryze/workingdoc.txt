@@ -1,0 +1,224 @@
+Match Context:
+Professional game for Boston Major 2016 Qualifiers, Groupstage.   
+
+Tips:
+- Missed early Tango Usage: 151 719 (this one prevents death in a fight)
+- Prioritise preventing sidepulls by the offlaner! Too far at 221 321
+- Shift-queue ward placement and a follow-up movement when going only for wards. 1027 1443 1817 2331 3756 3838
+- When time is no issue, drop Magic Stick (or at least one other item increasing Manapool) before using Arcane Boots 1359 1743 2605 3703
+- Lasthits
+- Don't move close to the enemy core in Lategame fights, stay further out to cast spells. 4500 4706 4942
+
+
+
+048 information : Missed Enchantress placing ward 
+    Info shows super short - need a camera on the deep ward
+    Info Batrider pings position, didnt infer that she placed ward from here -  Ogre rotates through later
+
+114 execution : moved in too close for harass, drew agro on ranged creep, moved it to the pull
+
+    + ideal outcome, getting the lasthit and solo exp on the creep for lvl2 (crucial for following kill)
+    - risky, Nyx was able to deny 
+
+151 missed opportunity to eat tango
+    Info could eat the rosh tree at 2:03 , but maybe keep that for juking 
+    - 150 HP missing - could use that later critical situation at 229
+
+202 Delaying to take the rune until 213, time needed at 221!
+    - Brood doesn't have bottle yet
+
+221 Too far to prevent side pull
+    - Have to walk into aggroed creeps, took ~170 damage
+    - Lost 1 melee creep to neutral camp
+    - Dangerous situation at 229: If Nyx anticipated the movement could die to impale, creeps, and Sun Strike.
+    screenshot at 229
+
+314 !important! missed lasthit in pull (hit wrong creep, ignoring ranged creeps target)
+    - could buy a second Clarity with the additional gold at 4:04, to use after next fight at 5:05
+316 Execution: Moved back unnecessarily far
+    - Lose vision of the jungle, Enchantress is off the map, could be moving in
+
+321 Far to prevent side pull 
+    - Rely on passive play of Nyx: potentially dangerous situation at 331, could take lots of damage to impale+creepwave, sunstrike possible
+    = Good outcome, get the creepwave back
+    - maybe screenshot
+
+
+416 !important! Bad camera placement: dont see nyx moving in
+    screenshot of original cam vs good cam
+    = Need to use Telekinesis to secure pull
+    - Allows him to stun and draw creeps. Loses lane equilibrium, 4 creeps, death of Ogre in bad gank.
+
+719 !important! Could use tango after reveal to regen for incoming fight
+    = 13 seconds to regen until death, lives through hits and even a possible Lucent Beam (Raindrops come off cooldown).
+
+925 Decision Decide to keep the lane back earlier
+    - missed opportunity to deny melee creep 931 936
+    -Unnecessary hit on enemy creep 935
+    - Moves lane up a bit at 1002
+940 Mechanics missed lasthit (too early)
+1011 Mechanics missed lasthit (impatient to push, hit wrong creep)
+
+1027 Efficiency: Didn't shift-queue movement after warding
+
+1037 Efficiency: Unnecessary movement back towards jungle, losing ~10 seconds of movement time
+    - See 3 heroes engaging, no way to fight
+    = Could walk towards mid and push earlier (lose a ranged creep to tower later)
+    ! Could move in an place aggressive ward while enemy team is distracted
+        [minimap]
+
+
+1132 Efficiency: Could use forge spirits to farm neutrals instead of moving them along (will be off cooldown for next fight)
+    = Send them on the hard camp
+    = Could use fade bolt and farm stacked medium camp (critical on Mana though, as low mana regen)
+
+
+1150 Execution: Bad gank on Nyx, show to next creepwave
+    = Can possibly catch with Storm Spirit, would kill with Telekinesis/Fade Bold/stolen Impale.
+
+1200 Decision: Placed sentry ward in obvious, but useful position
+    - Can place further up. With this, storm could get hit from Vendetta at 1219
+    = Keep and place further up at 1212
+
+
+
+1247 Mechanics missed lasthit (impatient, maybe attack creep in the back and lasthit the one focused by own creeps)
+1248 Mechanics missed lasthit (impatient/ too early)
+1317 Mechanics Missed lasthit (impatient/ mismicro on forgespirits)
+1319 Mechanics Missed lasthit (impatient/ mismicro on forgespirits)
+1344 Mechanics Missed lasthit on neutral (impatient/ mismicro on forgespirits)
+
+1356 Itemisation: Missed opportunity to sell last tango, Missed opportunity to buy TP
+
+1359 Mechanics: Didn't drop magic stick before using Arcanes 
+
+1443 Mechanics: Hesitation, didn't shift queue movement after warding
+    - !far from team afterwards
+
+1652 Decision: Leave creepwave top
+    = Could try to stay out of vision for Experience , risky with Nyx missing
+
+1739 Mechanics Missed lasthit (impatient, hit one creep too much, didn't prehit ranged creep)
+
+1743 Mechanics: Didn't drop Magic Stick before using arcanes
+
+1746 Information: Delivered wards before walking into lane
+    - Show wards at 1753
+    = Either keep courier until after the push, or drop them on the ground to collect. 
+
+1802 Mechanics Missed lasthit (didn't prehit when there was time - ended with 2 creeps dying at almost the same time)
+
+1817 Mechanics: Didn't shift queue movement after ward, slightly inefficient pathing
+
+1818 Decision: Could have TP'd top,
+    Arguments: back up the batrider, close distance to team
+        = Could interrupt invokers TP out later, eclipse is on cooldown so fight is possible
+
+1946 Decision: Hide in trees below T1 bottom
+    - no way out, unlikely to fight
+    = Position far back, use Fade Bold and run. 
+        !could place ward, if they push further
+    = Alternative don't TP at all, bad position to defend (need whole team)
+
+2050 Itemisation: TP'd out of base with minimal cooldown on next observer ward
+    -> could stay 6 seconds until it is ready
+
+2330 Decision: Placed very optimistic ward
+    - Likely to get dewarded when enemies reclaim their jungle
+    - Didn't place sentry
+    - very deep, as all lanes are pushed in
+    - maybe try a safer ones
+
+2331 Mechanics: Didn't shift queue movement after placing ward
+
+2426 Execution: Didn't save Batrider
+    - Walk towards Invoker to Telekinesis so he can't hit
+2429 Execution: didn't steal spell,
+    - Good opportunity after using Telekinesis+ Fade Bold, could get Impale! or Cold Snap
+    screenshot
+2533 Efficiency: Unnecessary use of Magic Stick
+2600 Decision: Placed very defensive ward
+    - Slightly different placement gives vision of left stairs as well
+2605 Mechanics: Didn't drop magic stick before using Arcane Boots
+
+2750 Efficiency: Killed creepcamp too late, blocking it
+    -Missed 1-2 hits by walking back unnecessarily
+
+3221 Execution: Walked too close when casting Fade Bolt, initiated and killed
+    - Casted on an illusion that got disrupted and walked forward
+    - A Forge Spirit would have been closer, didn't have to move in so far
+    - Could TP earlier and cast before enemies get onto highground
+
+3255 Information: Didn't check Enchantress as she walks into ward
+    - Would see her place a ward, probably initiate in a different way?
+    = Fight still works out 
+
+3550 Mechanics: Missed lasthits on 3 melee creeps, 1 super ranged creep and catapult
+    - Messed up the camera and kited around creeps
+    - Could use stolen Nature's attendants and tank the creeps
+
+3635 Mechanics: Missed lasthit (impatient, walked instead of hitting)
+3638 Mechanics: Missed lasthit (impatient, hit ranged creep instead of hitting)
+3640 Mechanics: Missed lasthit (early, underestimated HP of super range creep)
+
+3650 Mechanics: Missed lasthit (hit ranged creep over taking lasthit)
+3653 Mechanics: Missed lasthit (hit late)
+
+3703 Mechanics: Didn't drop magic stick before using Arcane Boots
+3745 Mechanics: Missed lasthit (checking allies inventories)
+3747 Mechanics: Missed lasthit (careless)
+
+
+3756 Mechanics: Didn't shift queue movement after placing ward
+3756 Decision: Didn't place Sentry ward with observer
+    = Nyx and Invoker
+
+3838 Mechanics: Didn't shift queue movement after placing ward
+3838 Decision: Didn't place Sentry ward with observer
+    = Nyx and Invoker
+
+4017 Information: Could infer from Enchantress' empty item slot that she recently placed a ward
+    - Didn't check super-highround ward at Rosh (Storm walks close by with Gem)
+
+4204 Execution:
+    = Could have prevented Luna casting Eclipse with Telekinesis at 4204
+        (Saves Ogre, but no stolen Eclipse vs Luna. Can steal Meteor, Deafening Blast or Disruption instead.
+        Probably worth saving the Ogre, as Luna will die to Broodmother+Storm focus, additional stun from Ogre.
+        Possibly Ignite to cancel Nyx's Blink dagger)
+    - Late steal on Eclipse, could take it immediately after cast.
+
+4305 Mechanics: Missed lasthit (wrong focus, prehits cause melee creep and catapult to die at the same time)
+4309 Mechanics: Missed lasthit (wrogn focus, prehits case 2 melee creeps to die at same time)
+4311 Mechanics: Missed lasthit (careless, prioritising hits on ranged creep)
+4313 Mechanics: Missed lasthit (late attack)
+
+4332 Itemisation: Didn't buy ward when in stock (courier used by Ogre for Smoke, bring the ward along) 
+4339 Decision: Place safe ward
+    = Would be no problem with the additional ward
+    - Ward is not immediately necesary, as controlling the area, have close vision with Batrider
+    - Only ward available, want to gain more from that
+    - !important! Opportunity for deeper wards at 4407  Fight at 4500 in this area!
+     minimap with stronger wards
+
+4445 Execution: 
+    - stood too far back, didn't move in decisively
+    -  4451 wrong target: went towards Invoker in BKB, rightclicked
+        4453 bad position, close to Luna (and Invoker)
+        No need for telekinesis, Ogre can stun after BKB runs out, this is no initiation
+        rather go for supports on the side with storm (saw SD)
+        want to move to the side behind trees, cast 
+    \screenshots
+
+4655 Execution:
+    - Could break Invoker's Linkens with spellsteal at 4756 (unused afterwards) so Storm can go
+    - Stay for rightclicks+lift on Luna in BKB at 4706, rather run
+
+4655 Execution:
+    - Stay for rightclicks+lift on Luna in BKB at 4706, rather run
+
+4732 Execution: Could steal Alacrity
+
+4942 Execution:
+    - Don't move towards the (disrupted) Luna at 4943
+        Rather move downward across the fight to get to nyx
+    - Needed to move up at 4947, no way out after moving right.

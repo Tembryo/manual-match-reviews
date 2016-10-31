@@ -1,0 +1,617 @@
+\documentclass{article}
+\usepackage[top=2.5cm, bottom=2.5cm, inner=2.5cm,outer=2.5cm]{geometry}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\definecolor{WisdotaBackground}{HTML}{61595D}
+\definecolor{highlight}{HTML}{F1B72A}
+\definecolor{secondaryhighlight}{HTML}{D98E04}
+\definecolor{mistakecolor}{HTML}{8C2625}
+\definecolor{goodplaycolor}{HTML}{258C27}
+
+\definecolor{mechanicscolor}{HTML}{D73356}
+\definecolor{efficiencycolor}{HTML}{D68A1B}
+\definecolor{informationcolor}{HTML}{3FD258}
+\definecolor{itemisationcolor}{HTML}{D13CC1}
+\definecolor{executioncolor}{HTML}{37AFD3}
+\definecolor{decisioncolor}{HTML}{5A56DC}
+
+
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{fontspec}
+\usepackage{background}
+\usepackage{blindtext}
+%\usepackage{stix}
+\usepackage{savesym}
+\usepackage{amsmath}
+\savesymbol{mathdollar}
+\usepackage{MnSymbol}
+\restoresymbol{MnS}{mathdollar}
+\usepackage{hyperref}
+\usepackage{titling}
+\usepackage{enumitem}
+%\usepackage{fdsymbol}
+
+
+\hypersetup{
+    colorlinks = false,
+    linkbordercolor = {highlight}
+}
+
+\onehalfspacing
+%\doublespacing
+\setmainfont{Roboto-Light}
+\backgroundsetup{
+    scale=1,
+    angle=45,
+    opacity=0.1,
+    contents={\begin{tikzpicture}[remember picture,overlay]
+    \path [left color = gray, right color = black] (current page.south west) rectangle (current page.north east);   % Adjust the position of the logo.
+    \end{tikzpicture}}
+}
+
+\newcommand{\matchid}{2740681929}
+
+
+\makeatletter
+\fancypagestyle{reportpage}{%
+  \fancyhf{}% Clear header/footer
+  \rhead{ \textcolor{white}{Wisdota.com}}
+  \lhead{\textcolor{white}{Report for Match \matchid}}
+  \fancyfoot[C]{\textcolor{white}{\color{white}\thepage}}% Page # in middle/centre of footer
+  \renewcommand{\headrulewidth}{.4pt}% .4pt header rule
+  \def\headrule{{\if@fancyplain\let\headrulewidth\plainheadrulewidth\fi
+    \color{white}\hrule\@height\headrulewidth\@width\headwidth \vskip-\headrulewidth}}
+  \renewcommand{\footrulewidth}{0pt}% No footer rule
+%  \def\footrule{{\if@fancyplain\let\footrulewidth\plainfootrulewidth\fi
+%    \vskip-\footruleskip\vskip-\footrulewidth
+%    \hrule\@width\headwidth\@height\footrulewidth\vskip\footruleskip}}
+}
+\fancypagestyle{first-page}{%
+  \fancyhf{}% Clear header/footer
+  \rhead{}
+  \lhead{}
+  \fancyfoot[C]{\textcolor{white}{\color{white}\thepage}}% Page # in middle/centre of footer
+  \renewcommand{\headrulewidth}{0}% .4pt header rule
+  \def\headrule{}
+  \renewcommand{\footrulewidth}{0pt}% No footer rule
+%  \def\footrule{{\if@fancyplain\let\footrulewidth\plainfootrulewidth\fi
+%    \vskip-\footruleskip\vskip-\footrulewidth
+%    \hrule\@width\headwidth\@height\footrulewidth\vskip\footruleskip}}
+}
+
+\setlist[itemize]{leftmargin=0pt,labelindent=1em}
+
+\title{Wisdota Report for Match \matchid \\
+Rubick by Imperial.Ryze}
+\date{Played on 28/10/2016}
+\pretitle{\begin{flushleft}\LARGE\sffamily}
+\posttitle{\par\end{flushleft}}
+\preauthor{}
+\author{}
+\postauthor{} 
+\predate{\begin{flushright}\large\scshape}
+\postdate{\par\end{flushright}}
+
+\setlength{\droptitle}{0pt}
+
+\makeatother
+\pagestyle{reportpage}
+
+\newcommand{\mechanics}{\scalebox{1.5}{\ensuremath{\;\;\color{mechanicscolor} \filledmedsquare} }}
+\newcommand{\efficiency}{\scalebox{1.5}{\ensuremath{\;\;\color{efficiencycolor} \filledmedsquare}} }
+\newcommand{\information}{\scalebox{1.5}{\ensuremath{\;\;\color{informationcolor} \filledmedsquare}} }
+\newcommand{\itemisation}{\scalebox{1.5}{\ensuremath{\;\;\color{itemisationcolor} \filledmedsquare}} }
+\newcommand{\execution}{\scalebox{1.5}{\ensuremath{\;\;\color{executioncolor} \filledmedsquare}} }
+\newcommand{\decision}{\scalebox{1.5}{\ensuremath{\;\;\color{decisioncolor} \filledmedsquare}} }
+
+\newcommand{\gt}{\ensuremath{\;\;\color{green} \filledmedtriangleup} }
+\newcommand{\rt}{\ensuremath{\;\;\color{red} \filledmedtriangledown} }
+\newcommand{\ws}{\ensuremath{\;\;\color{white} \filledmedsquare} }
+
+\newenvironment{remarks}
+    {
+        \begin{description}
+            \setlength\itemsep{0em}
+    }
+    {
+        \end{description}
+    }
+\newcommand{\goodremark}[1]{\item[\gt] #1}
+\newcommand{\neutralremark}[1]{\item[\ws] #1}
+\newcommand{\badremark}[1]{\item[\rt] #1}
+\newcommand{\logremark}[3]{\vbox{ \item[\textnormal{\logref{#1}} #2 ] #3}}
+
+\newcommand{\suggestion}[1]{\\ \emph{#1}}
+
+\newcommand{\important}{\colorbox{highlight}{Important!}\ }
+
+\newcommand{\mistake}{\colorbox{mistakecolor}{Mistake!}\ }
+\newcommand{\goodplay}{\colorbox{goodplaycolor}{Good Play!}\ }
+\newcommand{\logref}[1]{\textcolor{highlight}{#1}}
+
+\newcommand{\nnsection}[1]
+{\section*{#1}
+\addcontentsline{toc}{section}{#1}
+}
+
+\newcommand{\decisionmistake}[3]{#1\\
+\vbox{
+\vspace{}
+\textbf{What happened}\\\vbox{#2}
+\textbf{Alternative}\\\vbox{#3}
+}
+}
+
+\newcommand{\decisionmistakeshort}[3]{#1\\
+\vbox{
+\textbf{Thoughts}\\\vbox{#2}
+\textbf{Alternative}\\\vbox{#3}
+}
+}
+
+
+\newcommand{\decisionmistakefull}[4]{#1\\
+\textbf{Thoughts}\\#2\\
+\textbf{What Happened}\\#3\\
+\textbf{Alternative}\\#4
+}
+
+\newcommand{\screenshot}[1]{
+    \begin{center}
+    \begin{minipage}[t]{0.4\textwidth}
+        \includegraphics[width=\textwidth]{#1}
+    \end{minipage}
+\end{center}
+}
+\newcommand{\widescreenshot}[1]{
+    \begin{center}
+    \begin{minipage}[t]{0.7\textwidth}
+        \includegraphics[width=\textwidth]{#1}
+    \end{minipage}
+\end{center}
+}
+
+\newcommand{\twoscreenshots}[2]{
+\begin{center}
+    \begin{minipage}[t]{0.4\textwidth}
+        \begin{center}
+            \includegraphics[width=\textwidth]{#1}
+            \end{center}
+    \end{minipage}
+    \begin{minipage}[t]{0.4\textwidth}
+            \begin{center}
+        \includegraphics[width=\textwidth]{#2}
+                \paragraph{}\hfill
+            \end{center}
+    \end{minipage}
+\end{center}
+}
+
+
+\newcommand{\minimap}[1]{
+    \begin{center}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#1}
+    \end{minipage}
+\end{center}
+}
+
+\newcommand{\twominimaps}[2]{
+\begin{center}
+    \begin{minipage}[t]{0.3\textwidth}
+        \begin{center}
+            \textbf{What happened}\hfill
+            \includegraphics[width=\textwidth]{#1}
+            \end{center}
+    \end{minipage}
+    \begin{minipage}[t]{0.3\textwidth}
+            \begin{center}
+            \textbf{Instead}\hfill
+        \includegraphics[width=\textwidth]{#2}
+                \paragraph{}\hfill
+            \end{center}
+    \end{minipage}
+\end{center}
+}
+
+\newcommand{\threeminimaps}[3]{
+\begin{center}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#1}
+    \end{minipage}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#2}
+    \end{minipage}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#3}
+    \end{minipage}
+\end{center}
+}
+
+\newcommand{\twominimapscomment}[4]{
+\begin{center}
+    \begin{minipage}[t]{0.42\textwidth}
+    \begin{center}
+        \textbf{What happened}\hfill
+        \includegraphics[width=0.7\textwidth]{#1} 
+        \begin{itemize}
+        #2
+        \end{itemize}
+    \end{center}
+    \end{minipage}
+    \begin{minipage}[t]{0.42\textwidth}
+        \begin{center}
+        \textbf{Instead}\hfill\\
+        \includegraphics[width=0.7\textwidth]{#3}
+        \begin{itemize}
+        #4
+        \end{itemize}
+        \end{center}
+    \end{minipage} 
+    \end{center}
+}
+
+
+\newcommand{\threeminimapscomment}[6]{
+\begin{center}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#1} 
+        \begin{itemize}
+            #2
+        \end{itemize}
+    \end{minipage}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#3}
+        \begin{itemize}
+        #4
+        \end{itemize}
+    \end{minipage}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#5}
+        \begin{itemize}
+            #6
+        \end{itemize}
+    \end{minipage}
+\end{center}
+}
+
+
+
+
+\begin{document}
+\pagecolor{WisdotaBackground}
+\color{white}
+
+\maketitle
+\thispagestyle{first-page}
+
+\paragraph{Match Context}
+Professional game for Boston Major 2016 Qualifiers, Groupstage. Position 5 support Rubick. Focus is on warding and contributing to ganks and teamfights with spells. Had to play with small amount of farm as the game plays out evenly, major contribution with stolen Eclipse in two teamfights, game is lost in a misplayed teamfight around Rosh.
+
+\nnsection{Tips}
+
+\begin{itemize}
+    \item Missed early Tango Usage: \logref{1:51} \logref{7:19} (this one prevents death in a fight)
+    \item Prioritise preventing sidepulls by the offlaner! Stood too far at \logref{2:21} \logref{3:21}
+    \item Shift-queue ward placement and a follow-up movement when going only for wards. \logref{10:27} \logref{14:43} \logref{18:17} \logref{23:31} \logref{37:56} \logref{38:38}
+    \item When time is no issue, drop Magic Stick (or at least one other item increasing Manapool) before using Arcane Boots \logref{13:59} \logref{17:43} \logref{26:05} \logref{37:03}
+    \item Missed 26 lasthits to own creeps when pushing - prioritise lasthitting the creep that dies first to the own wave/ranged creep over getting slightly more push.
+    \item Don't move close to the enemy cores with BKB in lategame fights, stay further out to cast spells. \logref{44:51} \logref{47:06} \logref{49:42}
+\end{itemize}
+
+
+\pagebreak
+
+\nnsection{Events}
+
+%\begin{tabular}{ c | c | c | c | c | c}
+%  \mechanics & \efficiency & \information & \itemisation & \execution & \decision \\
+  %\hline
+%  Mechanics & Efficiency & Information & Itemisation & Execution & Decision \\
+%\end{tabular}
+
+\begin{tabular}{ l | l }
+  \mechanics & Mechanics \\
+  \efficiency & Efficiency\\
+  \information & Information\\
+  \itemisation & Itemisation\\
+  \execution & Execution\\
+  \decision & Decision\\
+  
+\end{tabular}
+
+
+\begin{remarks}
+
+\logremark{-0:48}{\information}{ Missed Enchantress placing ward 
+\begin{itemize}
+    \item Shows only very short time - need one camera looking at the deep ward
+    \item Batrider pings position, didn't infer that she placed ward from here -  Ogre rotates through later
+\end{itemize}
+}
+
+\logremark{1:14}{\execution}{ moved in too close for harass, drew agro on ranged creep, moved it to the pull
+\begin{itemize}
+    \item ideal outcome, getting the lasthit and solo exp on the creep for lvl2 (crucial for following kill)
+    \item risky, Nyx should have been able to deny
+\end{itemize}
+ }
+
+\logremark{1:51}{\mechanics}{ Missed opportunity to eat tango
+\begin{itemize}
+    \item could eat the rosh tree at \logref{2:03} , but maybe keep that for juking 
+    \item 150 HP missing - could use that later critical situation at \logref{2:29}
+\end{itemize}
+}
+
+\logremark{2:02}{\decision}{ Delaying to take the rune until \logref{2:13}, time needed at \logref{2:21}!
+\begin{itemize}
+    \item Broodmother doesn't have bottle yet
+    \item\logref{2:21} Too far to prevent side pull
+    \item Have to walk into aggroed creeps, took ~170 damage
+    \item Lost 1 melee creep to neutral camp
+    \item Dangerous situation at \logref{2:29}: If Nyx anticipated the movement could die to impale, creeps, and Sun Strike.
+\end{itemize}
+\screenshot{img/229.jpg}
+}
+
+\logremark{3:14}{\mechanics}{ \important missed lasthit in pull (hit wrong creep, ignoring ranged creeps target)
+    \suggestion{could buy a second Clarity with the additional gold at \logref{4:04}, to use after next fight at \logref{5:05}}}
+    
+\logremark{3:16}{\information}{ Moved back unnecessarily far
+   \suggestion{Lose vision of the jungle, Enchantress is off the map, could be moving in}}
+
+\logremark{3:21}{\decision}{ Far to prevent side pull 
+\begin{itemize}
+    \item  Rely on passive play of Nyx: potentially dangerous situation at \logref{3:31}, could take lots of damage to Impale + creepwave, Sunstrike possible
+   \item Good outcome, get the creepwave back
+\end{itemize}
+
+}
+
+\logremark{4:16}{\information}{ \important Bad camera placement: dont see nyx moving in
+\begin{itemize}
+    \item Need to use Telekinesis to secure pull
+    \item Allows him to stun and draw creeps. Loses lane equilibrium, 4 creeps, death of Ogre in bad gank.
+\end{itemize}
+\twoscreenshots{img/416-1.jpg}{img/416-2.jpg}
+}
+
+\logremark{7:19}{\decision}{ \important Use tango after reveal to regen for incoming fight
+\suggestion{~13 seconds to regen until death, enough to live through hits and even a possible Lucent Beam (Raindrops come off cooldown).}
+}
+
+\logremark{9:25}{\decision}{Decide to keep the lane back earlier
+\begin{itemize}
+    \item missed opportunity to deny melee creep \logref{9:31} \logref{9:36}
+    \item Unnecessary hit on enemy creep \logref{9:35}
+    \item Moves lane up a bit at \logref{10:02}
+\end{itemize}
+    }
+    
+\logremark{9:40}{\mechanics}{Missed lasthit (too early)}
+\logremark{10:11}{\mechanics}{Missed lasthit (impatient to push, hit wrong creep)}
+
+\logremark{10:27}{\efficiency}{ Didn't shift-queue movement after warding}
+
+\logremark{10:37}{\efficiency}{ Unnecessary movement back towards jungle, losing ~10 seconds of movement time
+\begin{itemize}
+    \item See 3 heroes engaging, no way to fight
+    \item Could walk towards mid and push earlier (lose a ranged creep to tower later)
+    \item Could move in an place aggressive ward while enemy team is distracted
+\end{itemize}
+\minimap{img/1037.pdf}
+}
+
+
+\logremark{11:32}{\efficiency}{ Could use forge spirits to farm neutrals instead of moving them along 
+\suggestion{Will be off cooldown for next fight}
+\begin{itemize}
+    \item Send them on the hard camp
+    \item Could use fade bolt and farm stacked medium camp (critical on Mana though, as low mana regen)
+\end{itemize}
+} 
+
+\logremark{11:50}{\execution}{ Bad gank on Nyx, show to next creepwave
+\suggestion{ Can possibly catch with Storm Spirit, would kill with Telekinesis/Fade Bold/stolen Impale.}}
+
+\logremark{12:00}{\decision}{ Placed sentry ward in obvious, but useful position
+\begin{itemize}
+    \item Can place further up. With this, storm could get hit from Vendetta at \logref{12:19}
+    \item Keep and place further up at \logref{12:12}
+\end{itemize}
+}
+
+
+\logremark{12:47}{\mechanics}{ missed lasthit (impatient, maybe attack creep in the back and lasthit the one focused by own creeps)}
+\logremark{12:48}{\mechanics}{ missed lasthit (impatient/ too early)}
+\logremark{13:17}{\mechanics}{ Missed lasthit (impatient/ mismicro on forgespirits)}
+\logremark{13:19}{\mechanics}{ Missed lasthit (impatient/ mismicro on forgespirits)}
+\logremark{13:44}{\mechanics}{ Missed lasthit on neutral (impatient/ mismicro on forgespirits)}
+
+\logremark{13:56}{\itemisation}{ Missed opportunity to sell last tango, Missed opportunity to buy TP (get a second chance to buy it later)}
+
+\logremark{13:59}{\mechanics}{ Didn't drop magic stick before using Arcanes }
+
+\logremark{14:43}{\mechanics}{ Hesitation, didn't shift queue movement after warding
+   \suggestion{far from team afterwards}}
+
+\logremark{16:52}{\decision}{ Leave creepwave top
+  \suggestion{Could try to stay out of vision for experience, risky with Nyx missing}}
+
+\logremark{17:39}{\mechanics}{ Missed lasthit (impatient, hit one creep too much, didn't prehit ranged creep)}
+
+\logremark{17:43}{\mechanics}{ Didn't drop Magic Stick before using Arcanes}
+
+\logremark{17:46}{\information}{ Delivered wards before walking into lane
+\begin{itemize}
+    \item Show wards at \logref{17:53}
+    \item Either keep courier until after the push, or drop them on the ground to collect. 
+\end{itemize}
+}
+
+\logremark{18:02}{\mechanics}{ Missed lasthit (didn't prehit when there was time - ended with 2 creeps dying at almost the same time)}
+
+\logremark{18:17}{\mechanics}{ Didn't shift queue movement after ward, slightly inefficient pathing}
+
+\logremark{18:18}{\decision}{ Could have TP'd top
+\begin{itemize}
+    \item  Arguments: back up the batrider, close distance to team
+    \item Could interrupt invokers TP out later, eclipse is on cooldown so fight is possible.
+\end{itemize}
+}
+
+\logremark{19:46}{\decision}{\important TP in and hide in trees below T1 bottom
+\begin{itemize}
+    \item No way out, unlikely to fight as team is far.
+    \item Instead: Position far back, use Fade Bold and run. Could place ward to have vision if enemies push further
+    \item Alternative don't TP at all, bad position to defend (need whole team).
+\end{itemize}
+\screenshot{img/1947.jpg}
+}
+
+\logremark{20:50}{\itemisation}{ TP'd out of base with minimal cooldown on next observer ward
+\suggestion{could stay 6 seconds until it is ready}}
+
+\logremark{23:30}{\decision}{ Placed very optimistic ward deep in enemy jungle
+\begin{itemize}
+    \item Likely to get dewarded when enemies reclaim their jungle
+    \item Didn't place sentry
+    \item very deep, as all lanes are pushed in
+    \item Maybe try a more uncommon spot
+\end{itemize}
+}
+
+\logremark{23:31}{\mechanics}{ Didn't shift queue movement after placing ward}
+
+\logremark{24:26}{\execution}{\important Didn't save Batrider
+\begin{itemize}
+    \item  Walk towards Invoker to Telekinesis so he can't hit
+    \item Didn't steal spell at \logref{24:29}, good opportunity after using Telekinesis + Fade Bold, could get Impale or Cold Snap
+\end{itemize}
+\screenshot{img/2429.jpg}
+}
+    
+\logremark{25:33}{\efficiency}{ Unnecessary use of Magic Stick}
+\logremark{26:00}{\decision}{ Placed very defensive ward
+\suggestion{ Slightly different placement gives vision of left stairs as well}
+\widescreenshot{img/2600.jpg}
+}
+\logremark{26:05}{\mechanics}{ Didn't drop magic stick before using Arcane Boots}
+
+\logremark{27:50}{\efficiency}{ Killed creepcamp too late, blocking it
+\suggestion{Lost 1-2 hits by walking back unnecessarily}}
+
+\logremark{32:21}{\execution}{ Walked too close when casting Fade Bolt, initiated on and killed
+\begin{itemize}
+    \item Casted on an illusion that got disrupted and walked forward
+    \item A Forge Spirit would have been closer, didn't have to move in so far
+    \item Could TP earlier and cast before enemies get onto highground
+\end{itemize}
+}
+
+\logremark{32:55}{\information}{ Didn't check Enchantress as she walks into ward
+\begin{itemize}
+    \item Would see Enchantress place a ward, probably initiate in a different way?
+    \item Fight still works out
+\end{itemize}
+ }
+
+\logremark{35:50}{\mechanics}{ Missed lasthits on 3 melee creeps, 1 super ranged creep and catapult
+\begin{itemize}
+    \item Messed up the camera and kited around creeps
+    \item Could use stolen Nature's attendants and tank the creeps
+\end{itemize}
+}
+\logremark{36:35}{\mechanics}{Missed lasthit (impatient, walked instead of hitting)}
+\logremark{36:38}{\mechanics}{Missed lasthit (impatient, hit ranged creep instead of hitting)}
+\logremark{36:40}{\mechanics}{Missed lasthit (early, underestimated HP of super range creep)}
+
+\logremark{36:50}{\mechanics}{Missed lasthit (hit ranged creep over taking lasthit)}
+\logremark{36:53}{\mechanics}{Missed lasthit (hit late)}
+
+\logremark{37:03}{\mechanics}{Didn't drop magic stick before using Arcane Boots}
+\logremark{37:45}{\mechanics}{Missed lasthit (checking allies inventories)}
+\logremark{37:47}{\mechanics}{Missed lasthit (careless)}
+
+
+\logremark{37:56}{\mechanics}{Didn't shift queue movement after placing ward}
+\logremark{37:56}{\decision}{Didn't place Sentry ward with observer
+\suggestion{ See movements of Nyx and Invoker}
+}
+\logremark{38:38}{\mechanics}{ Didn't shift queue movement after placing ward}
+\logremark{38:38}{\decision}{Didn't place Sentry ward with observer
+\suggestion{See movement of Nyx and Invoker}}
+
+\logremark{40:17}{\information}{Could infer from Enchantress' empty item slot that she recently placed a ward
+\suggestion{Didn't check super-highround ward at Rosh (Storm walks close by with Gem)}}
+
+\logremark{42:04}{\execution}{\hfill
+\begin{itemize}
+    \item  Could have prevented Luna casting Eclipse with Telekinesis at \logref{42:04}
+    \begin{itemize}
+        \item Saves Ogre
+        \item No stolen Eclipse vs Luna. Can steal Meteor, Deafening Blast or Disruption instead.
+        \item Luna will probably die anyway to Broodmother+Storm focus, additional stun from Ogre.
+        \item Ignite available to cancel Nyx's Blink dagger
+    \end{itemize}
+    \item Late steal on Eclipse, could take it immediately after cast.
+\end{itemize}
+\screenshot{img/4204.jpg}
+}
+
+\logremark{43:05}{\mechanics}{ Missed lasthit (wrong focus, prehits cause melee creep and catapult to die at the same time)}
+\logremark{43:09}{\mechanics}{ Missed lasthit (wrogn focus, prehits case 2 melee creeps to die at same time)}
+\logremark{43:11}{\mechanics}{ Missed lasthit (careless, prioritising hits on ranged creep)}
+\logremark{43:13}{\mechanics}{ Missed lasthit (late attack)}
+
+\logremark{43:32}{\itemisation}{\important Missed buying ward when in stock (Courier used by Ogre for Smoke, bring the ward along) }
+\logremark{43:39}{\decision}{ Place ward too defensively
+\begin{itemize}
+    \item Would be no problem with the additional ward
+    \item Ward is not immediately necessary, as controlling the area, have close vision with Batrider
+    \item Only ward available, want to gain more from that
+    \item \important Opportunity for deeper wards at \logref{44:07} Fight at \logref{44:50} in this area!
+\end{itemize}
+}
+
+\logremark{44:45}{\execution}{\hfill
+
+\begin{itemize}
+    \item  stood too far back, didn't move in decisively
+    \item \important  wrong target \logref{44:51}: went towards Invoker in BKB, rightclicked
+    \item  bad position at \logref{44:53}, close to Luna (and Invoker)
+    \begin{itemize}
+       \item No need for telekinesis, Ogre can stun after BKB runs out, this is no initiation
+       \item rather go for supports on the side with storm (saw SD)
+       \item want to move to the side behind trees, cast spells
+    \end{itemize}
+\end{itemize}
+    \widescreenshot{img/4451-1.jpg}
+    \widescreenshot{img/4451-2.jpg}
+}
+
+\logremark{46:55}{\execution}{
+\begin{itemize}
+    \item Could break Invoker's Linkens with spellsteal at \logref{47:56} (unused afterwards) so Storm can go
+    \item Stay for rightclicks+lift on Luna in BKB at \logref{47:06}, rather run
+\end{itemize}
+}
+
+\logremark{46:55}{\execution}{ Stay for rightclicks + Telekinesis on Luna in BKB at \logref{47:06}, rather run}
+
+\logremark{47:32}{\execution}{ Could steal Alacrity}
+
+\logremark{49:42}{\execution}{
+\begin{itemize}
+    \item  Don't move towards the (disrupted) Luna at \logref{49:43}
+       \suggestion{Rather move downward across the fight to get to Nyx}
+    \item Needed to move up at \logref{49:47}, no way out after moving right.
+\end{itemize}
+
+    }
+  
+\end{remarks}
+\end{document}
+
+
