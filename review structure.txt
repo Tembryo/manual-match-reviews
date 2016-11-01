@@ -27,3 +27,9 @@ Mechanics               / Micro Execution   / Minimal changes to individual acti
 Fight Execution         / Micro Decisions   / Goal picking for individual actions
 Movement                / Macro Execution   / Small changes to action sequences, small increase
 Strategic Decisions     / Macro Decisions   / Goal picking for action sequences
+
+Decision making: ---which bad decision--
+    Possible:
+    Consequences:
+
+    Alternative play:

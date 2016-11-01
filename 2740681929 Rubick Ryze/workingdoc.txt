@@ -1,14 +1,13 @@
 Match Context:
-Professional game for Boston Major 2016 Qualifiers, Groupstage.   
+Professional game for Boston Major 2016 Qualifiers, Groupstage. Position 5 support Rubick. Focus is on warding and contributing to ganks and teamfights with spells. Had to play with small amout of farm as the game plays out relatively even, major contribution with stolen Eclipse in two teamfights, game is lost in a misplayed teamfight for Rosh.
 
 Tips:
 - Missed early Tango Usage: 151 719 (this one prevents death in a fight)
 - Prioritise preventing sidepulls by the offlaner! Too far at 221 321
 - Shift-queue ward placement and a follow-up movement when going only for wards. 1027 1443 1817 2331 3756 3838
 - When time is no issue, drop Magic Stick (or at least one other item increasing Manapool) before using Arcane Boots 1359 1743 2605 3703
-- Lasthits
-- Don't move close to the enemy core in Lategame fights, stay further out to cast spells. 4500 4706 4942
-
+- Missed 26 lasthits to own creeps when pushing - prioritise lasthitting the creep that dies first to the own wave/ranged creep over getting slightly more push.
+- Don't move close to the enemy core in Lategame fights, stay further out to cast spells. 4451 4706 4942
 
 
 048 information : Missed Enchantress placing ward 
@@ -41,7 +40,6 @@ Tips:
 321 Far to prevent side pull 
     - Rely on passive play of Nyx: potentially dangerous situation at 331, could take lots of damage to impale+creepwave, sunstrike possible
     = Good outcome, get the creepwave back
-    - maybe screenshot
 
 
 416 !important! Bad camera placement: dont see nyx moving in
@@ -54,7 +52,7 @@ Tips:
 
 925 Decision Decide to keep the lane back earlier
     - missed opportunity to deny melee creep 931 936
-    -Unnecessary hit on enemy creep 935
+    - Unnecessary hit on enemy creep 935
     - Moves lane up a bit at 1002
 940 Mechanics missed lasthit (too early)
 1011 Mechanics missed lasthit (impatient to push, hit wrong creep)
@@ -192,17 +190,17 @@ Tips:
 4311 Mechanics: Missed lasthit (careless, prioritising hits on ranged creep)
 4313 Mechanics: Missed lasthit (late attack)
 
-4332 Itemisation: Didn't buy ward when in stock (courier used by Ogre for Smoke, bring the ward along) 
+4332 Itemisation: !important! Missed buying ward when in stock (Courier used by Ogre for Smoke, bring the ward along) 
 4339 Decision: Place safe ward
     = Would be no problem with the additional ward
-    - Ward is not immediately necesary, as controlling the area, have close vision with Batrider
+    - Ward is not immediately necessary, as controlling the area, have close vision with Batrider
     - Only ward available, want to gain more from that
     - !important! Opportunity for deeper wards at 4407  Fight at 4500 in this area!
      minimap with stronger wards
 
 4445 Execution: 
     - stood too far back, didn't move in decisively
-    -  4451 wrong target: went towards Invoker in BKB, rightclicked
+    - !important! 4451 wrong target: went towards Invoker in BKB, rightclicked
         4453 bad position, close to Luna (and Invoker)
         No need for telekinesis, Ogre can stun after BKB runs out, this is no initiation
         rather go for supports on the side with storm (saw SD)

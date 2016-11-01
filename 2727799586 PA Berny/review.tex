@@ -49,7 +49,7 @@
     \end{tikzpicture}}
 }
 
-\newcommand{\matchid}{2705787298}
+\newcommand{\matchid}{2727799586}
 
 
 \makeatletter
@@ -82,7 +82,7 @@
 \setlist[itemize]{leftmargin=0pt,labelindent=1em}
 
 \title{Wisdota Report for Match \matchid \\
-Spirit Breaker by Spdy}
+Phantom Assassin by Tails}
 \date{Played on 11/10/2016}
 \pretitle{\begin{flushleft}\LARGE\sffamily}
 \posttitle{\par\end{flushleft}}
@@ -97,12 +97,12 @@ Spirit Breaker by Spdy}
 \makeatother
 \pagestyle{reportpage}
 
-\newcommand{\mechanics}{\ensuremath{\;\;\color{mechanicscolor} \filledmedsquare} }
-\newcommand{\efficiency}{\ensuremath{\;\;\color{efficiencycolor} \filledmedsquare} }
-\newcommand{\information}{\ensuremath{\;\;\color{informationcolor} \filledmedsquare} }
-\newcommand{\itemisation}{\ensuremath{\;\;\color{itemisationcolor} \filledmedsquare} }
-\newcommand{\execution}{\ensuremath{\;\;\color{executioncolor} \filledmedsquare} }
-\newcommand{\decision}{\ensuremath{\;\;\color{decisioncolor} \filledmedsquare} }
+\newcommand{\mechanics}{\scalebox{1.5}{\ensuremath{\;\;\color{mechanicscolor} \filledmedsquare} }}
+\newcommand{\efficiency}{\scalebox{1.5}{\ensuremath{\;\;\color{efficiencycolor} \filledmedsquare}} }
+\newcommand{\information}{\scalebox{1.5}{\ensuremath{\;\;\color{informationcolor} \filledmedsquare}} }
+\newcommand{\itemisation}{\scalebox{1.5}{\ensuremath{\;\;\color{itemisationcolor} \filledmedsquare}} }
+\newcommand{\execution}{\scalebox{1.5}{\ensuremath{\;\;\color{executioncolor} \filledmedsquare}} }
+\newcommand{\decision}{\scalebox{1.5}{\ensuremath{\;\;\color{decisioncolor} \filledmedsquare}} }
 
 \newcommand{\gt}{\ensuremath{\;\;\color{green} \filledmedtriangleup} }
 \newcommand{\rt}{\ensuremath{\;\;\color{red} \filledmedtriangledown} }
@@ -119,7 +119,7 @@ Spirit Breaker by Spdy}
 \newcommand{\goodremark}[1]{\item[\gt] #1}
 \newcommand{\neutralremark}[1]{\item[\ws] #1}
 \newcommand{\badremark}[1]{\item[\rt] #1}
-\newcommand{\logremark}[3]{\item[\textnormal{\logref{#1}} #2 ] #3}
+\newcommand{\logremark}[3]{\vbox{ \item[\textnormal{\logref{#1}} #2 ] #3}}
 
 \newcommand{\suggestion}[1]{\\ \emph{#1}}
 
@@ -136,7 +136,7 @@ Spirit Breaker by Spdy}
 
 \newcommand{\decisionmistake}[3]{#1\\
 \vbox{
-\vspace{}
+\vspace{0.1cm}
 \textbf{What happened}\\\vbox{#2}
 \textbf{Alternative}\\\vbox{#3}
 }
@@ -166,15 +166,14 @@ Spirit Breaker by Spdy}
 
 \newcommand{\twoscreenshots}[2]{
 \begin{center}
-    \begin{minipage}[t]{0.4\textwidth}
+    \begin{minipage}[t]{0.49\textwidth}
         \begin{center}
-            \includegraphics[width=\textwidth]{#1}
+            \includegraphics[height=5.7cm]{#1}
             \end{center}
     \end{minipage}
-    \begin{minipage}[t]{0.4\textwidth}
+    \begin{minipage}[t]{0.49\textwidth}
             \begin{center}
-        \includegraphics[width=\textwidth]{#2}
-                \paragraph{}\hfill
+        \includegraphics[height=5.7cm]{#2}
             \end{center}
     \end{minipage}
 \end{center}
@@ -279,29 +278,19 @@ Spirit Breaker by Spdy}
 \thispagestyle{first-page}
 
 \paragraph{Match Context}
-Solo AP ranked. Spriti Breaker on offlane, roaming/initiator - Goal is to gain an advantage through kills and become strong enough to initiate fights with charge. Got an early advantage and snowballed to a win.
-
+2-stack AP unranked. Phantom Assassin in midlane. Aim is to gain an kill advantage with early levels and the 
+first items, and then build up into a strong lategame carry. Successfull earlygame, fall behind with bad engagements in the midgame, win due to some good fights and reaching lategame items.
 \paragraph{Highlight Tip}
-Empowering Haste has an active part, use it to boost movespeed (and damage) in fights!
+Phantom Assassin usually has a small HP pool after the early game, making her very susceptible to magical burst damage. Play carefully in the teamfights so you don't die to nukers like Tiny.
 
-\nnsection{Summary}
-
-\begin{remarks}
-\goodremark{Effective itembuild. Get Stout Shield, buy Quelling Blade at the sideshop.}
-\goodremark{Good laning, punishing solo Sven}
-\goodremark{Successful aggressive ganks.}
-\neutralremark{Unnecessary deaths to overconfidence, might have been able to escape with charge.}
-\badremark{Unused skills/abilities: Empowering Haste, sometimes Urn and Drums. }
-\end{remarks}
 
 \section{Tips}
 
 \begin{itemize}
-    \item Only hero and tower damage cancels Urn regeneration, use it to stay healthy when tanking creepwaves.
-    \item When you have charges available, use Urn agressively when you enter the fight.
-    \item Prioritise killing the ranged creep when pushing a lane.
-    \item When pushing lanes later in the game, make sure to lasthit the enemy creeps dying to your creeps. 
-    \item Be patient and take safe lasthits over pushing a little bit more.
+    \item Carefully plan item purchases in the mid lane. Only buy in base when immediately using the courier, use the sideshop during ganks. Delayed boots by 2-3 minutes, see \logref{3:10}.
+    \item In order to prevent Pudge from self-denying with Rot in ganks, don't try to finish him off with rightclicks. Move close and hold the last rightclick, then finish him off with Stifling Dagger. Missed 2 kills at \logref{4:45}, \logref{6:45}.
+    \item Be aware of the magical burst potential of the enemy team, went into multiple dangerous engagements and died \logref{16:49} \logref{20:09} \logref{20:53} \logref{22:21}. If you are at a disadvantage, splitpush and farm up until you can live through a fight.
+    \item Prioritise farming efficiently in the midgame by always moving to the next closest creepwave or neutralcamp, unless there is a good reason to go somewhere else. Examples of suboptimal movement at \logref{22:00} \logref{27:46}.
 \end{itemize}
 
 
@@ -309,7 +298,14 @@ Empowering Haste has an active part, use it to boost movespeed (and damage) in f
 
 \section{Events}
 
-
+\begin{tabular}{ l | l }
+  \mechanics & Mechanics \\
+  \efficiency & Efficiency\\
+  \information & Information\\
+  \itemisation & Itemisation\\
+  \execution & Execution\\
+  \decision & Decision\\
+\end{tabular}
 
 \begin{remarks}
 
@@ -331,8 +327,6 @@ Empowering Haste has an active part, use it to boost movespeed (and damage) in f
         \minimap{img/-030.pdf}
     }
 }
-
-
 
 \logremark{0:31}{\mechanics}{missed lasthit (too early, 5hp)}
 \logremark{0:32}{\mechanics}{missed lasthit (didn't use dagger to lasthit)}
@@ -392,11 +386,15 @@ Empowering Haste has an active part, use it to boost movespeed (and damage) in f
 \logremark{6:47}{\itemisation}{missed opportunity to buy TP at sideshop, will likely move mid}
 
 
-\logremark{9:21}{\decision}{bad blink into fight, death
-    pudge+sk under tower, just run}
+\logremark{9:21}{\decision}{
+    \decisionmistakeshort{Bad blink into fight}
+    {Pudge + SK under tower, SK has Burrowstrike, Lina will die
+    \screenshot{img/920.jpg}}
+    {Just run}
+}
     
 
-\logremark{10:14}{\efficiency}{didnt use blinkstrike on creepwave}
+\logremark{10:14}{\efficiency}{Didn't use blinkstrike on creepwave}
 
 \logremark{10:21}{\mechanics}{missed lasthit (impatient, tried 2 hits)}
 \logremark{10:34}{\mechanics}{missed lasthit (unlucky crit, could use dagger quickly)}
@@ -405,86 +403,75 @@ Empowering Haste has an active part, use it to boost movespeed (and damage) in f
 \logremark{11:46}{\mechanics}{missed lasthit (hit wrong creep)}
 \logremark{11:47}{\mechanics}{missed lasthit (hit wrong creep)}
 
-\logremark{11:53}{\itemisation}{missed opportunity to buy tp at sideshop}
+\logremark{11:53}{\itemisation}{missed opportunity to buy TP at sideshop}
 
-\logremark{12:30}{\execution}{death in small fight
-    1222 move into fight with half HP
-        safe play is to stay back a bit and bottle up
-    +LC blink was suprising
-    -WD didn't use heal, could have lived}
+\logremark{12:30}{\execution}{
+    \decisionmistake
+    {Death in small fight
+    \suggestion{Reveal of LC's Blink Dagger}}
+    {
+    \begin{remarks}     
+        \logremark{12:22}{\execution}{move into fight with half HP}
+    \end{remarks}
+    }
+    {Safe play is to stay back a bit and use Bottle. WD didn't use heal, could have lived.}
+}
 
-\logremark{13:19}{\itemisation}{always use phaseboots to move}
+\logremark{13:19}{\itemisation}{Always use phaseboots to move}
         
     
-\logremark{14:38}{\efficiency}{didnt use spells to farm camp
-        !full mana
-        !low(er) hp}
+\logremark{14:38}{\efficiency}{Didn't use spells to farm camp
+\suggestion{full mana, low HP}
+}
 
-\logremark{15:12}{\efficiency}{inefficient
-    didnt use dagger to farm camp
-        !more mana
-        !low(er) hp}
+\logremark{15:12}{\efficiency}{
+    Didn't use Dagger to farm camp
+    \suggestion{had more mana and low hp}}
 
-\logremark{15:56}{\mechanics}{missed lasthit (didnt watch wave for dagger)}
+\logremark{15:56}{\mechanics}{missed lasthit (didn't watch wave for dagger)}
 
-\logremark{16:04}{\itemisation}{death to tiny
-    - walking around with low HP
-    + new blink
-    - had to expect blink to soon come up
-    - had no vision, knew enemies were nearby}
+\logremark{16:04}{\decision}{Death to tiny
+\begin{itemize}
+    \item walking around with low HP
+    \item revel of Tiny's blink (had to expect it to soon come up)
+    \item had no vision, knew enemies were nearby
+\end{itemize}
+}
 
-\logremark{}{\itemisation}{!!! decision making:
-    did ping enemy position!
-    need to realize that initiating teamfights is impossible
-    lots of magic burst damage, all heroes squishy
-    can only fight if enemies use spells separately - super hard
-->
-..
-1649 bad tp mid
-    - towards enemy team
+\logremark{16:49}{\decision}{
 
-1655 walk uphill
-
-1708 death in fight
-    - too low maxhp/too much magic damage
-    - cant go into fight
-    - lucky that tiny didnt burst immediately
-
- ..
-   !!instead TP bottom 1649, split/move to ancient jungle
-..
+\decisionmistake{Grouped up with team and took fight in bad}
+{
+\begin{remarks}
+    \logremark{16:49}{\decision}{bad TP mid
+        \suggestion{move you towards enemy team}
+        }
+    \logremark{16:55}{\decision}{walk uphill}
+    \logremark{17:08}{\decision}{Death in fight\hfill
+        \begin{itemize}
+        \item too low max HP/too much magic damage. Can only go into fight after spells are used.
+        \item lucky that tiny didn't burst immediately at \logref{16:57}
+        \end{itemize}}
+ \end{remarks}
+}
+{TP bottom at \logref{16:49}, splitpush/move to ancient camp}
 }
 
 \logremark{19:45}{\efficiency}{use phaseboots to move}
           
-    
-   
 \logremark{20:09}{\decision}{decision bad go into tiny - should have immediately died to combo}
 
-
-\logremark{}{\itemisation}{!!! decision makign:
-    keep fighting into sk/tiny  with reduced HP}
-
-\logremark{20:53}{\itemisation}{go onto tiny
+\logremark{20:53}{\decision}{go onto tiny
     leads to death}
 
-\logremark{}{\decision}{!!decision making
-    walk over to mid as they fight pudge
-    should farm jungle, no need to help there
-    want to spread and maximize farm
-    dont want to show, dangerous with 3 blinks and lots of burst
+\logremark{22:00}{\decision}{Walk over to mid where team fights pudge
+\suggestion{Should farm jungle, no need to help there. Want to spread out and maximize farm. Fighting is dangerous against 3 blinks and lots of burst}
+\twominimaps{img/2200-bad.pdf}{img/2200-good.pdf}
+}
 
-bad movement
-top t2-> mid t2 - mid t1 - farm mid wave  -stay and farm next wave
-instead - farm jungle
-top t2 -> medium camp -> hard camp -> medium camp rune}
+\logremark{22:21}{\decision}{\important Show on the lane - should die do SK+Tiny }
 
-\logremark{22:21}{\decision}{show on the lane - should die do sk+tiny }
-
-\logremark{24:45}{\itemisation}{inefficient movement
-    bad pathing above ancient camp to creepwave
-    misses 2 creeps
-    saw them mid, cant }
+\logremark{24:04}{\mechanics}{Missed lasthit (hit wrong creep, dies to tower)}
 
 \logremark{24:57}{\mechanics}{missed lasthit (hit wrong creep)}
 
@@ -492,61 +479,44 @@ top t2 -> medium camp -> hard camp -> medium camp rune}
 
 \logremark{25:02}{\mechanics}{missed lasthit (impatient, tried to get two hits.)}
 
-\logremark{25:03}{\decision}{!decision making:
-    tiny sk pudge show mid
-    -> wave bottom is safe to farm}
-
-\logremark{25:04}{\efficiency}{
-    !missing information: need to view drows movement
-    walk to hardcamp
-    team is farming that
-    instead: immediately farm ancients
-        !avoids dangerous situation
+\logremark{25:03}{\decision}{Didn't push a safe creepwave
+\suggestion{Tiny, SK and Pudge show mid}
 }
-\logremark{27:44}{\efficiency}{use blink strike to clear creepwave}
+
+\logremark{25:04}{\efficiency}{Share farm with Drow 
+\suggestion{Prioritise farming ancient camp, gives more gold, can move back afterwards}
+\begin{remarks}
+\logremark{25:05}{\information}{Didn't view Drows movement towards the camp}
+\end{remarks}
+}
+\logremark{27:44}{\efficiency}{didn't use blink strike to clear creepwave}
 
 \logremark{27:46}{\decision}{
-    !decision making
-        should farm enemy jungle toward bottom
-            enemies are respawning/ in base
-            lots of space available
-            spread out 
-..
-    2813 missed opportunity to buy TP, usign courier
-    walk to secret shop
-    farm ancients
-    walk mid
-
-    2830 !decision making
-        should not try to fight there
-        no vision
-        nothing to gain, own lane is pushed in
-        Lina is out of mana, global silence on cooldown
-..
-..
-   !!instead farm radiant jungle toward bottom, kill one wave
-
-..
+Inefficient farming after push
+\suggestion{Enemies are still in base or respawning, spread out and use the space}
+\twominimaps{img/2746-bad.pdf}{img/2746-good.pdf}
 }
+\logremark{28:13}{\itemisation}{Used courier, missed opportunity to buy TP}
 
+\logremark{28:30}{\decision}{going for a bad fight
+\begin{itemize}
+    \item No vision, fighting into highground
+    \item Nothing to gain, own lane is pushed in
+    \item Lina is out of mana, global silence on cooldown
+\end{itemize}
+}
+        
 \logremark{29:47}{\itemisation}{missed opportunity to buy TP
-    replace Raindrops! }
+    \suggestion{replace Raindrops}}
 
-\logremark{30:04}{\itemisation}{!decision making should push out top
+\logremark{30:04}{\decision}{
+\decisionmistakeshort{Missed opportunity to splitfarm}{Farming mid\suggestion{Sharing farm with Drow, less camps next to secret shop}}{Farm top instead \suggestion{Big creepwave, pushes lane, can continue into the jungle}}}
 
-    inefficient movement farming mid
-        allies in mid, sharing farm with drow
-        only 2 camps next to secret shop to continue
-    farm top instead 
-        big creepwave
-        should push top
-        can continue jungle}
+\logremark{30:56}{\decision}{Didn't push out bottom
+    \suggestion{Have no TP, could have bought at \logref{29:47}}}
 
-\logremark{30:56}{\itemisation}{!decision making should push out bottom
-    !missing tp, could have bought at 2947}
-
-\logremark{32:36}{\efficiency}{inefficient movement: walk mid then bot
-    bottom needs to be pushed, go there immediately}
+\logremark{32:36}{\efficiency}{Walk mid then bot
+\suggestion{Bottom needs to be pushed, go there immediately}}
 
 \logremark{33:20}{\mechanics}{missed lasthit (wrong creep)}
 
@@ -555,21 +525,15 @@ top t2 -> medium camp -> hard camp -> medium camp rune}
 \logremark{41:30 }{\decision}{enemies could push top rax, no tp!}
 
 \logremark{42:21}{\decision}{
-    fighting with only 3 for enemy base
-    no TP out
-        -> should run }
-\logremark{42:25}{\execution}{fight execution:
-    run up instead of towards team}
+    Fighting with only 3 for enemy base
+    \suggestion{No TP out available, should run} }
+    
+\logremark{42:25}{\execution}{Ran up instead of down towards team}
 
 \logremark{45:19}{\decision}{
-    killed 4, go for objectives
-
-    did: farmed ancients, moved to bottom
-
-    should: push mid
-
+    Farmed neutrals after won teamfight
+    \suggestion{killed 4, immediately push and take objectives}
 }
-
 \end{remarks}
 \end{document}
 
