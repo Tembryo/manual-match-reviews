@@ -1,0 +1,463 @@
+\documentclass{article}
+\usepackage[top=2.5cm, bottom=2.5cm, inner=2.5cm,outer=2.5cm]{geometry}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\definecolor{WisdotaBackground}{HTML}{61595D}
+\definecolor{highlight}{HTML}{F1B72A}
+\definecolor{secondaryhighlight}{HTML}{D98E04}
+\definecolor{mistakecolor}{HTML}{8C2625}
+\definecolor{goodplaycolor}{HTML}{258C27}
+
+\definecolor{mechanicscolor}{HTML}{D73356}
+\definecolor{efficiencycolor}{HTML}{D68A1B}
+\definecolor{informationcolor}{HTML}{3FD258}
+\definecolor{itemisationcolor}{HTML}{D13CC1}
+\definecolor{executioncolor}{HTML}{37AFD3}
+\definecolor{decisioncolor}{HTML}{5A56DC}
+
+
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{fontspec}
+\usepackage{background}
+\usepackage{blindtext}
+%\usepackage{stix}
+\usepackage{savesym}
+\usepackage{amsmath}
+\savesymbol{mathdollar}
+\usepackage{MnSymbol}
+\restoresymbol{MnS}{mathdollar}
+\usepackage{hyperref}
+\usepackage{titling}
+\usepackage{enumitem}
+%\usepackage{fdsymbol}
+
+
+\hypersetup{
+    colorlinks = false,
+    linkbordercolor = {highlight}
+}
+
+\onehalfspacing
+%\doublespacing
+\setmainfont{Roboto-Light}
+\backgroundsetup{
+    scale=1,
+    angle=45,
+    opacity=0.1,
+    contents={\begin{tikzpicture}[remember picture,overlay]
+    \path [left color = gray, right color = black] (current page.south west) rectangle (current page.north east);   % Adjust the position of the logo.
+    \end{tikzpicture}}
+}
+
+\newcommand{\matchid}{2736890401}
+
+
+\makeatletter
+\fancypagestyle{reportpage}{%
+  \fancyhf{}% Clear header/footer
+  \rhead{ \textcolor{white}{Wisdota.com}}
+  \lhead{\textcolor{white}{Report for Match \matchid}}
+  \fancyfoot[C]{\textcolor{white}{\color{white}\thepage}}% Page # in middle/centre of footer
+  \renewcommand{\headrulewidth}{.4pt}% .4pt header rule
+  \def\headrule{{\if@fancyplain\let\headrulewidth\plainheadrulewidth\fi
+    \color{white}\hrule\@height\headrulewidth\@width\headwidth \vskip-\headrulewidth}}
+  \renewcommand{\footrulewidth}{0pt}% No footer rule
+%  \def\footrule{{\if@fancyplain\let\footrulewidth\plainfootrulewidth\fi
+%    \vskip-\footruleskip\vskip-\footrulewidth
+%    \hrule\@width\headwidth\@height\footrulewidth\vskip\footruleskip}}
+}
+\fancypagestyle{first-page}{%
+  \fancyhf{}% Clear header/footer
+  \rhead{}
+  \lhead{}
+  \fancyfoot[C]{\textcolor{white}{\color{white}\thepage}}% Page # in middle/centre of footer
+  \renewcommand{\headrulewidth}{0}% .4pt header rule
+  \def\headrule{}
+  \renewcommand{\footrulewidth}{0pt}% No footer rule
+%  \def\footrule{{\if@fancyplain\let\footrulewidth\plainfootrulewidth\fi
+%    \vskip-\footruleskip\vskip-\footrulewidth
+%    \hrule\@width\headwidth\@height\footrulewidth\vskip\footruleskip}}
+}
+
+\setlist[itemize]{leftmargin=0pt,labelindent=1em}
+
+\title{Wisdota Report for Match \matchid \\
+Sven by seed1}
+\date{Played on 27/10/2016}
+\pretitle{\begin{flushleft}\LARGE\sffamily}
+\posttitle{\par\end{flushleft}}
+\preauthor{}
+\author{}
+\postauthor{} 
+\predate{\begin{flushright}\large\scshape}
+\postdate{\par\end{flushright}}
+
+\setlength{\droptitle}{0pt}
+
+\makeatother
+\pagestyle{reportpage}
+
+\newcommand{\mechanics}{\scalebox{1.5}{\ensuremath{\;\;\color{mechanicscolor} \filledmedsquare} }}
+\newcommand{\efficiency}{\scalebox{1.5}{\ensuremath{\;\;\color{efficiencycolor} \filledmedsquare}} }
+\newcommand{\information}{\scalebox{1.5}{\ensuremath{\;\;\color{informationcolor} \filledmedsquare}} }
+\newcommand{\itemisation}{\scalebox{1.5}{\ensuremath{\;\;\color{itemisationcolor} \filledmedsquare}} }
+\newcommand{\execution}{\scalebox{1.5}{\ensuremath{\;\;\color{executioncolor} \filledmedsquare}} }
+\newcommand{\decision}{\scalebox{1.5}{\ensuremath{\;\;\color{decisioncolor} \filledmedsquare}} }
+
+\newcommand{\gt}{\ensuremath{\;\;\color{green} \filledmedtriangleup} }
+\newcommand{\rt}{\ensuremath{\;\;\color{red} \filledmedtriangledown} }
+\newcommand{\ws}{\ensuremath{\;\;\color{white} \filledmedsquare} }
+
+\newenvironment{remarks}
+    {
+        \begin{description}
+            \setlength\itemsep{0em}
+    }
+    {
+        \end{description}
+    }
+\newcommand{\goodremark}[1]{\item[\gt] #1}
+\newcommand{\neutralremark}[1]{\item[\ws] #1}
+\newcommand{\badremark}[1]{\item[\rt] #1}
+\newcommand{\logremark}[3]{\vbox{ \item[\textnormal{\logref{#1}} #2 ] #3}}
+
+\newcommand{\suggestion}[1]{\\ \emph{#1}}
+
+\newcommand{\important}{\colorbox{highlight}{Important!}\ }
+
+\newcommand{\mistake}{\colorbox{mistakecolor}{Mistake!}\ }
+\newcommand{\goodplay}{\colorbox{goodplaycolor}{Good Play!}\ }
+\newcommand{\logref}[1]{\textcolor{highlight}{#1}}
+
+\newcommand{\nnsection}[1]
+{\section*{#1}
+\addcontentsline{toc}{section}{#1}
+}
+
+\newcommand{\decisionmistake}[3]{#1\\
+\vbox{
+\vspace{}
+\textbf{What happened}\\\vbox{#2}
+\textbf{Alternative}\\\vbox{#3}
+}
+}
+
+\newcommand{\decisionmistakeshort}[3]{#1\\
+\vbox{
+\textbf{Thoughts}\\\vbox{#2}
+\textbf{Alternative}\\\vbox{#3}
+}
+}
+
+
+\newcommand{\decisionmistakefull}[4]{#1\\
+\textbf{Thoughts}\\#2\\
+\textbf{What Happened}\\#3\\
+\textbf{Alternative}\\#4
+}
+
+\newcommand{\screenshot}[1]{
+    \begin{center}
+    \begin{minipage}[t]{0.4\textwidth}
+        \includegraphics[width=\textwidth]{#1}
+    \end{minipage}
+\end{center}
+}
+\newcommand{\widescreenshot}[1]{
+    \begin{center}
+    \begin{minipage}[t]{0.7\textwidth}
+        \includegraphics[width=\textwidth]{#1}
+    \end{minipage}
+\end{center}
+}
+
+\newcommand{\twoscreenshots}[2]{
+\begin{center}
+    \begin{minipage}[t]{0.4\textwidth}
+        \begin{center}
+            \includegraphics[width=\textwidth]{#1}
+            \end{center}
+    \end{minipage}
+    \begin{minipage}[t]{0.4\textwidth}
+            \begin{center}
+        \includegraphics[width=\textwidth]{#2}
+                \paragraph{}\hfill
+            \end{center}
+    \end{minipage}
+\end{center}
+}
+
+
+\newcommand{\minimap}[1]{
+    \begin{center}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#1}
+    \end{minipage}
+\end{center}
+}
+
+\newcommand{\twominimaps}[2]{
+\begin{center}
+    \begin{minipage}[t]{0.3\textwidth}
+        \begin{center}
+            \textbf{What happened}\hfill
+            \includegraphics[width=\textwidth]{#1}
+            \end{center}
+    \end{minipage}
+    \begin{minipage}[t]{0.3\textwidth}
+            \begin{center}
+            \textbf{Instead}\hfill
+        \includegraphics[width=\textwidth]{#2}
+                \paragraph{}\hfill
+            \end{center}
+    \end{minipage}
+\end{center}
+}
+
+\newcommand{\threeminimaps}[3]{
+\begin{center}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#1}
+    \end{minipage}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#2}
+    \end{minipage}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#3}
+    \end{minipage}
+\end{center}
+}
+
+\newcommand{\twominimapscomment}[4]{
+\begin{center}
+    \begin{minipage}[t]{0.42\textwidth}
+    \begin{center}
+        \textbf{What happened}\hfill
+        \includegraphics[width=0.7\textwidth]{#1} 
+        \begin{itemize}
+        #2
+        \end{itemize}
+    \end{center}
+    \end{minipage}
+    \begin{minipage}[t]{0.42\textwidth}
+        \begin{center}
+        \textbf{Instead}\hfill\\
+        \includegraphics[width=0.7\textwidth]{#3}
+        \begin{itemize}
+        #4
+        \end{itemize}
+        \end{center}
+    \end{minipage} 
+    \end{center}
+}
+
+
+\newcommand{\threeminimapscomment}[6]{
+\begin{center}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#1} 
+        \begin{itemize}
+            #2
+        \end{itemize}
+    \end{minipage}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#3}
+        \begin{itemize}
+        #4
+        \end{itemize}
+    \end{minipage}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#5}
+        \begin{itemize}
+            #6
+        \end{itemize}
+    \end{minipage}
+\end{center}
+}
+
+
+
+
+\begin{document}
+\pagecolor{WisdotaBackground}
+\color{white}
+
+\maketitle
+\thispagestyle{first-page}
+
+\paragraph{Match Context}
+Solo Ranked RD. Safelane carry Sven. Build an advantage through accelearated early farm, win midgame fights with the burst damage, build into a lategame force with strong AoE damage output. After a good laning stage entered fights slightly early and died, builds up a good position but game continues with alternating teamfight wins into very late game.
+
+\paragraph{Highlight Tip}
+Be aware of the big AoE ultimates on the enemy team - preventing spells like Reverse Polarity from hitting multiple heroes is crucial to win teamfights. Either fight only in areas with vision, or be careful to position away from allies.
+
+\nnsection{Tips}
+
+\begin{itemize}
+    \item Check the inventory of enemies whenever possible. Spotting a Blink Dagger can be crucial for fights, e.g. \logref{15:27} \logref{20:04}.
+    \item Prioritize farming until core items are finished, Sven has difficulty engaging without Blink Dagger. If you have to join fights, play safe.
+\end{itemize}
+
+
+\pagebreak
+
+\nnsection{Events}
+
+%\begin{tabular}{ c | c | c | c | c | c}
+%  \mechanics & \efficiency & \information & \itemisation & \execution & \decision \\
+  %\hline
+%  Mechanics & Efficiency & Information & Itemisation & Execution & Decision \\
+%\end{tabular}
+
+\begin{tabular}{ l | l }
+  \mechanics & Mechanics \\
+  \efficiency & Efficiency\\
+  \information & Information\\
+  \itemisation & Itemisation\\
+  \execution & Execution\\
+  \decision & Decision\\
+\end{tabular}
+
+
+\begin{remarks}
+
+\logremark{1:03}{\mechanics}{Missed lasthit (cancelled attack)}
+\logremark{1:52}{\decision}{Didnt deny own creep
+\begin{itemize}
+    \item Results in 2 range creeps
+    \item Pushes the lane
+    \item Gives Magnus exp from \logref{2:35}
+\end{itemize}
+}
+\logremark{2:43}{\mechanics}{Missed lasthit (impatient/early)}
+
+\logremark{3:24}{\decision}{Didn't draw creep back 
+\suggestion{Results in pushed up wave at \logref{3:30}} }
+\logremark{3:44}{\mechanics}{Missed lasthit (lost time on a missed deny)}
+\logremark{3:56}{\mechanics}{Missed deny}
+\logremark{3:58}{\mechanics}{Didnt draw creeps back (partially because of bad camera position)}
+\logremark{4:23}{\mechanics}{Didn't draw creeps to ranged creep (want lane to pull back, dont want to tank the creep)}
+\logremark{4:31}{\mechanics}{Missed lasthit (too late)}
+\logremark{4:38}{\mechanics}{Missed deny (impatient, wait for deny)}
+
+\logremark{4:45}{\execution}{Casted Warcry, not enough mana for stun, misses kill (dies later anyway)}
+
+\logremark{4:52}{\execution}{Tanked unnecessary tower hit (walk to wrong side of creep into tower range)}
+
+\logremark{5:59}{\mechanics}{Didnt block creep to keep lane a bit back}
+\logremark{6:08}{\mechanics}{Missed deny (too defensive)}
+
+\logremark{6:42}{\mechanics}{Missed 2 lasthits (Magnus is dead, turn for creeps)}
+
+\logremark{10:33}{\mechanics}{Missed lasthit (hit wrong creep, care about of which creep is hit by tower) }
+\logremark{10:37}{\mechanics}{Missed lasthit (to tower, unusual catapult aggro)}
+\logremark{11:13}{\mechanics}{Missed lasthit (positioned behind creepwave in)}
+
+\logremark{12:06}{\efficiency}{Didn't use warcry to move to base}
+
+\logremark{12:41}{\mechanics}{Missed lasthit (hit wrong creep, care about of which creep is hit by tower)}
+\logremark{12:54}{\efficiency}{Didn't try to stack camp (centaurs are fast)}
+
+\logremark{13:20}{\decision}{Immediately walked towards team, then farmed mid
+\begin{itemize}
+    \item Instead farm jungle camp as planned
+    \item Miss out on stacked hardcamp+medium camp
+    \item Delays Echo Saber, takes farm from PA
+\end{itemize}
+}
+
+\logremark{13:39}{\mechanics}{Missed lasthit (early)}
+
+\logremark{13:55}{\efficiency}{\important Delayed buying echo sabre and using courier 
+\begin{itemize}
+    \item Used the courier at \logref{14:08} instead
+    \item Would kill kunkka  at \logref{14:23}
+    \item If rest of fight continues, would probably kill SF at \logref{14:33}
+\end{itemize}
+}
+
+\logremark{14:33}{\execution}{Chase for SF with multiple enemies coming in \suggestion{not worth dying for the kill, rubick/magnus coming - also kunkka torrent}}
+
+\logremark{15:27}{\information}{Didn't check SF's items (see his blink dagger)}
+
+\logremark{16:04}{\decision}{Chase forward into 4 heroes 
+\begin{itemize}
+    \item Surprised by Blink Dagger as didn't check SF's items before
+    \item This leaves Omniknight to die, as Rubick can chase in
+    \item Instead hit the rubick
+\end{itemize}
+}
+
+\logremark{16:32}{\decision}{Go into fight against Kunkka, Rubick 
+\begin{itemize}
+    \item Smoke Cloud down, will miss!
+    \item See Shadow Fiend coming in on minimap
+    \item Instead back out and let PA blink
+\end{itemize}
+}
+
+\logremark{19:06}{\mechanics}{Missed lasthit (didn't move past creepwave)}
+
+\logremark{20:04}{\information}{Didn't check items of magnus and kunkka in ward \suggestion{important for incoming fight}}
+\logremark{20:07}{\decision}{Didn't jump on Magnus \suggestion{good target,need fast initiation as fighting without Batrider} }
+\logremark{20:11}{\decision}{\important bad initiation on Kunkka 
+\begin{itemize}
+    \item Hitting only one target
+    \item Most hp in enemy team, won't die during the stun
+    \item Rubick and Magnus ready to counter
+\end{itemize}
+}
+
+\logremark{25:33}{\execution}{Unnecessary Storm Bolt on riki \suggestion{one rightclick for the kill} }
+
+\logremark{25:50}{\itemisation}{Missed opportunity to buy TP scroll 
+\begin{itemize}
+    \item Sell quelling blade
+    \item Going for T2 push top, very deep
+\end{itemize}
+}
+
+\logremark{26:04}{\information}{Didn't view SF taking DD and walking into rosh pit}
+\logremark{26:20}{\decision}{Didn't immediately go for T2 \suggestion{SF isn't there!}}
+
+\logremark{28:17}{\decision}{Went for very dangerous push 
+\begin{itemize}
+    \item No vision in the area
+    \item 4v5 as Batrider is still in the jungle
+    \item Danger of magnus initiation, lots of follow up damage by SF/Kunkka
+    \item Let PA push with aegis, stay back
+    \item Use God's Strength if going for the push
+    \suggestion{Dangerous situation, rather push quickly}
+\end{itemize} 
+}
+\logremark{35:49}{\execution}{Missed lasthit (hit early)}
+
+\logremark{36:00}{\efficiency}{Walked towards lane, could farm medium camp immediately. saves ~8 seconds}
+
+\logremark{37:09}{\execution}{Missed opportunity to stun rubick (too slow)}
+
+\logremark{43:15}{\execution}{Walked too far, missing hits on SF 
+\begin{itemize}
+    \item Didn't estimate where Batrider would pull
+    \item Wrong direction for cleave hits, would damage magnus/rubick 
+\end{itemize}
+}
+
+\logremark{46:44}{\decision}{Didn't walk back to team after taking bounty rune (want to pressure/force buyback)}
+
+\logremark{50:40}{\efficiency}{Slow path into Rosh (blink across the cliff)}
+
+\logremark{50:51}{\execution}{Didn't precast Gods strength before fight (4 hits on SF)}
+
+\logremark{55:33}{\decision}{Tried for a kill on SF (take the safe kill on magnus, he used spells/is weak. 3 teammates dead, take what you get)}
+
+\logremark{60:47}{\execution}{Didn't blink for counter-initiate on Magnus}
+
+\logremark{68:11}{\decision}{\important Hit ancient alone against backdoor regen \suggestion{SF respawning! Also out of mana} }
+
+\logremark{69:30}{\decision}{\important Blinked into team for kunkka \suggestion{Magnus is out of vision, need to care for RP} }
+
+\end{remarks}
+\end{document}
+
+

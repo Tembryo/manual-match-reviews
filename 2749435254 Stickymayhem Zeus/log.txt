@@ -1,0 +1,372 @@
+tips:
+
+- 
+
+
+Skill build: 
+!!maxed Static Field over Arc Lightning
+!! no quickcast
+
+start with bottle+clarity?
+
+000 give last bottle charge to veno before taking rune
+
+055 bolt? 
+059 mechanics wasted mana on lasthit - can rightclick
+104 mechanics missed deny
+108 mechanics wasted mana on lasthit - can rightclick
+117 mechanics missed deny
+119 mechanics bad positioning - keeps lane pushed, tank creeps. stand below to pull them back
+127 mechanics missed lasthit (no mana)
+134 mechanics wasted mana on lasthit - can rightclick
+146 mechanics missed lasthit (late, super close)
+149 mechanics missed lasthit (impossible to tower - need to prehit +cast )
+216 mechanics missed lasthit (to tower - need to prehit + cast)
+218 mechanics missed lasthit (need to bottle+cast, not enough damage)
+228 mechanics missed deny (unnecessary movement back)
+235 mechanics missed deny (camera movement to check rune is late - )
+249 mechanics missed deny (need to move forward with the creep)
+
+257 information didn't check bottom before gank
+301 decision bad gank bottom 
+    no way to kill. lane is pushed, full HP, only ember spirit bola VS Timbersaw
+    Overall not worth:
+        missed 2 creepwaves
+        got 300exp, 290 gold
+        lost 530 exp, 390 gold
+
+401 efficiency - find haste rune
+    should use immediately, regen  up and take top rune
+    could get 1 additional lasthit in mid
+
+431 mechanics missed lasthit (backed too far - kunkka used abilities, its safe)
+436 mechanics missed lasthit (unnecessary movement)
+437 mechanics missed lasthit (unnecessary movement)
+442 information didn't check top lane for gank (also would see pathing of WK)
+456 execution wrong pathing for gank
+
+506 decision stayed top - instead TP back mid
+    got 200 exp, 160g (taken from BB/KotL)
+    could instead get 
+
+527 mechanics missed lasthit (used arc lightning on the wrong creep)
+
+536 mechanics missed 2x lasthit (unnecessary movement)
+
+617 decision inefficient chase for kunkka 
+    (Reduced damage from Ship/ Rum buff, see when casting arc lightning)
+    losing creepwave mid, 120g 180 exp
+    expending ult, 340 mana!
+    638 would kill timbersaw here with the mana (Bolt+Ult)
+
+631 itemisation delayed using courier ()
+
+646 decision inefficient rotation bottom
+    - ember is farming the lane, don't want to take his gold/exp or push his lane
+    - too early to push T2, no damage with Zeus/Ember / not worth pushing without supports
+    instead go stack/then farm the jungle
+
+707 mechanics missed lasthit (too early)
+709 mechanics missed lasthit (too late, needed to arc lightning)
+713 mechanics missed lasthit (left for ember)
+718 mechanics missed lasthit (left for ember, didnt try when he misses)
+727 mechanics missed lasthit (unnecessary movement)
+
+822 Missed lasthit (unnecessary movement)
+829 Missed lasthit (early)
+852 Missed lasthit (left to Veno)
+858 missed lasthit (didnt try with arc lightning?)
+
+917 execution missed Kill on LC (unnecessary movement)
+920 execution delayed kill/respawn of WK, letting him get off stun on Bristleback
+    -> cast Lightning Bolt on the ground when enemies try  to juke (uphill)   
+
+940 efficiency unnecessary bolt (nothing to hit)
+941 efficiency suboptimal movement away from the lane  -> miss 2 lasthits as too far away
+954 efficiency inefficient pathing to rune - can walk in the river
+
+1020 missed lasthit (early)
+1020 herobuild don't get 2 lasthits due to leveling Static Field over Arc Lightning 
+
+1028 - 1044 herobuild less damage due to skilling Static Field over Arc Lightning 
+    8x arc - 120 dmg
+
+1053 efficiency missed TP top
+    lost 11 creeps! 471 gold, ~800 Exp
+
+1133 herobuild less damage due to skilling Static Field over Arc Lightning (save 2 autoattacks)
+
+1156 herobuild less damage due to skilling Static Field over Arc Lightning (save 2 autoattacks)
+1159 mechanics missed lasthit (move closer to next creep)
+
+1232 herobuild less damage due to skilling Static Field over Arc Lightning (save 1 cast of arc lightning)
+1232 efficiency unnecessary autoattack (hit the big one, saves one hit) 
+
+1251 herobuild less damage due to skilling Static Field over Arc Lightning
+
+1305 decision missed a kill on Timbersaw!
+    Hit Bolt - Can follow up with Arc Lightning+Ultimate
+
+1314 execution suboptimal cast order in gank  \\clip
+    Ultimate to scout - dangerous position, enigma,  Black Hole possible
+    Bolt, most damage+ give vision and prevent jukes
+    then Arc Lightning
+
+1344 execution missed lasthit (tried for 2 hits - use arc lightning)
+
+1347 herobuild less damage due to skilling Static Field over Arc Lightning (save 2 autoattacks)
+1352 execution missed lasthit (casted on wrong creep - prioritize the one hin by creepwave)
+1355 execution missed lasthit (casted on wrong creep - prioritize the one hin by creepwave)
+1358 execution missed lasthit (left wave early)
+
+1405 decision !important movement to the wrong side of the map
+    big creepwave on top is pushing in
+        -farm than, push out (otherwise someone else has to rotate)
+    no need to join the team bottom
+        strong enough as 4
+        too early to push highground
+    long distance to walk, top is far closer
+    safe position top
+    can TP back to fountain after pushing and refill
+
+1441 herobuild less damage due to skilling Static Field over Arc Lightning (gets one more lasthit instead of Venomancer)
+1444 decision !dangerous position
+    - low HP, LC missing 
+    Use lighning bolt to give truesight in entire lane, sentry only covers the side
+
+1518 decision stayed around trying to presure in bad position
+    - nothing to gain
+    go farm jungle, use mana from bloodstone
+    or tp top to push
+
+1519 decision !dangerous position
+    - low HP, LC missing 
+
+1544 execution casted too too many spells, lets LC catch up
+    - turn twice for arc lightning
+    - didn't cancel backswing of ultimate 
+
+1600 decision missed buying TP scroll  (want to TP out at 1807) 
+
+1618 mechanics missed lasthit (impatient/tried using one more arcane lightning, late due to no quickcast)
+1618 herobuild less damage due to skilling Static Field over Arc Lightning (missed 2 lasthits, saves 1 arcane lightning)
+1622 mechanics missed lasthit (hit early/misjudged damage)
+
+1618 herobuild less damage due to skilling Static Field over Arc Lightning (missed 2 lasthits, saves 1 arcane lightning)
+
+1654 execution didnt retreat correctly, dangerous position
+    could get duelled at 1656
+        could die to Kunkka/Timbersaw/Enigma followup, rum buff saves enemy team
+    ran into bristleback and got bodyblocked
+    turned twice to cast spells
+
+
+1700 herobuild less damage due to skilling Static Field over Arc Lightning (timbersaw dies 1 arcane lightning earlier)
+
+1707 mechanics missed lasthit (veno got it, use arcane lightning)
+1708 execution didn't cast arcane lightning on creep (better than hitting tower) 
+
+1749 execution unnecessary walking back
+    - not focused by anyone
+    - bolt ready in 1 second
+
+1806 decision walk into dangerous situation
+    - alone/ember spirit is almost dead
+    - no escape 
+    - kill on Timbersaw is not worth dying
+    TP out instead (if had TP)
+
+1845 efficiency/decision suboptimal walk to rune
+    farm/stack medium camp mid instead
+    bottle is full! 
+
+1901 mechanics almost missed lasthit(used arc lightning on wrong creep) 
+1918 herobuild less damage, less bounces due to skilling Static Field over Arc Lightning (missed 3 creep lasthits+ 4 eidolons, saves 1 arcane lightning)
+1906 mechanics missed lasthit (arcane lightning early, or move in to rightclick. get it with different skillbuild)
+1907 mechanics missed lasthit (arcane lightning early, or move in to rightclick. get it with different skillbuild)
+1910 mechanics missed lasthit (arcane lightning early/on the eidolons. get it with different skillbuild)
+
+1917 efficiency unnecessary movement forward/backward, delays multiple uses of arc lightning! 
+    - mouse positioning for cast takes time
+
+1927 decision suboptimal staying in midlane, slightly dangerous position
+    alone, far forward - could get dangerous with X mark, Duel...
+    instead move into jungle/bottom
+
+2008 mechanics missed lasthit (casted on wrong creep)
+2013 mechanics missed lasthit (casted on wrong creep)
+2023 mechanics missed lasthit (ignored catapult)
+2029 decision/itemisation missed opportunity to buy TP scroll at side shop
+2030 efficiency suboptimal movemnt to rune
+    walk through the jungle, farm hard camp on the way
+
+2112 herobuild less damage due to skilling Static Field over Arc Lightning (miss 1 lasthit)
+2112 mechanics missed lasthit (casted early)
+2116 decision bad highground push
+    - too early
+    - 4v5, veno is walking towards base
+    - ultimate on cooldown
+    take enemy jungle instead, take top T2
+
+2133 execution standing a bit too close to team
+    - caught in black hole, can otherwise cancel and win the fight
+
+
+2234 mechanics missed lasthit (unnecessary movement, late on the cast due to turn rate)
+2235 herobuild less damage, less bounces due to skilling Static Field over Arc Lightning (missed 2 creep lasthits)
+2236 mechanics missed lasthit (standing too far)
+2236 mechanics missed lasthit (unnecessary movement, late on the cast due to turn rate)
+
+2250 decision dangerous movement through enemy jungle
+    -could get caught by duel (possibly with followup)
+    -dangerous path, possibly warded
+    instead walk back the lane, farm hardcamp
+
+2323 mechanics missed lasthit (use arc lightning)
+
+2355 decision suboptimal/dangerous movement - walking away from rune, to ancient camp
+    - instead stay at the rune to immediately pick it up. 6 seconds delay
+    4 enemies missing, could run into multiple farming hard/ancient camp
+
+
+2408 efficiency suboptimal movement, walking to hardcamp
+    instead farm fight side of jungle (medium/easy/hard camp, farm bottom)
+
+2440 efficiency use blink dagger to move
+2450 mechanics missed lasthit (wrong creep, aggroed by catapult)
+2457 mechanics missed lasthit (ignored catapult, too far)
+2510 execution weird chasing angle
+2511 execution bad blink
+    - separated from the fight if enemies move down
+    2514 didnt cast arc lightning
+    2517 moved out, let the timbersaw escape
+
+2545 decision! bad cast of lightning bolt
+    - cast too far, walk back
+    - blink dagger still on cooldown, should wait for that
+
+2646 efficiency didn't use blink dagger to move (miss 2 lasthits)
+2656 mechanics missed lasthit (too far, didnt blink)
+2658 mechanics missed lasthit (too late on the bold, didnt blink earlier)
+2706 mechanics missed lasthit (didn't move in to rightclick)
+2734 mechanics missed lasthit (didn't move in to rightclick)
+2736 decision missed opportunity to buy TP 
+2804 mechanics missed lasthit (unnecessary movement/ moved camera)
+
+2818 decision dangerous movement 
+    - no vision, likely to be warded
+
+2847 mechanics missed lasthit 2x (1 didnt rightclick, 2nd didn't prehit before casts )
+2849 decision dangerous push
+    alone, kunkka/WK/enigma missing
+    don't deal tower damage with zeus
+
+2857 execution didn't use spells as quickly as possible
+    2857 should use ult to scout, get ult off for the fight at rosh in case of chainstun 
+    2903 after bolt immediately use arc lightning
+    2910 ran with arc lightning off cooldown 
+
+2915 information didn't watch teamfight at rosh (see that enigma is really low HP)
+2915 efficiency didn't use blink dagger to move
+    could kill enigma! 
+
+2940 efficiency bad walk to secretshop
+    use courier for that!
+    bring out TP!
+    instead farm the jungle, can farm 2-3 camps in this time
+
+3008 efficiency didn't farm hardcamp on the way
+3028 mechanics missed lasthit (didn't move in to rightclick)
+3045 efficiency late use of blink dagger to move (8 seconds, misses 1 lasthit at 31:02) 
+3046 efficiency suboptimal pathing (don't walk down into the river)
+    takes longer
+    dangerous as no vision
+
+3117 decision missed opportunity to buy TP
+
+3138 mechanics missed lasthit (microing illusions)
+3142 mechanics missed lasthit (late)
+3146 mechanics missed lasthit (stood too far away)
+3153 mechanics missed lasthit (stood too far away)
+3202 mechanics missed lasthit (stood too far away)
+
+3227 decision dangerous position, walk too close to base
+    kunkka has X-Mark, only Keeper as backup
+
+3253 execution turned late, use lightning bolt when WK switches target
+    - spend time moving camera to move down
+    - instead walk into trees, keep camera still
+
+3302 execution unnecessary movement
+    -delayes arc lighning on creeps, just stand
+
+3313 execution missed lasthit (late arc lightning)
+3317 execution missed lasthit (blinked out unnecessarily, then too far)
+
+3347 decision !important walked into enemies
+    walking highground!
+    saw them move in, chasing the ember
+    - instead use Lightning Bolt to scout the highground
+
+3322 decision 
+
+3342 efficiency tabbed out too long, standing in base for 17 seconds after respawn
+
+3547 execution missed lasthit (arcane lightning too early)
+3550 execution missed lasthit (didnt rightclick /cast on wrong creep)
+3551 execution missed lasthit (wrong creep, late due to turn)
+
+3600 decision dangerous path
+    LC/WK missing
+    instead walk back and through the other entrance
+
+3604 decision dangerous walking highground
+    use lightning bolt to scout!
+
+3610 decision !important show position by casting spell
+    alone in dangerous position
+    causes WK to chase
+
+3619 decision escape in wrong direction
+    - ran left, saw enigma with Ultimate
+    instead run down, toward Keeper
+
+3808 efficiency unnecessary hit on small creep in camp
+3823 mechanics missed lasthit (didnt walk close)
+3827 mechanics missed lasthit (didnt rightclick)
+
+4027 mechanics missed lasthit (use lightning bolt)
+4148 efficicency let regeneration rune get cancelled by creeps
+    use it earlier e.g. immeediately after picking it up at 4127
+    or: dont blink up into creepwave 
+
+4222 execution didn't use arc lightning (can get 2 onto LC, might kill)
+
+4431 execution missed lasthit (casted on wrong creep)
+
+4556 execution wrong cast order 
+    use arc lightning first, higher cast range
+    will get off cooldown earlier, one additional cast
+
+4626 decision bad blink forward
+    - no vision, wk missing
+    - front of the fight, want to stay at the side
+
+4756 efficiency didn't use blink to move
+
+4824 decision didnt use ult to scout
+    - as reaction to initiation by kunkka
+
+4943 efficiency didn't use blink to move (6 seconds late)
+    -blink into enemy vision at 4949
+
+5251 decision show position by casting arc lightning
+    wait until blink is off cooldown/ somebody else is focused
+
+5520 mechanics missed lasthit (didnt rightclick)
+5523 mechanics missed lasthit (casted early)
+5529 mechanics missed lasthit (didnt rightclick)
+5531 mechanics missed lasthit (tried to do 2 hits)
+
+walking 
+5533 execution use spells before running  (can get off additional 2 arc lightning, 1 lightning bolt)

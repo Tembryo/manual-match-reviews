@@ -1,0 +1,94 @@
+-1:05 !!good queued up next 3 items for quickbuy 
+
+1:03 mechanics missed lasthit (cancelled attack)
+xxxx    1:52 decision didnt deny own creep (results in 2 range creeps, pushes lane, gives magnus exp from 2:35)  \\\clip
+2:43 mechanics missed lasthit (impatient/early )
+
+xxxx    3:24 decision didn't draw creep back (results in pushed up wave at 3:30) \\clip 
+3:44 mechanics missed lasthit (lost time on a missed deny)
+3:56 mechanics missed deny
+3:58 mechanics didnt draw creeps back (partially because of bad camera position)
+4:23 mechanics didn't draw creeps to ranged creep (want lane to pull back, dont want to tank the creep)
+4:31 mechanics missed lasthit (too late)
+4:38 mechanics missed deny (impatient, wait for deny)
+
+xxxx    4:45 execution casted warcry, not enough mana for stun, misses kill (dies later anyway) \\clip
+
+4:52 execution tanked unnecessary towerhit (walk to wrong side of creep into tower range)
+
+5:59 mechanics didnt block creep to keep lane a bit back
+6:08 mechanics missed deny (too defensive)
+
+6:42 mechanics missed 2 lasthits (magnus is dead, turn for rightclick)
+
+10:33 mechanics missed lasthit (hit wrong creep, care about of which creep is hit by tower) 
+10:37 mechanics missed lasthit (to tower, weird catapult aggro)
+11:13 mechanics missed lasthit (positioned behind creepwave in)
+
+xxxx    12:06 efficiency didn't use warcry to move to base \\clip
+
+12:41 mechanics missed lasthit (hit wrong creep, care about of which creep is hit by tower)
+12:54 efficiency didn't try to stack camp (centaurs are fast)
+
+13:20 decision immediately walked towards team, then farmed mid -> instead farm jungle camp as planned
+    miss out on stacked hardcamp+medium camp, delays echo saber, takes farm from PA 
+
+13:39 mechanics missed lasthit (early)
+
+dont move to lane
+
+xxxx    13:55 efficiency \important delayed buying echo sabre/using courier - used at 14:08 instead \\clip
+        would kill kunkka  at 14:23, if rest of fight continues probably kills SF at 14:33
+
+14:33 execution chase for SF with multiple enemies coming in (not worth dying for the kill, rubick/magnus coming - also kunkka torrent)
+
+15:27 information didnt check SF's items (see his blink dagger)
+
+16:04 decision chase forward into 4 heroes (surprised by Blink as didn't check SF's items before. kills omniknight, as rubick chases in  ) \\clip
+    instead hit the rubick
+
+16:34 decision go into fight against kunkka, rubick (cloud down, will miss! SF coming in on minimap) \\clip
+    instead back out and let PA blink
+
+19:06 mechanics missed lasthit (didn't move past creepwave)
+
+xxxx     20:04 information didn't check items of magnus and kunkka in ward (important for incoming fight) \\clip
+20:07 decision didn't jump on magnus (good target,need fast initiation as fighting without Batrider) 
+20:11 decision initiate on Kunkka (alone, most hp in enemy team)
+
+25:24 late 
+25:33 execution unnecessary Storm Bolt on riki (one hit for the kill) \\clip
+
+25:50 itemisation missed opportunity to buy TP scroll (sell quelling blade, going for T2 push top, very deep)
+
+26:04 information didn't view SF taking DD and walking into rosh pit
+26:20 decision didn't immediately go for T2 (SF isn't there!)
+
+xxxx    28:17 decision went for very dangerous push (no vision around, no Batrider, danger of magnus initiation, lots of follow up damage by SF/Kunkka) \clip
+    let PA push with aegis, stay back
+    28: 20 execution didn't use God's Strength for push (dangerous situation, rather push quickly, )
+
+35:49 execution missed lasthit (hit early)
+
+36:00 efficiency wealked towards lane, could farm medium camp immediately. saves ~8 seconds
+
+37:09 execution missed opportunity to stun rubick (too slow)
+
+43:15 execution walked too far, missing hits on SF (didn't estimate where Batrider would pull)
+    also wrong direction for cleave hits! would damage magnus/rubick \clip
+
+4644 decision didn't walk back to team after taking bounty rune (want to pressure/force buyback)
+
+50:40 efficiency slow path into rosh (blink across the cliff)
+
+50:51 execution didn't precast gods strength before fight (4 hits on SF)
+
+xxxx   55:33 decision tried for a kill on SF (take the safe kill on magnus, he used spells/is weak. 3 teammates dead, take what you get)
+
+60:47 execution did't blink for counter-initiate on magnus
+
+64:52 decision focused riki as second target (kill off magnus with others) ?
+
+68:11 decision hit ancient alone against backdoor regen (SF respawning , out of mana) \clip
+
+xxxx     69:30 decision \important blink in for kunkka (magnus out of vision, RP) \clip

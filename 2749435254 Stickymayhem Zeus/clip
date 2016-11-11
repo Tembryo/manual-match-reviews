@@ -1,0 +1,38 @@
+#
+efficicency - saving early mana
+    059 108
+
+decision early rotation 
+    301
+
+mechanics lasthit - less movement
+    431 436 437
+
+decision TP back mid
+    506
+
+decision rotation bot ##
+    646
+
+mechanics #2 lasthits
+    1352 1355 1358
+
+decision map movement ##
+    1405
+
+hero build arc lightning over passive
+    1918
+
+decision movement route ##
+    2250
+
+2545 decision! bad cast of lightning bolt
+    - cast too far, walk back
+    - blink dagger still on cooldown, should wait for that
+
+efficiency walk to secret shop ##
+    2940
+
+decision reveal position by casting
+    3610
+    5251

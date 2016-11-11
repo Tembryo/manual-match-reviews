@@ -1,0 +1,779 @@
+\documentclass{article}
+\usepackage[top=2.5cm, bottom=2.5cm, inner=2.5cm,outer=2.5cm]{geometry}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\definecolor{WisdotaBackground}{HTML}{61595D}
+\definecolor{highlight}{HTML}{F1B72A}
+\definecolor{secondaryhighlight}{HTML}{D98E04}
+\definecolor{mistakecolor}{HTML}{8C2625}
+\definecolor{goodplaycolor}{HTML}{258C27}
+
+\definecolor{mechanicscolor}{HTML}{D68A1B}
+\definecolor{efficiencycolor}{HTML}{37AFD3}
+\definecolor{informationcolor}{HTML}{3FD258}
+\definecolor{herobuildcolor}{HTML}{d33bc2}
+\definecolor{executioncolor}{HTML}{D73356}
+\definecolor{decisioncolor}{HTML}{5A56DC}
+
+
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{fontspec}
+\usepackage{background}
+\usepackage{blindtext}
+%\usepackage{stix}
+\usepackage{savesym}
+\usepackage{amsmath}
+\savesymbol{mathdollar}
+\usepackage{MnSymbol}
+\restoresymbol{MnS}{mathdollar}
+\usepackage{hyperref}
+\usepackage{titling}
+\usepackage{enumitem}
+%\usepackage{fdsymbol}
+
+
+\hypersetup{
+    colorlinks = false,
+    linkbordercolor = {highlight}
+}
+
+\onehalfspacing
+%\doublespacing
+\setmainfont{Roboto-Light}
+\backgroundsetup{
+    scale=1,
+    angle=45,
+    opacity=0.1,
+    contents={\begin{tikzpicture}[remember picture,overlay]
+    \path [left color = gray, right color = black] (current page.south west) rectangle (current page.north east);   % Adjust the position of the logo.
+    \end{tikzpicture}}
+}
+
+\newcommand{\matchid}{2749435254}
+
+
+\makeatletter
+\fancypagestyle{reportpage}{%
+  \fancyhf{}% Clear header/footer
+  \rhead{ \textcolor{white}{Wisdota.com}}
+  \lhead{\textcolor{white}{Report for Match \matchid}}
+  \fancyfoot[C]{\textcolor{white}{\color{white}\thepage}}% Page # in middle/centre of footer
+  \renewcommand{\headrulewidth}{.4pt}% .4pt header rule
+  \def\headrule{{\if@fancyplain\let\headrulewidth\plainheadrulewidth\fi
+    \color{white}\hrule\@height\headrulewidth\@width\headwidth \vskip-\headrulewidth}}
+  \renewcommand{\footrulewidth}{0pt}% No footer rule
+%  \def\footrule{{\if@fancyplain\let\footrulewidth\plainfootrulewidth\fi
+%    \vskip-\footruleskip\vskip-\footrulewidth
+%    \hrule\@width\headwidth\@height\footrulewidth\vskip\footruleskip}}
+}
+\fancypagestyle{first-page}{%
+  \fancyhf{}% Clear header/footer
+  \rhead{}
+  \lhead{}
+  \fancyfoot[C]{\textcolor{white}{\color{white}\thepage}}% Page # in middle/centre of footer
+  \renewcommand{\headrulewidth}{0}% .4pt header rule
+  \def\headrule{}
+  \renewcommand{\footrulewidth}{0pt}% No footer rule
+%  \def\footrule{{\if@fancyplain\let\footrulewidth\plainfootrulewidth\fi
+%    \vskip-\footruleskip\vskip-\footrulewidth
+%    \hrule\@width\headwidth\@height\footrulewidth\vskip\footruleskip}}
+}
+
+\setlist[itemize]{leftmargin=0pt,labelindent=1em}
+
+\title{Wisdota Report for Match \matchid \\
+Zeus by Stickymayhem}
+\date{Played on 01/11/2016}
+\pretitle{\begin{flushleft}\LARGE\sffamily}
+\posttitle{\par\end{flushleft}}
+\preauthor{}
+\author{}
+\postauthor{} 
+\predate{\begin{flushright}\large\scshape}
+\postdate{\par\end{flushright}}
+
+\setlength{\droptitle}{0pt}
+
+\makeatother
+\pagestyle{reportpage}
+
+\newcommand{\mechanics}{\scalebox{1.5}{\ensuremath{\;\;\color{mechanicscolor} \filledmedsquare} }}
+\newcommand{\efficiency}{\scalebox{1.5}{\ensuremath{\;\;\color{efficiencycolor} \filledmedsquare}} }
+\newcommand{\information}{\scalebox{1.5}{\ensuremath{\;\;\color{informationcolor} \filledmedsquare}} }
+\newcommand{\herobuild}{\scalebox{1.5}{\ensuremath{\;\;\color{herobuildcolor} \filledmedsquare}} }
+\newcommand{\execution}{\scalebox{1.5}{\ensuremath{\;\;\color{executioncolor} \filledmedsquare}} }
+\newcommand{\decision}{\scalebox{1.5}{\ensuremath{\;\;\color{decisioncolor} \filledmedsquare}} }
+
+\newcommand{\gt}{\ensuremath{\;\;\color{green} \filledmedtriangleup} }
+\newcommand{\rt}{\ensuremath{\;\;\color{red} \filledmedtriangledown} }
+\newcommand{\ws}{\ensuremath{\;\;\color{white} \filledmedsquare} }
+
+\newenvironment{remarks}
+    {
+        \begin{description}
+            \setlength\itemsep{0em}
+    }
+    {
+        \end{description}
+    }
+\newcommand{\goodremark}[1]{\item[\gt] #1}
+\newcommand{\neutralremark}[1]{\item[\ws] #1}
+\newcommand{\badremark}[1]{\item[\rt] #1}
+\newcommand{\logremark}[3]{\vbox{ \item[\textnormal{\logref{#1}} #2 ] #3}}
+
+\newcommand{\suggestion}[1]{\\ \emph{#1}}
+
+\newcommand{\important}{\colorbox{highlight}{Important!}\ }
+
+\newcommand{\mistake}{\colorbox{mistakecolor}{Mistake!}\ }
+\newcommand{\goodplay}{\colorbox{goodplaycolor}{Good Play!}\ }
+\newcommand{\logref}[1]{\textcolor{highlight}{#1}}
+
+\newcommand{\nnsection}[1]
+{\section*{#1}
+\addcontentsline{toc}{section}{#1}
+}
+
+\newcommand{\decisionmistake}[3]{#1\\
+\vbox{
+\vspace{}
+\textbf{What happened}\\\vbox{#2}
+\textbf{Alternative}\\\vbox{#3}
+}
+}
+
+\newcommand{\decisionmistakeshort}[3]{#1\\
+\vbox{
+\textbf{Thoughts}\\\vbox{#2}
+\textbf{Alternative}\\\vbox{#3}
+}
+}
+
+
+\newcommand{\decisionmistakefull}[4]{#1\\
+\textbf{Thoughts}\\#2\\
+\textbf{What Happened}\\#3\\
+\textbf{Alternative}\\#4
+}
+
+\newcommand{\screenshot}[1]{
+    \begin{center}
+    \begin{minipage}[t]{0.4\textwidth}
+        \includegraphics[width=\textwidth]{#1}
+    \end{minipage}
+\end{center}
+}
+\newcommand{\widescreenshot}[1]{
+    \begin{center}
+    \begin{minipage}[t]{0.7\textwidth}
+        \includegraphics[width=\textwidth]{#1}
+    \end{minipage}
+\end{center}
+}
+
+\newcommand{\twoscreenshots}[2]{
+\begin{center}
+    \begin{minipage}[t]{0.4\textwidth}
+        \begin{center}
+            \includegraphics[width=\textwidth]{#1}
+            \end{center}
+    \end{minipage}
+    \begin{minipage}[t]{0.4\textwidth}
+            \begin{center}
+        \includegraphics[width=\textwidth]{#2}
+                \paragraph{}\hfill
+            \end{center}
+    \end{minipage}
+\end{center}
+}
+
+
+\newcommand{\minimap}[1]{
+    \begin{center}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#1}
+    \end{minipage}
+\end{center}
+}
+
+\newcommand{\twominimaps}[2]{
+\begin{center}
+    \begin{minipage}[t]{0.3\textwidth}
+        \begin{center}
+            \textbf{What happened}\hfill
+            \includegraphics[width=\textwidth]{#1}
+            \end{center}
+    \end{minipage}
+    \begin{minipage}[t]{0.3\textwidth}
+            \begin{center}
+            \textbf{Instead}\hfill
+        \includegraphics[width=\textwidth]{#2}
+                \paragraph{}\hfill
+            \end{center}
+    \end{minipage}
+\end{center}
+}
+
+\newcommand{\threeminimaps}[3]{
+\begin{center}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#1}
+    \end{minipage}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#2}
+    \end{minipage}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#3}
+    \end{minipage}
+\end{center}
+}
+
+\newcommand{\twominimapscomment}[4]{
+\begin{center}
+    \begin{minipage}[t]{0.42\textwidth}
+    \begin{center}
+        \textbf{What happened}\hfill
+        \includegraphics[width=0.7\textwidth]{#1} 
+        \begin{itemize}
+        #2
+        \end{itemize}
+    \end{center}
+    \end{minipage}
+    \begin{minipage}[t]{0.42\textwidth}
+        \begin{center}
+        \textbf{Instead}\hfill\\
+        \includegraphics[width=0.7\textwidth]{#3}
+        \begin{itemize}
+        #4
+        \end{itemize}
+        \end{center}
+    \end{minipage} 
+    \end{center}
+}
+
+
+\newcommand{\threeminimapscomment}[6]{
+\begin{center}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#1} 
+        \begin{itemize}
+            #2
+        \end{itemize}
+    \end{minipage}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#3}
+        \begin{itemize}
+        #4
+        \end{itemize}
+    \end{minipage}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#5}
+        \begin{itemize}
+            #6
+        \end{itemize}
+    \end{minipage}
+\end{center}
+}
+
+
+
+
+\begin{document}
+\pagecolor{WisdotaBackground}
+\color{white}
+
+\maketitle
+\thispagestyle{first-page}
+
+\paragraph{Match Context}
+Solo Ranked AP. Solo mid Zeus. Gain an early level advantage and win engagements with strong magic burst damage, maintain an advantage and maximize magic damage output in later teamfights. Got early kills but didn't farm efficiently enough to build a strong lead, play an even game due to multiple deaths, game is lost by falling behind in economy after lost teamfights.
+
+\paragraph{Highlight Tip}
+Improve lasthitting in safe situations - a lot of lasthits are lost to own creeps. Move your hero less and focus on safely getting the lasthit (positioning the mouse does take time!), make sure to lasthit the creep that is being hit by your creeps before optimizing for pushing speed. Prepare distance/turn of the hero beforehand (possibly by attacking+cancelling in the animation), and then attack at the correct timing.  
+
+\nnsection{Tips}
+
+\begin{itemize}
+    \item Consider turning on Quickcast, speeds up your play and saves a lot of clicks
+    \item It is almost always better to level up Arc Lightning before Static Field.
+    This speeds up farming a lot and usually even provides more damage in fights (when Heroes have $<750$ HP, which is the case in most fights before maxing out both skills).
+    \item Be more restrained on rotating to sidelanes early in the game, this almost always reduces your level progression. \logref{3:00}, \logref{5:06}
+    \item Don't group up with your team for pushes on T2 or T3 towers too early. Instead farm free lanes, rotate into the jungle if all lanes are pushed or occupied. \logref{6:47} \logref{14:05} \logref{15:18}
+    \item Use Lightning Bolt (or Ultimate) to scout dangerous situations. \logref{13:14} \logref{33:47}  
+    \item Casting spells gives enemies information about your position - in lategame teamfights, only cast from dangerous positions if you can escape safely or if the enmies are kept busy. \logref{36:40} \logref{52:51}
+\end{itemize}
+
+
+\pagebreak
+
+\nnsection{Events}
+
+%\begin{tabular}{ c | c | c | c | c | c}
+%  \mechanics & \efficiency & \information & \itemisation & \execution & \decision \\
+  %\hline
+%  Mechanics & Efficiency & Information & Itemisation & Execution & Decision \\
+%\end{tabular}
+
+\begin{tabular}{ l | l }
+  \mechanics & Mechanics \\
+  \efficiency & Efficiency\\
+  \information & Information\\
+  \herobuild & Hero Build\\
+  \execution & Execution\\
+  \decision & Decision\\
+\end{tabular}
+
+
+\begin{remarks}
+\logremark{0:00}{\efficiency}{give last bottle charge to veno before taking rune}
+
+\logremark{0:55}{\efficiency}{Used Lightning Bolt on level 1 for harass 
+\suggestion{a bounce from arc lightning has the same damage/mana efficiency,get harass with lasthit instead.} }
+\logremark{0:59}{\mechanics}{wasted mana on lasthit - can rightclick}
+\logremark{1:04}{\mechanics}{missed deny}
+\logremark{1:08}{\mechanics}{wasted mana on lasthit - can rightclick}
+\logremark{1:17}{\mechanics}{missed deny}
+\logremark{1:19}{\mechanics}{bad positioning - keeps lane pushed, tank creeps. stand below to pull them back}
+\logremark{1:27}{\mechanics}{missed lasthit (no mana)}
+\logremark{1:34}{\mechanics}{wasted mana on lasthit - can rightclick}
+\logremark{1:46}{\mechanics}{missed lasthit (late, super close)}
+\logremark{1:49}{\mechanics}{missed lasthit (impossible to tower - need to prehit +cast )}
+\logremark{2:16}{\mechanics}{missed lasthit (to tower - need to prehit + cast)}
+\logremark{2:18}{\mechanics}{missed lasthit (need to bottle+cast, not enough damage)}
+\logremark{2:28}{\mechanics}{missed deny (unnecessary movement back)}
+\logremark{2:35}{\mechanics}{missed deny (camera movement to check rune is late - )}
+\logremark{2:49}{\mechanics}{missed deny (need to move forward with the creep)}
+
+\logremark{2:57}{\information}{didn't check bottom before gank}
+\logremark{3:01}{\decision}{ bad gank bottom 
+\begin{itemize}
+    \item no way to kill. lane is pushed, full HP, only ember spirit bola VS Timbersaw
+    \item Overall not worth: missed 2 creepwaves;  got 300exp, 290 gold; lost 530 exp, 390 gold
+\end{itemize}   
+}
+
+\logremark{4:01}{\efficiency}{found haste rune
+\begin{itemize}
+    \item 
+\end{itemize}
+
+    should use immediately, regen  up and take top rune
+    could get 1 additional lasthit in mid}
+
+\logremark{4:31}{\mechanics}{missed lasthit (backed too far - kunkka used abilities, its safe)}
+\logremark{4:36}{\mechanics}{missed lasthit (unnecessary movement)}
+\logremark{4:37}{\mechanics}{missed lasthit (unnecessary movement)}
+\logremark{4:42}{\information}{didn't check top lane for gank (also would see pathing of WK)}
+\logremark{4:56}{\execution}{wrong pathing for gank}
+\logremark{5:06}{\decision}{stayed top - instead TP back mid
+\begin{itemize}
+    \item Taking gold from Bristleback/Keeper and sharing expending
+    \item Could get more farm in mid
+\end{itemize}
+}
+
+\logremark{5:27}{\mechanics}{missed lasthit (used arc lightning on the wrong creep)}
+
+\logremark{5:36}{\mechanics}{missed 2x lasthit (unnecessary movement)}
+
+\logremark{6:17}{\decision}{inefficient chase for kunkka 
+\begin{itemize}
+    \item     (Reduced damage from Ship/ Rum buff, see when casting arc lightning)
+    \item losing creepwave mid, 120g 180 exp
+    \item expending ult, 340 mana!
+    \item \logref{6:38} would kill timbersaw here with the mana (Bolt+Ult)
+\end{itemize}
+   }
+
+\logremark{6:31}{\efficiency}{delayed using courier}
+
+\logremark{6:46}{\decision}{inefficient rotation bottom
+\begin{itemize}
+    \item ember is farming the lane, don't want to take his gold/exp or push his lane
+    \item too early to push T2, no damage with Zeus/Ember / not worth pushing without supports
+    \item  instead go stack/then farm the jungle
+\end{itemize}
+   }
+
+\logremark{7:07}{\mechanics}{missed lasthit (too early)}
+\logremark{7:09}{\mechanics}{missed lasthit (too late, needed to arc lightning)}
+\logremark{7:13}{\mechanics}{missed lasthit (left for ember)}
+\logremark{7:18}{\mechanics}{missed lasthit (left for ember, didnt try when he misses)}
+\logremark{7:27}{\mechanics}{missed lasthit (unnecessary movement)}
+
+\logremark{8:22}{\mechanics}{Missed lasthit (unnecessary movement)}
+\logremark{8:29}{\mechanics}{Missed lasthit (early)}
+\logremark{8:52}{\mechanics}{Missed lasthit (left to Veno)}
+\logremark{8:58}{\mechanics}{missed lasthit (didnt try with arc lightning?)}
+
+\logremark{9:17}{\execution}{ missed Kill on LC (unnecessary movement)}
+\logremark{9:20}{\execution}{ delayed kill/respawn of WK, letting him cast stun on Bristleback
+    \suggestion{ cast Lightning Bolt on the ground when enemies try  to juke (uphill)}  }
+
+\logremark{9:40}{\efficiency}{ unnecessary bolt (nothing to hit)}
+\logremark{9:41}{\efficiency}{ suboptimal movement away from the lane  -> miss 2 lasthits as too far away}
+\logremark{9:54}{\efficiency}{ inefficient pathing to rune - can walk in the river}
+
+\logremark{10:20}{\mechanics}{missed lasthit (early)}
+\logremark{10:20}{\herobuild}{don't get 2 lasthits due to leveling Static Field over Arc Lightning }
+
+\logremark{10:28}{\herobuild}{less damage due to skilling Static Field over Arc Lightning (8x arc - 120 dmg)}
+
+\logremark{10:53}{\efficiency}{ missed TP top
+    \suggestion{lost 11 creeps! 471 gold, ~800 Exp}}
+
+\logremark{11:33}{\herobuild}{ less damage due to skilling Static Field over Arc Lightning (save 2 autoattacks)}
+
+\logremark{11:56}{\herobuild}{ less damage due to skilling Static Field over Arc Lightning (save 2 autoattacks)}
+\logremark{11:59}{\mechanics}{ missed lasthit (move closer to next creep)}
+
+\logremark{12:32}{\herobuild}{ less damage due to skilling Static Field over Arc Lightning (save 1 cast of arc lightning)}
+\logremark{12:32}{\efficiency}{ unnecessary autoattack (hit the big one, saves one hit) }
+
+\logremark{12:51}{\herobuild}{ less damage due to skilling Static Field over Arc Lightning}
+
+\logremark{13:05}{\decision}{ missed a kill on Timbersaw!
+    \suggestion{Hit Bolt - Can follow up with Arc Lightning+Ultimate}}
+
+\logremark{13:14}{\execution}{ suboptimal cast order in gank 
+\begin{itemize}
+    \item Ultimate to scout - dangerous position, enigma,  Black Hole possible
+    \item Bolt, most damage+ give vision and prevent jukes then Arc Lightning
+\end{itemize}
+}
+
+\logremark{13:44}{\execution}{ missed lasthit (tried for 2 hits - use arc lightning)}
+
+\logremark{13:47}{\herobuild}{ less damage due to skilling Static Field over Arc Lightning (save 2 autoattacks)}
+\logremark{13:52}{\execution}{ missed lasthit (casted on wrong creep - prioritize the one hit by creepwave)}
+\logremark{13:55}{\execution}{ missed lasthit (casted on wrong creep - prioritize the one hit by creepwave)}
+\logremark{13:58}{\execution}{ missed lasthit (left wave early)}
+
+\logremark{14:05}{\decision}{ \important movement to the wrong side of the map
+\begin{itemize}
+    \item big creepwave on top is pushing in - farm that and push out (otherwise someone else has to rotate)
+    \item no need to join the team bottom
+        \begin{itemize}
+            \item strong enough as 4
+            \item too early to push highground
+        \end{itemize}
+        
+    \item long distance to walk, top is far closer
+    \item safe position top
+    \item can TP back to fountain after pushing and refill
+\end{itemize}
+
+}
+
+\logremark{14:41}{\herobuild}{ less damage due to skilling Static Field over Arc Lightning (gets one more lasthit instead of Venomancer)}
+\logremark{14:44}{\decision}{ dangerous position, low HP, LC missing.
+\suggestion{ Use lighning bolt to give truesight in entire lane, sentry only covers the side}}
+
+\logremark{15:18}{\decision}{ stayed around trying to presure in bad position
+\begin{itemize}
+    \item nothing to gain
+    \item go farm jungle, use mana from bloodstone
+    \item or tp top to push
+\end{itemize}
+}
+
+\logremark{15:19}{\decision}{ dangerous position - low HP, LC missing }
+
+\logremark{15:44}{\execution}{ casted too too many spells, lets LC catch up
+\begin{itemize}
+    \item turn twice for arc lightning
+    \item didn't cancel backswing of ultimate
+\end{itemize}
+}
+
+\logremark{16:00}{\decision}{ missed buying TP scroll  (want to TP out at 1807) }
+
+\logremark{16:18}{\mechanics}{ missed lasthit (impatient/tried using one more arcane lightning, late due to no quickcast)}
+\logremark{16:18}{\herobuild}{ less damage due to skilling Static Field over Arc Lightning (missed 2 lasthits, saves 1 arcane lightning)}
+\logremark{16:22}{\mechanics}{ missed lasthit (hit early/misjudged damage)}
+
+\logremark{16:18}{\herobuild}{ less damage due to skilling Static Field over Arc Lightning (missed 2 lasthits, saves 1 arcane lightning)}
+
+\logremark{16:54}{\execution}{ didnt retreat correctly, dangerous position
+\begin{itemize}
+    \item could get duelled at \logref{16:56}
+        could die to Kunkka/Timbersaw/Enigma followup, rum buff saves enemy team
+    \item ran into bristleback and got bodyblocked
+    \item turned twice to cast spells
+\end{itemize}
+}
+
+
+\logremark{17:00}{\herobuild}{ less damage due to skilling Static Field over Arc Lightning (timbersaw dies 1 arcane lightning earlier)}
+
+\logremark{17:07}{\mechanics}{ missed lasthit (veno got it, use arcane lightning)}
+\logremark{17:08}{\execution}{ didn't cast arcane lightning on creep (better than hitting tower) }
+
+\logremark{17:49}{\execution}{ unnecessary walking back
+\begin{itemize}
+    \item not focused by anyone
+    \item bolt ready in 1 second
+\end{itemize}
+}
+
+\logremark{18:06}{\decision}{ walk into dangerous situation
+\begin{itemize}
+    \item alone/ember spirit is almost dead
+    \item no escape 
+    \item kill on Timbersaw is not worth dying
+    \item TP out instead (if had TP)
+\end{itemize}
+}
+
+\logremark{18:45}{\decision}{ suboptimal walk to rune
+\begin{itemize}
+    \item farm/stack medium camp mid instead
+\item bottle is full!
+\end{itemize}
+    
+     }
+
+\logremark{19:01}{\mechanics}{ almost missed lasthit(used arc lightning on wrong creep) }
+\logremark{19:18}{\herobuild}{ less damage, less bounces due to skilling Static Field over Arc Lightning (missed 3 creep lasthits+ 4 eidolons, saves 1 arcane lightning)}
+\logremark{19:06}{\mechanics}{ missed lasthit (arcane lightning early, or move in to rightclick. get it with different skillbuild)}
+\logremark{19:07}{\mechanics}{ missed lasthit (arcane lightning early, or move in to rightclick. get it with different skillbuild)}
+\logremark{19:10}{\mechanics}{ missed lasthit (arcane lightning early/on the eidolons. get it with different skillbuild)}
+
+\logremark{19:17}{\efficiency}{ unnecessary movement forward/backward, delays multiple uses of arc lightning! 
+    \suggestion{mouse positioning for cast takes time}}
+
+\logremark{19:27}{\decision}{ suboptimal staying in midlane, slightly dangerous position
+\begin{itemize}
+    \item alone, far forward - could get dangerous with X mark, Duel...
+    \item instead move into jungle/bottom
+\end{itemize}
+}
+
+\logremark{20:08}{\mechanics}{ missed lasthit (casted on wrong creep)}
+\logremark{20:13}{\mechanics}{ missed lasthit (casted on wrong creep)}
+\logremark{20:23}{\mechanics}{ missed lasthit (ignored catapult)}
+\logremark{20:29}{\decision}{missed opportunity to buy TP scroll at side shop}
+\logremark{20:30}{\efficiency}{ suboptimal movemnt to rune
+    walk through the jungle, farm hard camp on the way}
+
+\logremark{21:12}{\herobuild}{ less damage due to skilling Static Field over Arc Lightning (miss 1 lasthit)}
+\logremark{21:12}{\mechanics}{ missed lasthit (casted early)}
+\logremark{21:16}{\decision}{ bad highground push
+\begin{itemize}
+    \item too early
+    \item 4v5, veno is walking towards base
+    \item ultimate on cooldown
+    \item take enemy jungle instead, take top T2
+\end{itemize}
+}
+
+\logremark{21:33}{\execution}{ standing a bit too close to team
+    \suggestion{ caught in black hole, can otherwise interrupt and win the fight}}
+
+
+\logremark{22:34}{\mechanics}{ missed lasthit (unnecessary movement, late on the cast due to turn rate)}
+\logremark{22:35}{\herobuild}{ less damage, less bounces due to skilling Static Field over Arc Lightning (missed 2 creep lasthits)}
+\logremark{22:36}{\mechanics}{ missed lasthit (standing too far)}
+\logremark{22:36}{\mechanics}{ missed lasthit (unnecessary movement, late on the cast due to turn rate)}
+
+\logremark{22:50}{\decision}{ dangerous movement through enemy jungle
+\begin{itemize}
+    \item could get caught by duel (possibly with followup)
+    \item dangerous path, possibly warded
+    \item instead walk back along the lane, farm hardcamp next to secret shop
+    \end{itemize}
+    }
+
+\logremark{23:23}{\mechanics}{ missed lasthit (use arc lightning)}
+
+\logremark{23:55}{\decision}{ suboptimal/dangerous movement walking away from rune, to ancient camp.
+\begin{itemize}
+    \item instead stay at the rune to immediately pick it up. lost 6 seconds
+    \item 4 enemies missing, could run into multiple farming hard/ancient camp
+\end{itemize}
+ }
+
+
+\logremark{24:08}{\efficiency}{ suboptimal movement, walking to hardcamp
+\suggestion{ instead farm fight side of jungle (medium/easy/hard camp, farm bottom)}}
+
+\logremark{24:40}{\efficiency}{ use blink dagger to move}
+\logremark{24:50}{\mechanics}{ missed lasthit (wrong creep, aggroed by catapult)}
+\logremark{24:57}{\mechanics}{ missed lasthit (ignored catapult, too far)}
+\logremark{25:10}{\execution}{ weird chasing angle}
+\logremark{25:11}{\execution}{ bad blink - separated from the fight if enemies move down
+\begin{itemize}
+    \item \logref{25:14} didnt cast arc lightning
+    \item \logref{25:17} moved out, let the timbersaw escape
+\end{itemize}
+    }
+
+\logremark{25:45}{\decision}{bad cast of lightning bolt
+\begin{itemize}
+    \item cast too far, walk back
+    \item blink dagger still on cooldown, should wait for that
+\end{itemize}
+}
+
+\logremark{26:46}{\efficiency}{ didn't use blink dagger to move (miss 2 lasthits)}
+\logremark{26:56}{\mechanics}{ missed lasthit (too far, didnt blink)}
+\logremark{26:58}{\mechanics}{ missed lasthit (too late on the bold, didnt blink earlier)}
+\logremark{27:06}{\mechanics}{ missed lasthit (didn't move in to rightclick)}
+\logremark{27:34}{\mechanics}{ missed lasthit (didn't move in to rightclick)}
+\logremark{27:36}{\decision}{ missed opportunity to buy TP }
+\logremark{28:04}{\mechanics}{ missed lasthit (unnecessary movement/ moved camera)}
+
+\logremark{28:18}{\decision}{ dangerous movement 
+    \suggestion{no vision, likely to be warded}}
+
+\logremark{28:47}{\mechanics}{ missed lasthit 2x (1 didnt rightclick, 2nd didn't prehit before casts )}
+\logremark{28:49}{\decision}{ dangerous push
+\begin{itemize}
+    \item alone, kunkka/WK/enigma missing
+    \item don't deal tower damage as zeus
+\end{itemize}
+    
+    }
+
+\logremark{28:57}{\execution}{ didn't use spells as quickly as possible
+\begin{itemize}
+    \item \logref{28:57} should use ult to scout, get ult off for the fight at rosh in case of chainstun 
+    \item \logref{29:03} after bolt immediately use arc lightning
+    \item  \logref{29:10} ran with arc lightning off cooldown
+\end{itemize}
+}
+
+\logremark{29:15}{\information}{ didn't watch teamfight at rosh (see that enigma is really low HP)}
+\logremark{29:15}{\efficiency}{didn't use blink dagger to move - could kill enigma! }
+
+\logremark{29:40}{\efficiency}{ bad walk to secretshop
+\begin{itemize}
+    \item use courier for that!
+    \item bring out TP!
+    \item instead farm the jungle, can farm 2-3 camps in this time
+\end{itemize}
+}
+
+\logremark{30:08}{\efficiency}{ didn't farm hardcamp on the way}
+\logremark{30:28}{\mechanics}{ missed lasthit (didn't move in to rightclick)}
+\logremark{30:45}{\efficiency}{ late use of blink dagger to move (8 seconds, misses 1 lasthit at 31:02) }
+\logremark{30:46}{\efficiency}{ suboptimal pathing (don't walk down into the river, walk on radiant side instead)
+\begin{itemize}
+    \item takes longer
+    \item dangerous as no vision in the river
+\end{itemize}
+    }
+
+\logremark{31:17}{\decision}{ missed opportunity to buy TP}
+
+\logremark{31:38}{\mechanics}{ missed lasthit (microing illusions)}
+\logremark{31:42}{\mechanics}{ missed lasthit (late)}
+\logremark{31:46}{\mechanics}{ missed lasthit (stood too far away)}
+\logremark{31:53}{\mechanics}{ missed lasthit (stood too far away)}
+\logremark{32:02}{\mechanics}{ missed lasthit (stood too far away)}
+
+\logremark{32:27}{\decision}{ dangerous position, walk too close to base
+    \suggestion{kunkka has X-Mark, only Keeper as backup}}
+
+\logremark{32:53}{\execution}{ turned late, use lightning bolt when WK switches target
+\begin{itemize}
+    \item spend time moving camera to move down
+    \item instead walk into trees, keep camera still
+\end{itemize}
+}
+
+\logremark{33:02}{\execution}{ unnecessary movement
+    \suggestion{delayes arc lighning on creeps, just stand}}
+
+\logremark{33:13}{\execution}{ missed lasthit (late arc lightning)}
+\logremark{33:17}{\execution}{ missed lasthit (blinked out unnecessarily, then too far)}
+
+\logremark{33:47}{\decision}{ \important walked into enemies
+\begin{itemize}
+    \item walking highground!
+    \item saw them move in, chasing the ember
+    \item instead use Lightning Bolt to scout the highground
+\end{itemize}
+}
+
+\logremark{33:42}{\efficiency}{ tabbed out too long, standing in base for 17 seconds after respawn}
+
+\logremark{35:47}{\execution}{ missed lasthit (arcane lightning too early)}
+\logremark{35:50}{\execution}{ missed lasthit (didnt rightclick /cast on wrong creep)}
+\logremark{35:51}{\execution}{ missed lasthit (wrong creep, late due to turn)}
+
+\logremark{36:00}{\decision}{ dangerous path
+\begin{itemize}
+    \item LC and WK missing
+    \item instead walk back and through the other entrance
+\end{itemize}
+    
+    }
+
+\logremark{36:04}{\decision}{ dangerous walking highground
+    \suggestion{use lightning bolt to scout}}
+
+\logremark{36:10}{\decision}{ \important show position by casting spell
+\begin{itemize}
+    \item alone in dangerous position
+    \item causes WK to chase
+\end{itemize}
+}
+
+\logremark{36:19}{\decision}{ escape in wrong direction
+\begin{itemize}
+    \item ran left, saw enigma with Ultimate
+    \item instead run down, toward Keeper
+\end{itemize}
+}
+
+\logremark{38:08}{\efficiency}{ unnecessary hit on small creep in camp}
+\logremark{38:23}{\mechanics}{ missed lasthit (didnt walk close)}
+\logremark{38:27}{\mechanics}{ missed lasthit (didnt rightclick)}
+
+\logremark{40:27}{\mechanics}{ missed lasthit (use lightning bolt)}
+\logremark{41:48}{\efficiency}{ let regeneration rune get cancelled by creeps
+\begin{itemize}
+    \item use it earlier e.g. immeediately after picking it up at \logref{41:27}
+    \item or: dont blink up into creepwave
+\end{itemize}
+}
+
+\logremark{42:22}{\execution}{ didn't use arc lightning (can get 2 onto LC, might kill)}
+
+\logremark{44:31}{\execution}{ missed lasthit (casted on wrong creep)}
+
+\logremark{45:56}{\execution}{ wrong cast order 
+\begin{itemize}
+    \item use arc lightning first, higher cast range
+    \item will get off cooldown earlier, one additional cast
+\end{itemize}
+    
+   }
+
+\logremark{46:26}{\decision}{ bad blink forward
+\begin{itemize}
+    \item no vision, WK missing
+    \item front of the fight, want to stay at the side
+\end{itemize}
+}
+
+\logremark{47:56}{\efficiency}{ didn't use blink to move}
+
+\logremark{48:24}{\decision}{ didnt use ult to scout as reaction to initiation by Kunkka}
+
+\logremark{49:43}{\efficiency}{ didn't use blink to move (6 seconds late), blink into enemy vision at \logref{49:49}}
+
+\logremark{52:51}{\decision}{ \important show position by casting arc lightning
+    \logref{wait until blink is off cooldown/ somebody else is focused}}
+
+\logremark{55:20}{\mechanics}{ missed lasthit (didnt rightclick)}
+\logremark{55:23}{\mechanics}{ missed lasthit (casted early)}
+\logremark{55:29}{\mechanics}{ missed lasthit (didnt rightclick)}
+\logremark{55:31}{\mechanics}{ missed lasthit (tried to do 2 hits)}
+
+\logremark{55:33}{\execution}{ use spells before running  (can get off additional 2 arc lightning, 1 lightning bolt)}
+\end{remarks}
+\end{document}
+
+
