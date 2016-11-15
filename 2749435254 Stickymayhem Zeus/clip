@@ -1,34 +1,83 @@
 #
 efficicency - saving early mana
-    059 108
+    059 
+    highlight on kunkka
+    "Kunkka is standing too far back to contest the lasthit, rightclick to save mana."
+
+    108
+    highlight on kunkka
+    "Kunkka is is still too far back to contest, kill the creep with a rightclick."
 
 decision early rotation 
     301
+    highlight on minimap bottom
+    "Bottom lane is pushed up to the tower, unlikely to get kills. Rather return to mid."
+
+    318
+    highlight on timbersaw
+    Timbersaw could retreat here, would be a wasted rotation losing a lot of creeps in mid.
+
+    401
+    highlight on timbersaw
+    The rotation was not worth even with the kill.
+    Staying mid for creeps gives +230 Exp. +100 gold
 
 mechanics lasthit - less movement
     431 436 437
+    highlight on low melee creep
+    The two creeps will die soon, pick a position and prepare to lasthit.
 
 decision TP back mid
+    452
+    highlight on minimap on WK
+    "view the lane to have more info for the gank"
     506
+    highlight on minimap - creepwave in mid
+    "Gank failed, return to mid as quickly as possible with a TP."
+
 
 decision rotation bot ##
-    646
+    644 
+    highlight on the time
+    "Lane is pushed, go and stack the medium camp next to mid lane."
+    657
+    highlight on minimap on bottom lane
+    "Ember Spirit is farming bottom, return mid or go farm jungle."
+
+
 
 mechanics #2 lasthits
-    1352 1355 1358
+    1350
+    highlight on mele creep in front
+    "Creep will die soon, focus on lasthit."
+    1353
+    highlight on melee creep in front
+    "Creep will die soon, focus on lasthit."
 
-decision map movement ##
-    1405
+decision map movement 
+    1404 ##
+    highlight on minimap creepwave top, 2nd highlight on hp/mana bar
+    "Top is pushing in, farm the lane then TP back to base to regen up."
+    1442
+    highlight on the minimap on venomancer
+    "In a very aggressive position with low HP/mana. The support Venomancer went to take the farm on toplane."
 
 hero build arc lightning over passive
     1918
+    highlight on skill points of 1st skill, highlight on skill points of 3rd skill
+    "Maxed out Arc Lightning speeds up farming this wave a lot. Would get +7 lasthits, one less cast."
 
-decision movement route ##
-    2250
 
-2545 decision! bad cast of lightning bolt
-    - cast too far, walk back
-    - blink dagger still on cooldown, should wait for that
+decision movement route 
+    2250##
+    highlight on minimap, dark area in middle of dire jungle
+    "In a dangerous position with little vision. Back as safely as possible along the lane."
+
+execution 
+    2542
+    highlight on mouse cursor, 2nd hightlight on blink dagger in inventory
+    "The cast of Lightning Bolt is too far, making the hero walk back. Should wait for Blink Dagger to get off cooldown before attempting risky actions."
+
 
 efficiency walk to secret shop ##
     2940
