@@ -1,0 +1,325 @@
+\documentclass{article}
+\usepackage[top=2.5cm, bottom=2.5cm, inner=2.5cm,outer=2.5cm]{geometry}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\definecolor{WisdotaBackground}{HTML}{61595D}
+\definecolor{highlight}{HTML}{F1B72A}
+\definecolor{secondaryhighlight}{HTML}{D98E04}
+\definecolor{mistakecolor}{HTML}{8C2625}
+\definecolor{goodplaycolor}{HTML}{258C27}
+
+\definecolor{mechanicscolor}{HTML}{D68A1B}
+\definecolor{efficiencycolor}{HTML}{37AFD3}
+\definecolor{informationcolor}{HTML}{3FD258}
+\definecolor{herobuildcolor}{HTML}{d33bc2}
+\definecolor{executioncolor}{HTML}{D73356}
+\definecolor{decisioncolor}{HTML}{5A56DC}
+
+
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{fontspec}
+\usepackage{background}
+\usepackage{blindtext}
+%\usepackage{stix}
+\usepackage{savesym}
+\usepackage{amsmath}
+\savesymbol{mathdollar}
+\usepackage{MnSymbol}
+\restoresymbol{MnS}{mathdollar}
+\usepackage{hyperref}
+\usepackage{titling}
+\usepackage{enumitem}
+%\usepackage{fdsymbol}
+
+
+\hypersetup{
+    colorlinks = false,
+    linkbordercolor = {highlight}
+}
+
+\onehalfspacing
+%\doublespacing
+\setmainfont{Roboto-Light}
+\backgroundsetup{
+    scale=1,
+    angle=45,
+    opacity=0.1,
+    contents={\begin{tikzpicture}[remember picture,overlay]
+    \path [left color = gray, right color = black] (current page.south west) rectangle (current page.north east);   % Adjust the position of the logo.
+    \end{tikzpicture}}
+}
+
+\input{data.tex}
+
+
+\makeatletter
+\fancypagestyle{reportpage}{%
+  \fancyhf{}% Clear header/footer
+  \rhead{ \textcolor{white}{Wisdota.com}}
+  \lhead{\textcolor{white}{Report for Match \matchid}}
+  \fancyfoot[C]{\textcolor{white}{\color{white}\thepage}}% Page # in middle/centre of footer
+  \renewcommand{\headrulewidth}{.4pt}% .4pt header rule
+  \def\headrule{{\if@fancyplain\let\headrulewidth\plainheadrulewidth\fi
+    \color{white}\hrule\@height\headrulewidth\@width\headwidth \vskip-\headrulewidth}}
+  \renewcommand{\footrulewidth}{0pt}% No footer rule
+%  \def\footrule{{\if@fancyplain\let\footrulewidth\plainfootrulewidth\fi
+%    \vskip-\footruleskip\vskip-\footrulewidth
+%    \hrule\@width\headwidth\@height\footrulewidth\vskip\footruleskip}}
+}
+\fancypagestyle{first-page}{%
+  \fancyhf{}% Clear header/footer
+  \rhead{}
+  \lhead{}
+  \fancyfoot[C]{\textcolor{white}{\color{white}\thepage}}% Page # in middle/centre of footer
+  \renewcommand{\headrulewidth}{0}% .4pt header rule
+  \def\headrule{}
+  \renewcommand{\footrulewidth}{0pt}% No footer rule
+%  \def\footrule{{\if@fancyplain\let\footrulewidth\plainfootrulewidth\fi
+%    \vskip-\footruleskip\vskip-\footrulewidth
+%    \hrule\@width\headwidth\@height\footrulewidth\vskip\footruleskip}}
+}
+
+\setlist[itemize]{leftmargin=0pt,labelindent=1em}
+
+\title{Wisdota Report for Match \matchid \\
+\hero \ by \player}
+\date{Played on \matchdate}
+\pretitle{\begin{flushleft}\LARGE\sffamily}
+\posttitle{\par\end{flushleft}}
+\preauthor{}
+\author{}
+\postauthor{} 
+\predate{\begin{flushright}\large\scshape}
+\postdate{\par\end{flushright}}
+
+\setlength{\droptitle}{0pt}
+
+\makeatother
+\pagestyle{reportpage}
+
+\newcommand{\mechanics}{\scalebox{1.5}{\ensuremath{\;\;\color{mechanicscolor} \filledmedsquare} }}
+\newcommand{\efficiency}{\scalebox{1.5}{\ensuremath{\;\;\color{efficiencycolor} \filledmedsquare}} }
+\newcommand{\information}{\scalebox{1.5}{\ensuremath{\;\;\color{informationcolor} \filledmedsquare}} }
+\newcommand{\herobuild}{\scalebox{1.5}{\ensuremath{\;\;\color{herobuildcolor} \filledmedsquare}} }
+\newcommand{\execution}{\scalebox{1.5}{\ensuremath{\;\;\color{executioncolor} \filledmedsquare}} }
+\newcommand{\decision}{\scalebox{1.5}{\ensuremath{\;\;\color{decisioncolor} \filledmedsquare}} }
+
+\newcommand{\gt}{\ensuremath{\;\;\color{green} \filledmedtriangleup} }
+\newcommand{\rt}{\ensuremath{\;\;\color{red} \filledmedtriangledown} }
+\newcommand{\ws}{\ensuremath{\;\;\color{white} \filledmedsquare} }
+
+\newenvironment{remarks}
+    {
+        \begin{description}
+            \setlength\itemsep{0em}
+    }
+    {
+        \end{description}
+    }
+\newcommand{\goodremark}[1]{\item[\gt] #1}
+\newcommand{\neutralremark}[1]{\item[\ws] #1}
+\newcommand{\badremark}[1]{\item[\rt] #1}
+\newcommand{\logremark}[3]{\vbox{ \item[\textnormal{\logref{#1}} #2 ] #3}}
+
+\newcommand{\suggestion}[1]{\\ \emph{#1}}
+
+\newcommand{\important}{\colorbox{highlight}{Important!}\ }
+
+\newcommand{\mistake}{\colorbox{mistakecolor}{Mistake!}\ }
+\newcommand{\goodplay}{\colorbox{goodplaycolor}{Good Play!}\ }
+\newcommand{\logref}[1]{\textcolor{highlight}{#1}}
+
+\newcommand{\nnsection}[1]
+{\section*{#1}
+\addcontentsline{toc}{section}{#1}
+}
+
+\newcommand{\decisionmistake}[3]{#1\\
+\vbox{
+\vspace{}
+\textbf{What happened}\\\vbox{#2}
+\textbf{Alternative}\\\vbox{#3}
+}
+}
+
+\newcommand{\decisionmistakeshort}[3]{#1\\
+\vbox{
+\textbf{Thoughts}\\\vbox{#2}
+\textbf{Alternative}\\\vbox{#3}
+}
+}
+
+
+\newcommand{\decisionmistakefull}[4]{#1\\
+\textbf{Thoughts}\\#2\\
+\textbf{What Happened}\\#3\\
+\textbf{Alternative}\\#4
+}
+
+\newcommand{\screenshot}[1]{
+    \begin{center}
+    \begin{minipage}[t]{0.4\textwidth}
+        \includegraphics[width=\textwidth]{#1}
+    \end{minipage}
+\end{center}
+}
+\newcommand{\widescreenshot}[1]{
+    \begin{center}
+    \begin{minipage}[t]{0.7\textwidth}
+        \includegraphics[width=\textwidth]{#1}
+    \end{minipage}
+\end{center}
+}
+
+\newcommand{\twoscreenshots}[2]{
+\begin{center}
+    \begin{minipage}[t]{0.4\textwidth}
+        \begin{center}
+            \includegraphics[width=\textwidth]{#1}
+            \end{center}
+    \end{minipage}
+    \begin{minipage}[t]{0.4\textwidth}
+            \begin{center}
+        \includegraphics[width=\textwidth]{#2}
+                \paragraph{}\hfill
+            \end{center}
+    \end{minipage}
+\end{center}
+}
+
+
+\newcommand{\minimap}[1]{
+    \begin{center}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#1}
+    \end{minipage}
+\end{center}
+}
+
+\newcommand{\twominimaps}[2]{
+\begin{center}
+    \begin{minipage}[t]{0.3\textwidth}
+        \begin{center}
+            \textbf{What happened}\hfill
+            \includegraphics[width=\textwidth]{#1}
+            \end{center}
+    \end{minipage}
+    \begin{minipage}[t]{0.3\textwidth}
+            \begin{center}
+            \textbf{Instead}\hfill
+        \includegraphics[width=\textwidth]{#2}
+                \paragraph{}\hfill
+            \end{center}
+    \end{minipage}
+\end{center}
+}
+
+\newcommand{\threeminimaps}[3]{
+\begin{center}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#1}
+    \end{minipage}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#2}
+    \end{minipage}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#3}
+    \end{minipage}
+\end{center}
+}
+
+\newcommand{\twominimapscomment}[4]{
+\begin{center}
+    \begin{minipage}[t]{0.42\textwidth}
+    \begin{center}
+        \textbf{What happened}\hfill
+        \includegraphics[width=0.7\textwidth]{#1} 
+        \begin{itemize}
+        #2
+        \end{itemize}
+    \end{center}\input{remarks.tex}
+    \end{minipage}
+    \begin{minipage}[t]{0.42\textwidth}
+        \begin{center}
+        \textbf{Instead}\hfill\\
+        \includegraphics[width=0.7\textwidth]{#3}
+        \begin{itemize}
+        #4
+        \end{itemize}
+        \end{center}
+    \end{minipage} 
+    \end{center}
+}
+
+
+\newcommand{\threeminimapscomment}[6]{
+\begin{center}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#1} 
+        \begin{itemize}
+            #2
+        \end{itemize}
+    \end{minipage}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#3}
+        \begin{itemize}
+        #4
+        \end{itemize}
+    \end{minipage}
+    \begin{minipage}[t]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{#5}
+        \begin{itemize}
+            #6
+        \end{itemize}
+    \end{minipage}
+\end{center}
+}
+\newcommand{\tipssection}[2]{
+\paragraph{Highlight Tip}
+#1
+
+\nnsection{Tips}
+
+\begin{itemize}
+#2
+\end{itemize}
+}
+
+
+
+\begin{document}
+\pagecolor{WisdotaBackground}
+\color{white}
+
+\maketitle
+\thispagestyle{first-page}
+
+\input{tips.tex}
+
+
+\pagebreak
+
+\nnsection{Events}
+
+%\begin{tabular}{ c | c | c | c | c | c}
+%  \mechanics & \efficiency & \information & \itemisation & \execution & \decision \\
+  %\hline
+%  Mechanics & Efficiency & Information & Itemisation & Execution & Decision \\
+%\end{tabular}
+
+\begin{tabular}{ l | l }
+  \mechanics & Mechanics \\
+  \efficiency & Efficiency\\
+  \information & Information\\
+  \herobuild & Hero Build\\
+  \execution & Execution\\
+  \decision & Decision\\
+\end{tabular}
+
+
+\begin{remarks}
+\input{remarks.tex}
+\end{remarks}
+\end{document}
+
+
