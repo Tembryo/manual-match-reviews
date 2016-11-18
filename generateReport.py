@@ -1,8 +1,15 @@
 import csv
 import json
+import os
+import subprocess
+
+out_dir = "generated"
+
+if not os.path.exists(out_dir):
+    os.makedirs(out_dir)
 
 in_log_filename = "log.csv"
-out_log_filename ="remarks.tex"
+out_log_filename ="generated/remarks.tex"
 
 log_fields = ["time", "category", "description"]
 
@@ -34,7 +41,7 @@ with open(out_log_filename, "w") as outfile:
             outfile.write(formatted)
 
 in_tips_filename = "tips.json"
-out_tips_filename ="tips.tex"
+out_tips_filename ="generated/tips.tex"
 with open(out_tips_filename, "w") as outfile:
     with open(in_tips_filename, "r") as infile:
         tip_data = json.load(infile)
@@ -50,7 +57,7 @@ with open(out_tips_filename, "w") as outfile:
 
 
 in_data_filename = "data.json"
-out_data_filename ="data.tex"
+out_data_filename ="generated/data.tex"
 with open(out_data_filename, "w") as outfile:
     with open(in_data_filename, "r") as infile:
         data = json.load(infile)
@@ -59,3 +66,11 @@ with open(out_data_filename, "w") as outfile:
         outfile.write("\\newcommand{\hero}{"+data["hero"]+"}\n")
         outfile.write("\\newcommand{\matchdate}{"+data["date"]+"}\n")
         outfile.write("\\newcommand{\player}{"+data["player"]+"}\n")
+
+
+
+make_args = ("make", "-f", "../Makefile")
+popen = subprocess.Popen(make_args, stdout=subprocess.PIPE)
+popen.wait()
+output = popen.stdout.read()
+print output
